@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&family=Poppins:wght@300;400;500;600&display=swap');
+
+/*Removes default Browser spacing */
+*, *::before, *::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* Colors & Fonts */
+:root {
+    --bg:       #f0efea;
+    --white:    #ffffff;
+    --black:    #111110;
+    --gray:     #6b6b65;
+    --border:   #d8d8d2;
+    --blue:     #4BA4F2;
+    --green:      #70D263;
+
+--font-body:    'DM Sans', sans-serif;
+--font-heading: 'Instrument Serif', Georgia, serif;
+--font-poppins: 'Poppins', sans-serif}
+
+/* body */
+body{
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--black);
+    font-size: 24px;
+    line-height:1.6; 
+}
+/* Navigation */
+nav{
+    position: fixed;
+    top: 0;
+    
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 48px;
+    background-color:rgba(240 ,239, 234, 0.85) ;
+    backdrop-filter: blur(12px);
+}
+/* Navigation Styling  */
+.logo{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+    text-decoration: none;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-links a {
+    font-size: 18px;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--black);
+}
+
+.btn-nav{
+    background: var(--black);
+    color: var(--white) !important;
+    padding: 16px 18px;
+    border-radius: 100px;
+    font-size: 16px;
+    transition: opacity 0.2s;
+}
+
+.btn-nav:hover{
+    opacity: 0.75;
+}
+/* Hero Section Styling */
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 64px;
+    position: relative;
+}
+
+/* Main Heading */
+.hero h1{
+    font-family: var(--font-poppins);
+    font-size: clamp(48px, 8vw, 88px);
+
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: 0.01em;
+    margin: 24px;
+}
+
+.hero-tagline{
+font-size: 24px;
+color: var(--gray);
+letter-spacing: 0.02em;
+margin-bottom: 24px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap: 12px;
+}
+
+.btn-primary{
+    background-color: var(--black);
+    color: var(--white);
+    padding: 12px 28px;
+    border-radius: 100px;
+
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+.btn-primary:hover{
+    opacity: 0.75;
+}
+
+.btn-outline{
+    background-color: transparent;
+    color: var(--black);
+    padding: 12px 28px;
+    
+    border-radius: 100px;
+    border: 1px solid var(--border);
+
+    font-size: 16px;
+    font-weight: 600;
+    
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+.btn-outline:hover {
+    background-color: #e5e4df;
+}
+
+/* Hero Card Styling */
+.hero-card {
+    position: absolute;
+    right: 80px;
+    bottom: 80px;
+
+    display: flex;
+    align-items: center;
+    gap : 12px;
+
+    background : var(--white);
+    border :1px solid var(--border);
+    border-radius: 100px;
+    padding: 8px 16px 8px 8px;
+
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+    z-index: 3;
+}
+.hero-card-avatar{
+    height: 80px;
+    border-radius:50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.hero-card-text{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.hero-card-name{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.hero-card-role{
+    font-size: 18px;
+    color: var(--gray);
+}
+/* About Section */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    
+    padding: 64px;
+    align-items: center;
+
+    max-width: 1440px;
+    min-height: 100vh;
+
+    margin:0 auto;
+}
+.about-left {
+    padding-top: 4px;
+}
+
+.about-body {
+    color: var(--black);
+    line-height: 1.4;
+    font-weight: 450;
+    font-size: 28px;
+}
+/* Project Section */
+.projects {
+    padding: 64px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+.section-label{
+    color: var(--gray);
+    letter-spacing: 0.04em;
+}
+/* Adds the \ before the text */
+.section-label::before {
+    content: '\\ ';
+}
+
+.project-tagline {
+    color: var(--black);
+    margin: 12px;
+    margin-bottom: 36px;
+    line-height: 1.4;
+}
+
+/* Left + Right two column layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+/* Right column stacks two cards vertically */
+.project-grid-right {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* SHARED CARD STYLES */
+.project-card-large,
+.project-card-small,
+.project-card-seemore {
+    display: block;           /* makes <a> tag behave like a div */
+    text-decoration: none;    /* removes underline from link */
+    color: var(--black);      /* keeps text black */
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover lift — applies to all three cards */
+.project-card-large:hover,
+.project-card-small:hover,
+.project-card-seemore:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+}
+
+.project-card-body {
+    padding:32px;
+}
+
+.project-title {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.project-description {
+    font-size: 24px;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+/* Big left card image — taller */
+.project-card-large .project-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Small right card image — shorter */
+.project-card-small .project-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* See More Card */
+.project-card-seemore {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px;
+    overflow: visible; /* overrides the shared overflow: hidden */
+}
+
+.seemore-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 8px;
+}
+
+.seemore-desc {
+    font-size: 24px;
+    color: var(--gray);
+    line-height: 1.5;
+}
+
+.seemore-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    color: var(--black);
+    font-size: 14px;
+    flex-shrink: 0;
+    transition: 0.2s, color 0.2s;
+}
+
+.project-card-seemore:hover .seemore-btn {
+    background: var(--black);
+    color: var(--white);
+}
+
+/* hobbies section*/
+.hobbies-section {
+    min-height: 90vh;
+    padding: 64px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 12px;
+}
+
+.hobbies-items{
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.hobbies-items img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.hobbies-items:hover img {
+    transform: scale(1.04);
+}
+
+/*footer*/
+footer {
+    display: flex;
+    flex-direction: column; /* stacks top and bottom vertically */
+    padding: 64px 64px 24px; 
+    gap: 32px;
+}
+
+.footer-top{
+    text-align: right;
+}
+
+.footer-heading{
+    font-family: var(--font-poppins);
+    font-size:clamp(32px, 5vw, 64px);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+}
+
+.footer-body{
+    font-size: 24px;
+    color: var(--gray);
+    line-height: 1.4;
+    margin: 0 auto;
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+    padding-top: 32px;
+}
+
+.footer-copy {
+    font-size: 18px;
+    color: var(--gray);
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.footer-links a {
+    font-size: 24px;
+    color: var(--gray);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--black);
+}
