@@ -33,15 +33,12 @@ body{
 nav{
     position: fixed;
     top: 0;
-    
     left: 0;
     right: 0;
     z-index: 100;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     padding: 20px 48px;
     background-color:rgba(240 ,239, 234, 0.85) ;
     backdrop-filter: blur(12px);
@@ -53,25 +50,21 @@ nav{
     color: var(--black);
     text-decoration: none;
 }
-
 .nav-links{
     list-style: none;
     display: flex;
     align-items: center;
     gap: 24px;
 }
-
 .nav-links a {
     font-size: 18px;
     color: var(--gray);
     text-decoration: none;
     transition: color 0.2s;
 }
-
 .nav-links a:hover {
     color: var(--black);
 }
-
 .btn-nav{
     background: var(--black);
     color: var(--white) !important;
@@ -80,20 +73,17 @@ nav{
     font-size: 16px;
     transition: opacity 0.2s;
 }
-
 .btn-nav:hover{
     opacity: 0.75;
 }
 /* Hero Section Styling */
 .hero {
     min-height: 100vh;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-
     padding: 64px;
     position: relative;
 }
@@ -102,7 +92,6 @@ nav{
 .hero h1{
     font-family: var(--font-poppins);
     font-size: clamp(48px, 8vw, 88px);
-
     font-weight: 400;
     line-height: 1.05;
     letter-spacing: 0.01em;
@@ -257,9 +246,7 @@ margin-bottom: 24px;
 }
 
 /* SHARED CARD STYLES */
-.project-card-large,
-.project-card-small,
-.project-card-seemore {
+.project-card-large,.project-card-small,.project-card-seemore {
     display: block;           /* makes <a> tag behave like a div */
     text-decoration: none;    /* removes underline from link */
     color: var(--black);      /* keeps text black */
@@ -271,9 +258,7 @@ margin-bottom: 24px;
 }
 
 /* Hover lift — applies to all three cards */
-.project-card-large:hover,
-.project-card-small:hover,
-.project-card-seemore:hover {
+.project-card-large:hover,.project-card-small:hover,.project-card-seemore:hover {
     transform: translateY(-4px);
     box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
 }
@@ -403,7 +388,7 @@ footer {
 }
 
 .footer-body{
-    font-size: 24px;
+    font-size: clamp(16px, 2vw, 24px);
     color: var(--gray);
     line-height: 1.4;
     margin: 0 auto;
@@ -418,7 +403,7 @@ footer {
 }
 
 .footer-copy {
-    font-size: 18px;
+    font-size: clamp(12px, 2vw, 18px);
     color: var(--gray);
 }
 
@@ -429,7 +414,7 @@ footer {
 }
 
 .footer-links a {
-    font-size: 24px;
+    font-size: clamp(12px, 2vw, 24px);
     color: var(--gray);
     text-decoration: none;
     transition: color 0.2s;
