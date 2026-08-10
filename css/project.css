@@ -110,3 +110,101 @@
 .content-body{
     font-size: 18px;
 }
+
+.persona-label {
+    font-size: 16px;
+    color: var(--gray);
+    margin: 32px 0 12px;
+}
+.persona-card {
+    display: grid;
+    grid-template-columns: 200px 1fr 1.5fr; /* avatar | details | info */
+    gap: 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+/* Left — coloured avatar block */
+.persona-avatar {
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.persona-avatar img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Middle — name and quick facts */
+.persona-details {
+  padding: 32px;
+  border-right: 1px solid var(--border);
+}
+
+.persona-name {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.persona-meta {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.persona-meta li {
+  font-size: 15px;
+  color: var(--gray);
+  position: relative;
+  padding-left: 16px;
+}
+
+/* Custom bullet dot */
+.persona-meta li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+}
+
+/* Right — pain points and needs */
+.persona-info {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.persona-subhead {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+
+.persona-info ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.persona-info li {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.5;
+  position: relative;
+  padding-left: 16px;
+}
+
+.persona-info li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+}
