@@ -7,9 +7,15 @@ margin: 0;
 padding: 0;
 }
 
-/* Colors & Fonts */
+/*  DESIGN TOKENS
+    Every colour, radius, shadow, motion, spacing
+    step, and font size used across the site lives
+    here. Reference var(--token).*/
 :root {
+/* Colours */
     --bg:       #f0efea;
+    --bg-nav:   rgba(240 ,239, 234, 0.85); /* --bg at the nav's blur opacity */
+    --bg-hover: #e5e4df;                   /* --bg at the nav's hover opacity */
     --white:    #ffffff;
     --black:    #111110;
     --gray:     #6b6b65;
@@ -17,9 +23,51 @@ padding: 0;
     --blue:     #4BA4F2;
     --green:    #70D263;
 
---font-body:    'DM Sans', sans-serif;
---font-heading: 'Instrument Serif', Georgia, serif;
---font-poppins: 'Poppins', sans-serif}
+/* Type families */
+    --font-body:    'DM Sans', sans-serif;
+    --font-heading: 'Instrument Serif', Georgia, serif;
+    --font-poppins: 'Poppins', sans-serif;
+
+/* Type scale*/
+    --fs-display-xl: clamp(48px, 8vw, 88px); /* hero h1 */
+    --fs-display-l:  clamp(48px, 8vw, 80px); /* project name */
+    --fs-display-m:  clamp(32px, 5vw, 64px); /* footer heading */
+    --fs-heading:    24px;                   /* card titles, content headings */
+    --fs-body-lg:    18px;                   /* standard paragraph copy */
+    --fs-body:       16px;                   /* buttons, nav links */
+    --fs-caption:    14px;                   /* section labels, meta, footer copy */
+
+/* line Height */
+    --lh-tight: 1.05; /* big display headings */
+    --lh-heading: 1.4; /* card titles, content headings */
+    --lh-body:  1.6;  /* paragraph copy */
+
+/* spacing scale */
+    --space-8:  8px;
+    --space-12: 12px;
+    --space-16: 16px;
+    --space-24: 24px;
+    --space-32: 32px;
+    --space-48: 48px;
+    --space-64: 64px;
+    --space-80: 80px;
+
+/* Radius scale */
+    --r-pill:    100px; /* buttons, nav pill, floating hero card, tags */
+    --r-card:    16px;  /* cards, hero images */
+    --r-tile:    12px;  /* photo tiles, placeholder blocks */
+    --r-tile-lg: 20px;  /* larger stat cards */
+    --r-round:   50%;   /* avatars, circular icon buttons */
+
+/* Elevation */
+    --shadow-rest: 0 4px 24px rgba(0, 0, 0, 0.07);
+    --shadow-lift: 0 16px 48px rgba(0, 0, 0, 0.1);
+
+/* Motion */
+    --t-color: 0.2s;
+    --t-lift:  0.3s ease;
+    --t-zoom:  0.4s ease;
+}
 
 /* body */
 body{
@@ -27,7 +75,7 @@ body{
     background-color: var(--bg);
     color: var(--black);
     font-size: 24px;
-    line-height:1.6; 
+    line-height: var(--lh-body); 
 }
 /* Navigation */
 nav{
@@ -40,7 +88,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 20px 48px;
-    background-color:rgba(240 ,239, 234, 0.85) ;
+    background-color: var(--bg-nav);
     backdrop-filter: blur(12px);
 }
 /* Navigation Styling  */
@@ -54,10 +102,10 @@ nav{
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: var(--space-24);
 }
 .nav-links a {
-    font-size: 18px;
+    font-size: var(--fs-body-lg);
     color: var(--gray);
     text-decoration: none;
     transition: color 0.2s;
@@ -69,9 +117,9 @@ nav{
     background: var(--black);
     color: var(--white) !important;
     padding: 16px 18px;
-    border-radius: 100px;
-    font-size: 16px;
-    transition: opacity 0.2s;
+    border-radius: var(--r-pill);
+    font-size: var(--fs-body);
+    transition: opacity var(--t-color);
 }
 .btn-nav:hover{
     opacity: 0.75;
@@ -84,60 +132,54 @@ nav{
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 64px;
+    padding: var(--space-64);
     position: relative;
 }
-
 /* Main Heading */
 .hero h1{
     font-family: var(--font-poppins);
-    font-size: clamp(48px, 8vw, 88px);
+    font-size: var(--fs-display-xl);
     font-weight: 400;
-    line-height: 1.05;
+    line-height: var(--lh-tight);
     letter-spacing: 0.01em;
-    margin: 24px;
+    margin: var(--space-24);
 }
-
 .hero-tagline{
-font-size: 24px;
+font-size: var(--fs-body-lg);
 color: var(--gray);
 letter-spacing: 0.02em;
-margin-bottom: 24px;
+margin-bottom: var(--space-24);
 }
-
 .hero-buttons{
     display:flex;
-    gap: 12px;
+    gap: var(--space-12);
 }
 
+/* Button Styling */
 .btn-primary{
     background-color: var(--black);
     color: var(--white);
-    padding: 12px 28px;
-    border-radius: 100px;
+    padding: var(--space-12) var(--space-28);
+    border-radius: var(--r-pill);
 
-    font-size: 16px;
+    font-size: var(--fs-body);
     font-weight: 600;
     text-decoration: none;
-    transition: opacity 0.2s;
+    transition: opacity var(--t-color);
 }
 .btn-primary:hover{
     opacity: 0.75;
 }
-
 .btn-outline{
     background-color: transparent;
     color: var(--black);
-    padding: 12px 28px;
-    
-    border-radius: 100px;
+    padding: var(--space-12) var(--space-28);
+    border-radius: var(--r-pill);
     border: 1px solid var(--border);
-
-    font-size: 16px;
+    font-size: var(--fs-body);
     font-weight: 600;
-    
     text-decoration: none;
-    transition: opacity 0.2s;
+    transition: opacity var(--t-color);
 }
 .btn-outline:hover {
     background-color: #e5e4df;
@@ -146,72 +188,64 @@ margin-bottom: 24px;
 /* Hero Card Styling */
 .hero-card {
     position: absolute;
-    right: 80px;
-    bottom: 80px;
-
+    right: var(--space-80);
+    bottom: var(--space-80);
     display: flex;
     align-items: center;
-    gap : 12px;
-
+    gap : var(--space-12);
     background : var(--white);
     border :1px solid var(--border);
-    border-radius: 100px;
-    padding: 8px 16px 8px 8px;
-
+    border-radius: var(--r-pill);
+    padding: var(--space-8) var(--space-16) var(--space-8) var(--space-8);
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
     z-index: 3;
 }
 .hero-card-avatar{
-    height: 80px;
+    height: var(--space-80);
     border-radius:50%;
     object-fit: cover;
     flex-shrink: 0;
 }
-
 .hero-card-text{
     display: flex;
     flex-direction: column;
     text-align: left;
-    line-height: 1.2;
+    line-height: var(--lh-heading);
 }
-
 .hero-card-name{
     font-size: 20px;
     font-weight: 600;
     color: var(--black);
 }
-
 .hero-card-role{
     font-size: 18px;
     color: var(--gray);
 }
+
 /* About Section */
 .about {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    
-    padding: 64px;
+    gap: var(--space-80);
+    padding: var(--space-64);
     align-items: center;
-
     max-width: 1440px;
     min-height: 100vh;
-
     margin:0 auto;
 }
 .about-left {
     padding-top: 4px;
 }
-
 .about-body {
     color: var(--black);
-    line-height: 1.4;
+    line-height: var(--lh-body);
     font-weight: 450;
     font-size: 28px;
 }
+
 /* Project Section */
 .mywork {
-    padding: 64px;
+    padding: var(--space-64);
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -228,7 +262,7 @@ margin-bottom: 24px;
     color: var(--black);
     margin: 12px;
     margin-bottom: 36px;
-    line-height: 1.4;
+    line-height: var(--lh-heading);
 }
 
 /* Left + Right two column layout */
@@ -276,7 +310,7 @@ margin-bottom: 24px;
 .project-description {
     font-size: 24px;
     color: var(--gray);
-    line-height: 1.5;
+    line-height: var(--lh-body);
 }
 
 /* Big left card image — taller */
@@ -314,7 +348,7 @@ margin-bottom: 24px;
 .seemore-desc {
     font-size: 24px;
     color: var(--gray);
-    line-height: 1.5;
+    line-height: var(--lh-body);
 }
 
 .seemore-btn {
@@ -328,7 +362,7 @@ margin-bottom: 24px;
     color: var(--black);
     font-size: 14px;
     flex-shrink: 0;
-    transition: 0.2s, color 0.2s;
+    transition: var(--t-color);
 }
 
 .project-card-seemore:hover .seemore-btn {
@@ -390,7 +424,7 @@ footer {
 .footer-body{
     font-size: clamp(16px, 2vw, 24px);
     color: var(--gray);
-    line-height: 1.4;
+    line-height: var(--lh-heading);
     margin: 0 auto;
 }
 
@@ -417,7 +451,7 @@ footer {
     font-size: clamp(12px, 2vw, 24px);
     color: var(--gray);
     text-decoration: none;
-    transition: color 0.2s;
+    transition: color var(--t-color);
 }
 
 .footer-links a:hover {
