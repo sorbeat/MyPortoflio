@@ -107,6 +107,23 @@ p {
     color: var(--black);
     font-weight: 600;
 }
+.sidebar-nav {
+    display: flex;
+    gap: 16px;
+    align-items: stretch; /* rail stretches to match the links column's rendered height */
+}
+.sidebar-progress {
+    width: 2px;
+    flex-shrink: 0;
+    background: var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+}
+.sidebar-progress-fill {
+    width: 100%;
+    height: 0%; /* JS drives this 0–100% as you scroll through the case study */
+    background: var(--black);
+}
 /* Dark block for turning point */
 .dark-block { 
     display: flex; 
@@ -159,7 +176,7 @@ p {
 .card-grid-2 { 
     display: grid; 
     grid-template-columns: 1fr 1fr; 
-    gap: 16px; }
+    gap: 18px; }
 
 .card-grid-3 { display: grid; 
     grid-template-columns: repeat(3, 1fr); 
@@ -179,7 +196,7 @@ p {
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05); 
     display: flex; 
     flex-direction: column; 
-    margin-bottom: 12px;
+    margin-bottom: 32px;
     gap: 12px; 
 }
 .info-card .content-heading { 
@@ -225,7 +242,6 @@ p {
     line-height: 1.4; 
     color: rgba(0, 0, 0, 0.5); 
 }
-/* Chosen-direction variant of step-card, used in Ideation */
 .step-card.is-chosen {
     background: #3C3C3C;
     color: #fff;
@@ -263,6 +279,7 @@ p {
 }
 .stat-card.span-2 { 
     grid-column: span 2; 
+
 }
 /* Persona cards */
 .persona-label {
@@ -362,7 +379,8 @@ p {
     position: absolute;
     left: 0;
 }
-/*Main Finding*/
+
+/* Finding style*/
 .finding-list { 
     display: flex; 
     flex-direction: column; 
@@ -398,4 +416,52 @@ p {
 .finding-row .so span { 
     color: #0A0A0A; 
 }
-
+/*3*/
+.priority-table { 
+    display: flex; 
+    flex-direction: column; 
+}
+.priority-row { 
+    display: grid; 
+    grid-template-columns: 1.2fr 2fr 0.8fr; 
+    gap: 20px; padding: 18px 0; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08); 
+    align-items: start; 
+}
+.priority-row.head { 
+    padding: 12px 0; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12); 
+    font-family: var(--font-sans); 
+    font-size: 18px; 
+    letter-spacing: 0.04em; color: rgba(0, 0, 0, 0.4); 
+}
+.priority-row .opportunity { 
+    font-family: var(--font-display); 
+    font-weight: 700;
+    font-size: 18px; 
+}
+.priority-row .evidence { 
+    font-family: var(--font-body); 
+    font-size: 16px; 
+    line-height: 1.55; 
+    color: rgba(0, 0, 0, 0.55); 
+}
+.decision-tag { 
+    font-family: var(--font-body); 
+    font-size: 14px; 
+    padding: 5px 12px; 
+    border-radius: 24px; 
+    justify-self: start; 
+}
+.decision-tag.core { 
+    color: #fff; 
+    background: #3C3C3C; 
+}
+.decision-tag.supporting { 
+    color: rgba(0, 0, 0, 0.55); 
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15); 
+}
+.decision-tag.parked { 
+    color: rgba(0, 0, 0, 0.4); 
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1); }
+    
