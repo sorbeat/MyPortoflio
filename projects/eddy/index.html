@@ -6,16 +6,16 @@
     <title>Eddy - Sebastian Harris</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/project.css">
-    
+    <script src="/components/sidebar-scroll.js" defer></script>
 </head>
 <body>
 
 <!--nav bar-->
 <div id="nav-placeholder"></div>
-<script src="/components/nav.js"></script>
+<script src="/components/nav.js" defer></script>
 
-    <!--Hero Section-->
-<section class="project-hero" >
+<!--Hero Section-->
+<section class="project-hero">
     <h1 class="project-name">Eddy</h1>
     <div class="project-tags">
         <span class="tag">UX/UI Design</span>
@@ -26,90 +26,77 @@
         <img src="/projects/eddy/images/muitl-screens-blue.png" alt="Eddy-mockups">
     </div>
 
-<div class="project-meta">
+    <div class="project-meta">
         <span class="meta-duration">Duration: 8 Weeks</span>
         <div class="meta-tools">
-        <span>Tools:</span>
+            <span>Tools:</span>
             <img src="/assets/icons/Figma.png" alt="Figma" class="tool-icon">
             <img src="/assets/icons/Forms.png" alt="Forms" class="tool-icon">
         </div>
     </div>
 </section>
 
-
 <section class="project-layout" id="project-info">
 
 <aside class="project-sidebar">
-    <a href="/index.html#projects" class="back-link">Back</a> <!--icon-->
-        <div class="sidebar-links">
-                <a href="#design-brief">Design Brief</a>
-                <a href="#approach">Approach</a>
-                <a href="#research">Research</a>
-                <a href="#persona">Persona</a>
-                <a href="#defining-problems">Defining Problems</a>
-                <a href="#ideation">Ideation</a>
-                <a href="#design-process">Design Process</a>
-                <a href="#usability-testing">Usability Testing</a>
-                <a href="#reflection">Reflection</a>
-        </div>
+    <a href="/index.html#projects" class="back-link">Back</a>
+    <div class="sidebar-links"></div>
 </aside>
-
 
 <main class="project-content">
     <div class="dark-block">
         <div class="content-heading-dk"></div>
-            <p class="content-body-large">I started designing a fitness app for surfers. Research told me surfers had a more urgent problem: deciding where and when to surf.</p>
-            <p>So I changed direction. Personalized surf discovery became the core of the product, 
-            and surf-specific fitness became a supporting feature rather than the headline. 
-            This page is mostly the story of that decision.</p>
-        </div>
+        <p class="content-body-large">I started designing a fitness app for surfers. Research told me surfers had a more urgent problem: deciding where and when to surf.</p>
+        <p>So I changed direction. Personalized surf discovery became the core of the product, 
+        and surf-specific fitness became a supporting feature rather than the headline. 
+        This page is mostly the story of that decision.</p>
+    </div>
 
-<div class="content-section" id="design-brief">
+    <section class="content-section" id="design-brief" data-nav-label="Design Brief">
         <h3 class="content-heading">01 — Design Brief</h3>
-            <h2>What Am I Designing?</h2>
-                <p class="content-body">This 8-week module teaches students to design a health,
-                fitness, or wellness app using user-centred design and insights from AI and
-                machine learning. It covers user research, competitor analysis, and creating
-                personalised, intelligent experiences.
-            </p>
-
-            <p class="content-body">Eddy is combines fitness and community for surfers.
+        <h2 class="content-title">What Am I Designing?</h2>
+        <p class="content-body">This 8-week module teaches students to design a health,
+            fitness, or wellness app using user-centred design and insights from AI and
+            machine learning. It covers user research, competitor analysis, and creating
+            personalised, intelligent experiences.
+        </p>
+        <p class="content-body">Eddy is combines fitness and community for surfers.
             Users can share sessions, track progress, and connect.
             AI-driven training plans and surf spot recommendations
             adapt to user skill and goals through Machine Learning
-            </p>
+        </p>
 
-    <div class="card-grid-2">
-        <div class="info-card">
-            <div class="content-heading">The module asked for</div>
-            <ul>
-                <li>A health, fitness or wellness product</li>
-                <li>A user-centred design process, evidenced</li>
-                <li>AI/ML explored as a personalisation layer</li>
-                <li>Research, competitor analysis, testing</li>
-            </ul>
+        <div class="card-grid-2">
+            <div class="info-card">
+                <div class="content-heading">The module asked for</div>
+                <ul>
+                    <li>A health, fitness or wellness product</li>
+                    <li>A user-centred design process, evidenced</li>
+                    <li>AI/ML explored as a personalisation layer</li>
+                    <li>Research, competitor analysis, testing</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <div class="content-heading">What I Used</div>
+                <ul>
+                    <li>Survey design and analysis</li>
+                    <li>Interviews and personas</li>
+                    <li>Problem definition and prioritisation</li>
+                    <li>IA, flows, wireframes, UI, prototype</li>
+                    <li>Usability testing and iteration</li>
+                </ul>
+            </div>
         </div>
-    <div class="info-card">
-            <div class="content-heading">What I Used</div>
-            <ul>
-                <li>Survey design and analysis</li>
-                <li>Interviews and personas</li>
-                <li>Problem definition and prioritisation</li>
-                <li>IA, flows, wireframes, UI, prototype</li>
-                <li>Usability testing and iteration</li>
-            </ul>
-        </div>
-    </div>
-</div>
+    </section>
 
-    <div class="content-section" id="approach">
+    <section class="content-section" id="approach" data-nav-label="Approach">
         <h3 class="content-heading">02 — Approach</h3>
-        <h2>How Did I Approach the Problem?</h2>
-            <p class="content-body">I took a user-centred approach, combining quantitative 
-                and qualitative research to understand how surfers of different experience 
-                levels approach fitness, performance, surf conditions and community. 
-                I used surveys to identify broader patterns and interviewed both an 
-                experienced and less-experienced surfer to understand their individual experiences in more depth.
+        <h2 class="content-title">How Did I Approach the Problem?</h2>
+        <p class="content-body">I took a user-centred approach, combining quantitative 
+            and qualitative research to understand how surfers of different experience 
+            levels approach fitness, performance, surf conditions and community. 
+            I used surveys to identify broader patterns and interviewed both an 
+            experienced and less-experienced surfer to understand their individual experiences in more depth.</p>
         <div class="card-grid-4">
             <div class="step-card">
                 <span class="index">01</span>
@@ -152,17 +139,17 @@
                 <span class="desc">What held up, what I would change</span>
             </div>
         </div>
-            <p class="content-body">The findings from these different research methods were then used to identify problems, 
-                generate ideas and prioritise features. This allowed the direction of 
-                Eddy to evolve from a primarily fitness-focused concept into a more personalised 
-                experience centred around surf discovery, performance and community.</p>
-    </div>
-    
+        <p class="content-body">The findings from these different research methods were then used to identify problems, 
+            generate ideas and prioritise features. This allowed the direction of 
+            Eddy to evolve from a primarily fitness-focused concept into a more personalised 
+            experience centred around surf discovery, performance and community.</p>
+    </section>
+
 <!-- RESEARCH -->
-    <div class="content-section" id="research">
+    <section class="content-section" id="research" data-nav-label="Research">
         <h3 class="content-heading">03 — Research</h3>
-        <h2>What did I discover?</h2>
-                <p class="section-body">I did a survey of 12 surfers across ability levels. Two interviews gave me the depth: one developing surfer, one experienced surfer with very little free time. Alongside that I audited existing surf and fitness apps, and looked at how other products use AI and machine learning to personalise.</p>
+        <h2 class="content-title">What did I discover?</h2>
+        <p class="section-body">I did a survey of 12 surfers across ability levels. Two interviews gave me the depth: one developing surfer, one experienced surfer with very little free time. Alongside that I audited existing surf and fitness apps, and looked at how other products use AI and machine learning to personalise.</p>
         <div class="card-grid-3">
             <div class="stat-card">
                 <span class="number">8/12</span>
@@ -185,138 +172,230 @@
                 <span class="desc">were interested, or potentially interested, in guidance on managing fear in challenging conditions</span>
             </div>
         </div>
-    </div>
+    </section>
 
-        <div class = content-section id="persona">
-            <h3 class="content-heading"></h3>
-            <h2>Who are the users?</h2>
+    <section class="content-section" id="persona" data-nav-label="Persona">
+        <h3 class="content-heading"></h3>
+        <h2 class="content-title">Who are the users?</h2>
         <p class="content-body">To understand the needs of surfers, I created two personas based on research. 
             The primary persona, E-Dawg, is a 22-year-old social media manager and university student who struggles to 
             track progress and improve consistently. The secondary persona, Bobby, is a 43-year-old construction 
             worker who has limited time to surf and train. These personas helped 
-                guide the design process and ensure that the app met the needs of its target users.</p>
+            guide the design process and ensure that the app met the needs of its target users.</p>
 
-<!-- PRIMARY PERSONA -->
-    <p class="persona-label">Primary</p>
+        <p class="persona-label">Primary</p><!-- PRIMARY PERSONA -->
         <div class="persona-card">
-
-<!-- Left — Avatar -->
-    <div class="persona-avatar">
-        <img src="/projects/eddy/images/E-Dawg-Profile.png" alt="E-Dawg persona">
-    </div>
-
-<!-- Middle — Details -->
-    <div class="persona-details">
-        <h4 class="persona-name">E-Dawg, 22</h4>
-        <ul class="persona-meta">
-            <li>Social Media Manager</li>
-            <li>University student</li>
-            <li>Male</li>
-            <li>South Africa</li>
-        </ul>
-    </div>
-
-<!-- Right — Pain Points & Needs -->
-<div class="persona-info">
-        <div class="persona-block">
-            <h5 class="persona-subhead">Pain Points</h5>
-            <ul>
-                <li>Struggles to track progress & improve consistently</li>
-                <li>Doesn't always know where to surf based on conditions</li>
-                <li>Wants to build strength but lacks a surf-specific training plan</li>
-            </ul>
+            <div class="persona-avatar"><!-- Left — Avatar -->
+                <img src="/projects/eddy/images/E-Dawg-Profile.png" alt="E-Dawg persona">
+            </div>
+            <div class="persona-details"><!-- Middle — Details -->
+                <h4 class="persona-name">E-Dawg, 22</h4>
+                <ul class="persona-meta">
+                    <li>Social Media Manager</li>
+                    <li>University student</li>
+                    <li>Male</li>
+                    <li>South Africa</li>
+                </ul>
+            </div>
+            <div class="persona-info"><!-- Right — Pain Points & Needs -->
+                <div class="persona-block">
+                    <h5 class="persona-subhead">Pain Points</h5>
+                    <ul>
+                        <li>Struggles to track progress & improve consistently</li>
+                        <li>Doesn't always know where to surf based on conditions</li>
+                        <li>Wants to build strength but lacks a surf-specific training plan</li>
+                    </ul>
+                </div>
+                <div class="persona-block">
+                    <h5 class="persona-subhead">Needs</h5>
+                    <ul>
+                        <li>Improve surfing technique & stamina</li>
+                        <li>Find good surf spots that match his skill level</li>
+                        <li>Connect with a local surf community</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    <div class="persona-block">
-        <h5 class="persona-subhead">Needs</h5>
-        <ul>
-            <li>Improve surfing technique & stamina</li>
-            <li>Find good surf spots that match his skill level</li>
-            <li>Connect with a local surf community</li>
-        </ul>
-        </div>
-    </div>
-
-</div>
 
 <!-- SECONDARY PERSONA -->
-    <p class="persona-label">Secondary</p>
-    <div class="persona-card">
+        <p class="persona-label">Secondary</p>
+        <div class="persona-card">
+            <div class="persona-avatar">
+                <img src="/projects/eddy/images/Bobby-Profile.png" alt="Bobby persona">
+            </div>
+            <div class="persona-details">
+                <h4 class="persona-name">Bobby, 43</h4>
+                <ul class="persona-meta">
+                    <li>Construction</li>
+                    <li>Married</li>
+                    <li>Male</li>
+                    <li>South Africa</li>
+                </ul>
+            </div>
+            <div class="persona-info">
+                <div class="persona-block">
+                    <h5 class="persona-subhead">Pain Points</h5>
+                    <ul>
+                        <li>Has limited time to surf & train</li>
+                        <li>Finds it harder to maintain fitness with age</li>
+                        <li>Wants quick, surf-relevant workouts without overcommitting</li>
+                    </ul>
+                </div>
+                <div class="persona-block">
+                    <h5 class="persona-subhead">Needs</h5>
+                    <ul>
+                        <li>Stay in surf shape despite a busy schedule</li>
+                        <li>Get quick updates on the best local surf conditions</li>
+                        <li>Maintain technique & flexibility with minimal effort</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-    <div class="persona-avatar">
-        <img src="/projects/eddy/images/Bobby-Profile.png" alt="Bobby persona">
+        <h4 class="content-subtitle">Three findings that changed the product</h4>
+        <div class="finding-list">
+            <div class="finding-row">
+                <p class="finding">Both interviewees described the same daily uncertainty: not knowing which spot suits them in today's conditions.</p>
+                <p class="so"><span>So</span> skill suitability and conditions had to be answered on the first screen, not buried in a spot page.</p>
+            </div>
+            <div class="finding-row">
+                <p class="finding">Fitness interest was real but conditional — most did no surf training, and most would consider it if it were structured for surfing.</p>
+                <p class="so"><span>So</span> fitness earns a place in the product, but as a supporting feature, not the reason to open the app.</p>
+            </div>
+            <div class="finding-row">
+                <p class="finding">Surfers already ask other surfers. Recent local sessions are the trusted signal.</p>
+                <p class="so"><span>So</span> community activity became part of discovery itself rather than a separate social tab.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="defining-problems" data-nav-label="Defining Problems">
+    <h3 class="content-heading">04 — Defining Problems</h3>
+    <h2 class="content-title">What problems did I identify?</h2>
+
+    <div class="dark-block">
+        <div class="content-heading-dk">Primary problem</div>
+        <p class="content-body-large">Surfers often struggle to determine which surf spots are suitable for their skill level and current conditions, making it difficult to confidently decide where and when to surf.</p>
     </div>
 
-    <div class="persona-details">
-        <h4 class="persona-name">Bobby, 43</h4>
-        <ul class="persona-meta">
-            <li>Construction</li>
-            <li>Married</li>
-            <li>Male</li>
-            <li>South Africa</li>
-        </ul>
+    <div class="card-grid-2">
+        <div class="info-card">
+            <div class="content-heading">Supporting problem 01</div>
+            <p class="content-body">Surfers lack simple ways to track their sessions and turn their surfing activity into meaningful insights that help them improve.</p>
+        </div>
+        <div class="info-card">
+            <div class="content-heading">Supporting problem 02</div>
+            <p class="content-body">Surfers have limited ways to share recent sessions and connect with their local community when deciding where to surf.</p>
+        </div>
     </div>
 
-    <div class="persona-info">
-        <div class="persona-block">
-        <h5 class="persona-subhead">Pain Points</h5>
-        <ul>
-            <li>Has limited time to surf & train</li>
-            <li>Finds it harder to maintain fitness with age</li>
-            <li>Wants quick, surf-relevant workouts without overcommitting</li>
-        </ul>
-</div>
-    <div class="persona-block">
-        <h5 class="persona-subhead">Needs</h5>
-        <ul>
-            <li>Stay in surf shape despite a busy schedule</li>
-            <li>Get quick updates on the best local surf conditions</li>
-            <li>Maintain technique & flexibility with minimal effort</li>
-        </ul>
-    </div>
-</div>
-
-    </div>
-</div>
-
-    <div class="content-section" id="defining-problems">
-        <h3 class="content-heading">Defining Problems</h3>
-        
-        <p class="persona-label">Primary problem</p>
-        <p class="content-body">Surfers often struggle to determine which surf spots are suitable for their skill level and current conditions, making it difficult to confidently decide where and when to surf.</p>
-        <p class="persona-label">Supporting problem 1</p>
-        <p class="content-body">Surfers lack simple ways to track their sessions and turn their surfing activity into meaningful insights that help them improve</p>
-        <p class="persona-label">Supporting problem 2</p>
-        <p class="content-body">Surfers have limited ways to share recent sessions and connect with their local community when deciding where to surf.</p>
-        <p class="persona-label">Supporting opportunity</p>
+    <div class="info-card">
+        <div class="content-heading">Supporting opportunity</div>
         <p class="content-body">Surf-specific fitness became a supporting opportunity rather than the core product focus, allowing the research to guide feature prioritisation.</p>
-        
+    </div>
+</section>
+
+    <section class="content-section" id="ideation" data-nav-label="Ideation">
+    <h3 class="content-heading">05 — Ideation</h3>
+    <h2 class="content-title">What solutions did I explore?</h2>
+    <p class="content-body">Before committing to a direction, I opened the problem out into five broad opportunity areas, then weighed each one against the strength of the evidence behind it rather than which one seemed most exciting to design.</p>
+
+    <div class="card-grid-3">
+        <div class="step-card">
+            <span class="title">Personalisation</span>
+            <span class="desc">Skill level, board type, goals and previous sessions shaping what a surfer sees first</span>
+        </div>
+        <div class="step-card">
+            <span class="title">Surf discovery</span>
+            <span class="desc">Recommended spots, skill suitability and live conditions in one place</span>
+        </div>
+        <div class="step-card">
+            <span class="title">Community</span>
+            <span class="desc">Recent session sharing and visibility into what local surfers are riding</span>
+        </div>
+        <div class="step-card">
+            <span class="title">Performance</span>
+            <span class="desc">Surf-specific fitness plans, technique tracking and training goals</span>
+        </div>
+        <div class="step-card">
+            <span class="title">Wellbeing</span>
+            <span class="desc">Breathwork, fear management and recovery support</span>
+        </div>
+        <div class="step-card is-chosen">
+            <span class="index">Direction chosen</span>
+            <span class="title">Personalised surf discovery + community</span>
+        </div>
     </div>
 
-    <div class="content-section" id="ideate">
-        <h3 class="content-heading">Ideate</h3>
-        <p class="content-body">Your content here...</p>       
+    <p class="content-body">This became the core of Eddy, with performance carried forward as a supporting feature rather than the starting point.</p>
+</section>
+
+    <section class="content-section" id="design-process" data-nav-label="Design Process">
+    <h3 class="content-heading">06 — Design Process</h3>
+    <h2 class="content-title">How did I turn ideas into an interface?</h2>
+    <p class="content-body">Everything below serves one sentence: the app has to answer "is this a good place for me to surf today?" before it asks the surfer to do anything else.</p>
+
+    <h4 class="content-subtitle">Information architecture</h4>
+    <div class="card-grid-4">
+        <div class="step-card">
+            <span class="title">Discover</span>
+            <span class="desc">Today's conditions, recommended spots, spot detail</span>
+        </div>
+        <div class="step-card">
+            <span class="title">Sessions</span>
+            <span class="desc">Log a surf, history, progress and weekly goals</span>
+        </div>
+        <div class="step-card">
+            <span class="title">Community</span>
+            <span class="desc">Recent local sessions, surfers nearby, spot chatter</span>
+        </div>
+        <div class="step-card">
+            <span class="title">Train</span>
+            <span class="desc">Surf-specific workouts, breathwork, recovery</span>
+        </div>
+    </div>
+    <p class="content-body">Discover sits first because it carries the primary problem. Train is reachable but deliberately last — the structure itself demotes fitness.</p>
+
+    <h4 class="content-subtitle">The flow that mattered most</h4>
+    <p class="content-body">Open Eddy → Check conditions → Recommended spot → View spot detail → <strong>Decide: surf or not</strong>.</p>
+
+<h4 class="content-subtitle">Three interface decisions</h4>
+    <div class="finding-list">
+        <div class="finding-row">
+            <p class="finding">Surfers could read the numbers but not the verdict — swell, period and wind mean little to a developing surfer.</p>
+            <p class="so"><span>Decision</span> Lead every spot with a plain-language suitability line for that surfer, and keep the raw conditions underneath for those who want them.</p>
+        </div>
+        <div class="finding-row">
+            <p class="finding">Recent sessions from local surfers were described as more trustworthy than a forecast.</p>
+            <p class="so"><span>Decision</span> Put community activity inside the spot card instead of in a separate feed, so social proof arrives at the moment of the decision.</p>
+        </div>
+        <div class="finding-row">
+            <p class="finding">Testers found some screens dense — too many things competing to be read first.</p>
+            <p class="so"><span>Decision</span> Cut secondary metrics from the first view and let one recommendation lead, with detail one tap away.</p>
+        </div>
     </div>
 
-    <div class="content-section" id="design-process">
-        <h3 class="content-heading">Design Process</h3>
-        <p class="content-body">Your content here...</p>
+    
+    <div class="dark-block">
+        <div class="content-heading-dk">Personalisation concept — AI/ML</div>
+        <p class="content-body-large">Eddy is a prototype, not a trained model. What I designed is the interaction such a model would make possible.</p>
+        <p>Inputs it would use: skill level, board type, previous sessions, stated goals, live surf conditions and nearby community activity. What the surfer would see: "This spot may be too advanced for you today." "This matches your surfing style."</p>
     </div>
+</section>
 
-    <div class="content-section" id="usability-testing">
+    <section class="content-section" id="usability-testing" data-nav-label="Usability Testing">
         <h3 class="content-heading">Usability Testing</h3>
         <p class="content-body">Your content here...</p>
-    </div>
+    </section>
 
-    <div class="content-section" id="reflections">
+    <section class="content-section" id="reflection" data-nav-label="Reflection">
         <h3 class="content-heading">Reflections</h3>
         <p class="content-body">Your content here...</p>
-    </div>
+    </section>
 
 </main>
-    </div>
-        </section>
-            <div id="footer-placeholder"></div>
-    <script src="/components/footer.js"></script>
+</section>
+<div id="footer-placeholder"></div>
+<script src="/components/footer.js" defer></script>
 </body>
 </html>
-

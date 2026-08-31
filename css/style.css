@@ -282,8 +282,8 @@ nav{
 /* SHARED CARD STYLES */
 .project-card-large,.project-card-small,.project-card-seemore {
     display: block;           /* makes <a> tag behave like a div */
-    text-decoration: none;    /* removes underline from link */
-    color: var(--black);      /* keeps text black */
+    text-decoration: none;    
+    color: var(--black);      
     background: var(--white);
     border: 1px solid var(--border);
     border-radius: 16px;
