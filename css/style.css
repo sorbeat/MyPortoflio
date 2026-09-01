@@ -193,7 +193,7 @@ nav{
     background: var(--gray);
     color: var(--white);
     padding: 8px 12px;
-    border-radius: var(--r-pill);
+    border-radius: 12px;
     font-size: var(--fs-heading);
 }
 

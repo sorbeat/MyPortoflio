@@ -3,8 +3,7 @@ document.getElementById('nav-placeholder').innerHTML = `
     <a href="/index.html" class="logo">Sebastianhar</a>
     <ul class="nav-links">
         <li><a href="/index.html#about">About</a></li>
-        <li><a href="/index.html#projects">My work</a></li>
-        <li><a href="/index.html#contact" class="btn-nav">Get in Touch</a></li>
-    </ul>
+        <li><a href="/index.html#mywork">My Work</a></li>
+        <li><a href="#contact" class="btn-nav">Get in Touch</a></li>    </ul>
     </nav>
 `;
