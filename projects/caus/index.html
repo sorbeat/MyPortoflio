@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Project Name] - Sebastian Harris</title>
+    <title>Caus. - Sebastian Harris</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/project.css">
-    <!-- <link rel="stylesheet" href="/projects/[project]/project-[name].css"> only if this project truly needs one-off styles -->
     <script src="/components/sidebar-scroll.js" defer></script>
 </head>
 <body>
@@ -19,12 +18,13 @@
 <section class="project-hero">
     <h1 class="project-name">Caus.</h1>
     <div class="project-tags">
-        <span class="tag">UX/UI design</span>
-        <span class="tag">Project</span>
+        <span class="tag">UX/UI Design</span>
+        <span class="tag">Mobile App</span>
+        <span class="tag">School Project</span>
     </div>
 
     <div class="project-hero-img">
-        <img src="/projects/caus/images/Multicards-caus.png" alt="[Describe the image]">
+        <img src="/projects/caus/images/Multicards-caus.png" alt="Caus. app screens shown across multiple cards">
     </div>
 
     <div class="project-meta">
@@ -40,7 +40,7 @@
 <section class="project-layout" id="project-info">
 
 <aside class="project-sidebar">
-    <a href="/index.html#projects" class="back-link">Back</a>
+    <a href="/index.html#mywork" class="back-link" onclick="event.preventDefault(); history.back();">Back</a>    
     <div class="sidebar-nav">
         <div class="sidebar-progress">
             <div class="sidebar-progress-fill"></div>
@@ -51,36 +51,44 @@
 
 <main class="project-content">
 
-    <!-- Optional pivot/turning-point statement — delete this block if this project didn't have one -->
     <div class="dark-block">
-        <div class="content-heading-dk">[Optional label]</div>
-        <p class="content-body-large">[The one-sentence turning point in the project, if there was one.]</p>
-        <p>[Follow-up context.]</p>
+        <p class="content-body-large">How do South African political memes use visuals and language to resist and challenge dominant digital narratives?</p>
     </div>
 
     <section class="content-section" id="design-brief" data-nav-label="Design Brief">
         <h3 class="content-heading">01 — Design Brief</h3>
         <h2 class="content-title">What am I designing?</h2>
-        <p class="content-body">This module takes our RP300 research and turns it into a digital 
-        product that responds to the issues we identified. We begin with blue-sky discussions, 
-        then create a proposal and a clear project plan, spatial interaction, or wearables to push beyond 
-        conventional design and create more human-centred digital experiences.</p>
+        <p class="content-body">This module takes the research from RP300 and turns it into a digital product that responds to the issues identified in it. It begins with blue-sky discussion, then moves into a proposal and a clear project plan before any design work starts.</p>
+        <!-- NOTE: the original brief text you had was garbled between "project plan" and
+            "spatial interaction, or wearables" — a clause is missing. Paste the original
+            wording and I'll restore the full sentence. -->
 
-        <!-- Example: two-column info-card grid — delete if not needed -->
-        <div class="card-grid-2">
+        <p class="content-body">My RP300 paper, <em>Meme Culture and Digital Resistance in South Africa: Visualizing Political and Social Activism in the Digital Age</em>, asked how South African political memes use visuals and language to resist and challenge dominant digital narratives. Caus. is the attempt to build something out of that question rather than only write about it.</p>
+
+        <h4 class="content-subtitle">The theory it's built on</h4>
+
+        <div class="card-grid-3">
             <div class="info-card">
-                <div class="content-heading">The module asked for</div>
+                <div class="content-heading">Shifman</div>
                 <ul>
-                    <li>Point</li>
+                    <li>Memes are cultural artefacts, not just images</li>
+                    <li>They spread through imitation, remix and participation</li>
+                    <li>Humour becomes political commentary</li>
                 </ul>
             </div>
             <div class="info-card">
-                <div class="content-heading">What I Used</div>
+                <div class="content-heading">Mirzoeff</div>
                 <ul>
-                    <li>Point</li>
-                    <li>Point</li>
-                    <li>Point</li>
-                    <li>Point</li>
+                    <li>Countervisuality — "the right to look"</li>
+                    <li>Memes become counter-visual tools</li>
+                    <li>Reclaiming the power to represent political events</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <div class="content-heading">Amanda du Preez</div>
+                <ul>
+                    <li>Writes about affect, visibility and postcolonial digital culture in South Africa</li>
+                    <li>Explains why memes in SA hit so hard</li>
                 </ul>
             </div>
         </div>
@@ -89,14 +97,28 @@
     <section class="content-section" id="approach" data-nav-label="Approach">
         <h3 class="content-heading">02 — Approach</h3>
         <h2 class="content-title">How did I approach the problem?</h2>
-        <p class="content-body">Your content here...</p>
+        <p class="content-body">Eight weeks, worked through in sequence — but I let the research overturn the framing rather than treating the concept as settled. The survey in the middle of the project changed what the app was for.</p>
 
-        <!-- Example: step-card process grid — delete or resize if not needed -->
         <div class="card-grid-4">
             <div class="step-card">
                 <span class="index">01</span>
-                <span class="title">[Step]</span>
-                <span class="desc">[Short description]</span>
+                <span class="title">Framing</span>
+                <span class="desc">Moodboard, first personas, SWOT analysis</span>
+            </div>
+            <div class="step-card">
+                <span class="index">02</span>
+                <span class="title">Research</span>
+                <span class="desc">Survey, empathy map, competitor analysis</span>
+            </div>
+            <div class="step-card">
+                <span class="index">03</span>
+                <span class="title">Structure</span>
+                <span class="desc">Information architecture, user flows, rough sketches</span>
+            </div>
+            <div class="step-card">
+                <span class="index">04</span>
+                <span class="title">Interface</span>
+                <span class="desc">Style guide, wireframes, high-fidelity screens</span>
             </div>
         </div>
     </section>
@@ -104,13 +126,55 @@
     <section class="content-section" id="research" data-nav-label="Research">
         <h3 class="content-heading">03 — Research</h3>
         <h2 class="content-title">What did I discover?</h2>
-        <p class="content-body">Your content here...</p>
+        <p class="content-body">I ran a survey of 21 people, mostly aged 18–24, alongside an empathy map and an audit of two existing platforms. I wanted to know two things: whether people actually treat memes as political, and whether anything happens after they share one.</p>
 
-        <!-- Example: stat-card grid — delete if not needed -->
+        <p class="content-body">The first question answered itself quickly. 81% had shared or seen a meme about a political or social issue, roughly 45% share memes daily, and 81% thought memes were an effective way to spread awareness. Motivation split between entertaining or provoking thought (47.6%) and criticising or satirising something (33.3%). The second question is where it got interesting.</p>
+
         <div class="card-grid-3">
             <div class="stat-card">
-                <span class="number">[X/X]</span>
-                <span class="desc">[What the stat means]</span>
+                <span class="number">81%</span>
+                <span class="desc">said memes are an effective way to spread awareness about social issues</span>
+            </div>
+            <div class="stat-card">
+                <span class="number">52.4%</span>
+                <span class="desc">did not believe memes could get politically disengaged people to take action</span>
+            </div>
+            <div class="stat-card">
+                <span class="number">61.9%</span>
+                <span class="desc">had never attended a protest they first heard about online</span>
+            </div>
+        </div>
+
+        <p class="content-body">So the audience believed in the reach and doubted the outcome. What did move people was specific: 57.1% said they'd take real-world action if it was an issue they already cared about, 19% if the meme came from a source they trusted, and 14.3% if taking part felt safe and accessible. 55% said they would attend an in-person event that started as an online meme campaign — which sits oddly against the 61.9% who never had. The intent is there; something in between is missing.</p>
+
+        <h4 class="content-subtitle">What the empathy map surfaced</h4>
+        <!-- IMAGE NEEDED: empathy map export → /projects/caus/images/empathy-map.png -->
+
+        <p class="content-body">Humour is the gateway — people engage with causes when it doesn't feel preachy. But the pains clustered tightly: activism feeling performative, information overload as causes compete for attention, uncertainty about whether a meme or the campaign behind it is credible, and no clear route from an online reaction to an offline one.</p>
+
+        <h4 class="content-subtitle">Competitor analysis</h4>
+        <!-- IMAGE NEEDED: competitor analysis boards → /projects/caus/images/competitor-analysis.png -->
+
+        <p class="content-body">I looked at Global Citizen and Ground News. Global Citizen already blends activism with entertainment and rewards participation with points, but its navigation — Festival, For You, Discover, Goals &amp; Journeys — is vague and overlapping, and points appear everywhere without explaining what they convert into.</p>
+
+        <p class="content-body">Ground News was the more useful failure. It exposes media bias brilliantly by showing left, centre and right coverage side by side, which is a genuinely counter-visual move. But the bias meter is passive: it tells you the split without explaining how the narratives differ. It's a dashboard, not a conversation. News is observed, never co-created — the exact opposite of how meme culture works, where critique becomes shared authorship. That contrast defined what Caus. needed to be.</p>
+
+        <div class="finding-list">
+            <div class="finding-row">
+                <p class="finding">People believe memes raise awareness but doubt they produce action.</p>
+                <p class="so"><span>Decision</span> Every meme in the app links directly to the campaign, petition or protest behind it, so the action is one tap from the joke.</p>
+            </div>
+            <div class="finding-row">
+                <p class="finding">Ground News shows you bias but gives you nowhere to respond to it.</p>
+                <p class="so"><span>Decision</span> A remix page sits at the centre of the product — users download, edit and repost memes, making participation part of consuming.</p>
+            </div>
+            <div class="finding-row">
+                <p class="finding">Analytics was the single most requested feature (52%), and users said they couldn't tell whether their posts mattered.</p>
+                <p class="so"><span>Decision</span> Post reach and engagement surface on the profile, so impact is visible rather than assumed.</p>
+            </div>
+            <div class="finding-row">
+                <p class="finding">Global Citizen's tab names didn't communicate what was inside them.</p>
+                <p class="so"><span>Decision</span> Four plainly named sections — Meme, Did You Know, Connection, Movement.</p>
             </div>
         </div>
     </section>
@@ -118,8 +182,116 @@
     <section class="content-section" id="persona" data-nav-label="Persona">
         <h3 class="content-heading"></h3>
         <h2 class="content-title">Who are the users?</h2>
-        <p class="content-body">Your content here...</p>
-        <!-- Copy the .persona-card markup from eddy/index.html if this project uses personas -->
+        <p class="content-body">Three users, chosen because they sit at different distances from the problem: someone fluent in meme culture but stuck at reposting, someone sceptical of it, and an organisation that needs the reach but can't produce the content.</p>
+
+        <!-- NOTE: markup below uses the persona classes I have on record. If Eddy's
+            persona-card structure changed during the rebuild, send it and I'll re-fit. -->
+        <!-- IMAGE NEEDED: three persona portraits →
+            /projects/caus/images/persona-kayla.png
+            /projects/caus/images/persona-mark.png
+            /projects/caus/images/persona-growth-foundation.png -->
+
+        <p class="persona-label">Primary</p>
+        <div class="persona-card">
+            <div class="persona-avatar">
+                <img src="/projects/caus/images/persona-kayla.png" alt="Kayla Alex persona portrait">
+            </div>
+            <div class="persona-details">
+                <h4 class="persona-name">Kayla Alex, 20</h4>
+                <ul class="persona-meta">
+                    <li>Digital Media Student</li>
+                    <li>BA in Computer Science</li>
+                    <li>Single</li>
+                    <li>England</li>
+                </ul>
+            </div>
+            <div class="persona-info">
+                <div class="persona-block">
+                    <h5 class="persona-subhead">Frustrations</h5>
+                    <ul>
+                        <li>Activism can feel overwhelming or performative</li>
+                        <li>Unsure what's real or trustworthy online</li>
+                        <li>Protest organising is scattered across multiple apps</li>
+                    </ul>
+                </div>
+                <div class="persona-block">
+                    <h5 class="persona-subhead">Goals</h5>
+                    <ul>
+                        <li>Express opinions and raise awareness creatively</li>
+                        <li>Be part of social movements without feeling pressured</li>
+                        <li>Measure impact — who saw or engaged with her post</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p class="persona-label">Secondary</p>
+        <div class="persona-card">
+            <div class="persona-avatar">
+                <img src="/projects/caus/images/persona-mark.png" alt="Mark Ace persona portrait">
+            </div>
+            <div class="persona-details">
+                <h4 class="persona-name">Mark Ace, 48</h4>
+                <ul class="persona-meta">
+                    <li>Dance Teacher</li>
+                    <li>Management</li>
+                    <li>Married</li>
+                    <li>Cape Town</li>
+                </ul>
+            </div>
+            <div class="persona-info">
+                <div class="persona-block">
+                    <h5 class="persona-subhead">Frustrations</h5>
+                    <ul>
+                        <li>Finds memes confusing or disrespectful toward serious issues</li>
+                        <li>Doesn't engage on newer platforms like TikTok</li>
+                        <li>Sceptical of online movements without visible action</li>
+                    </ul>
+                </div>
+                <div class="persona-block">
+                    <h5 class="persona-subhead">Goals</h5>
+                    <ul>
+                        <li>Understand youth perspectives and connect with them</li>
+                        <li>See social causes communicated respectfully</li>
+                        <li>Promote credible information and civic responsibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <p class="persona-label">Organisation</p>
+        <div class="persona-card">
+            <div class="persona-avatar">
+                <img src="/projects/caus/images/persona-growth-foundation.png" alt="Growth Foundation organisation persona">
+            </div>
+            <div class="persona-details">
+                <h4 class="persona-name">Growth Foundation</h4>
+                <ul class="persona-meta">
+                    <li>Small community-based organisation</li>
+                    <li>5–10 members</li>
+                    <li>Environmental and social justice campaigns</li>
+                    <li>Cape Town</li>
+                </ul>
+            </div>
+            <div class="persona-info">
+                <div class="persona-block">
+                    <h5 class="persona-subhead">Frustrations</h5>
+                    <ul>
+                        <li>Lacks digital marketing and meme-creation skills</li>
+                        <li>Hard to stay visible against large NGOs</li>
+                        <li>Uncertain how to engage meme-savvy youth authentically</li>
+                    </ul>
+                </div>
+                <div class="persona-block">
+                    <h5 class="persona-subhead">Goals</h5>
+                    <ul>
+                        <li>Reach and mobilise youth through online campaigns</li>
+                        <li>Track post reach and engagement</li>
+                        <li>Turn online awareness into real-world participation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="content-section" id="defining-problems" data-nav-label="Defining Problems">
@@ -128,67 +300,5 @@
 
         <div class="dark-block">
             <div class="content-heading-dk">Primary problem</div>
-            <p class="content-body-large">Your content here...</p>
-        </div>
-
-        <div class="card-grid-2">
-            <div class="info-card">
-                <div class="content-heading">Supporting problem 01</div>
-                <p class="content-body">Your content here...</p>
-            </div>
-            <div class="info-card">
-                <div class="content-heading">Supporting problem 02</div>
-                <p class="content-body">Your content here...</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-section" id="ideation" data-nav-label="Ideation">
-        <h3 class="content-heading">05 — Ideation</h3>
-        <h2 class="content-title">What solutions did I explore?</h2>
-        <p class="content-body">Your content here...</p>
-
-        <div class="card-grid-3">
-            <div class="step-card">
-                <span class="title">[Opportunity area]</span>
-                <span class="desc">[Short description]</span>
-            </div>
-            <div class="step-card is-chosen">
-                <span class="index">Direction chosen</span>
-                <span class="title">[The direction you picked]</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-section" id="design-process" data-nav-label="Design Process">
-        <h3 class="content-heading">06 — Design Process</h3>
-        <h2 class="content-title">How did I turn ideas into an interface?</h2>
-        <p class="content-body">Your content here...</p>
-
-        <h4 class="content-subtitle">[Sub-heading]</h4>
-
-        <!-- Example: evidence → decision pairs — reuses .finding-list -->
-        <div class="finding-list">
-            <div class="finding-row">
-                <p class="finding">[What you learned]</p>
-                <p class="so"><span>Decision</span> [What you did about it]</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-section" id="usability-testing" data-nav-label="Usability Testing">
-        <h3 class="content-heading">Usability Testing</h3>
-        <p class="content-body">Your content here...</p>
-    </section>
-
-    <section class="content-section" id="reflection" data-nav-label="Reflection">
-        <h3 class="content-heading">Reflection</h3>
-        <p class="content-body">Your content here...</p>
-    </section>
-
-</main>
-</section>
-<div id="footer-placeholder"></div>
-<script src="/components/footer.js" defer></script>
-</body>
-</html>
+            <p class="content-body-large">Memes spread awareness, but they rarely lead to real action.</p>
+            <p>A meme can reach more people faster than a news article, and the audience knows it. What's missing is the step after the share —

@@ -155,7 +155,7 @@ p {
 .content-subtitle{
     font-family: var(--font-body);
     font-size: 24px;
-    ;
+    margin-bottom: 12px;
 }
 .content-body{
     font-size: 24px;
