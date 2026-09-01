@@ -27,14 +27,6 @@ p {
     right: 64px;
     gap: 12px;
 }
-.tag{
-    display: inline-block;
-    background: var(--gray);
-    color: var(--white);
-    padding: 8px 12px;
-    border-radius: 10px;
-    font-size: 24px;
-}
 /* Hero image */
 .project-hero-img {
     width: 100%;

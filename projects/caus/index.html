@@ -3,103 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caus. - Sebastian Harris</title>
+    <title>[Project Name] - Sebastian Harris</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/project.css">
-    
+    <!-- <link rel="stylesheet" href="/projects/[project]/project-[name].css"> only if this project truly needs one-off styles -->
+    <script src="/components/sidebar-scroll.js" defer></script>
 </head>
 <body>
 
 <!--nav bar-->
 <div id="nav-placeholder"></div>
-<script src="/components/nav.js"></script>
+<script src="/components/nav.js" defer></script>
 
-    <!--Hero Section-->
-<section class="project-hero" >
+<!--Hero Section-->
+<section class="project-hero">
     <h1 class="project-name">Caus.</h1>
     <div class="project-tags">
-        <span class="tag">UX/UI Design</span>
-        <span class="tag">Mobile App</span>
+        <span class="tag">UX/UI design</span>
+        <span class="tag">Project</span>
     </div>
 
     <div class="project-hero-img">
-        <img src="/projects/caus/images/Multicards-caus.png" alt="Caus.-mockups">
+        <img src="/projects/caus/images/Multicards-caus.png" alt="[Describe the image]">
     </div>
 
-<div class="project-meta">
+    <div class="project-meta">
         <span class="meta-duration">Duration: 8 Weeks</span>
         <div class="meta-tools">
-        <span>Tools:</span>
+            <span>Tools:</span>
             <img src="/assets/icons/Figma.png" alt="Figma" class="tool-icon">
             <img src="/assets/icons/Forms.png" alt="Forms" class="tool-icon">
         </div>
     </div>
 </section>
 
-
 <section class="project-layout" id="project-info">
 
 <aside class="project-sidebar">
-    <a href="/index.html#projects" class="back-link">Back</a> <!--icon-->
-        <div class="sidebar-links">
-                <a href="#design-brief">Design Brief</a>
-                <a href="#approach">Approach</a>
-                <a href="#research">Research</a>
-                <a href="#defining-problems">Defining Problems</a>
-                <a href="#ideation">Ideation</a>
-                <a href="#design-process">Design Process</a>
-                <a href="#usability-testing">Usability Testing</a>
-                <a href="#reflection">Reflection</a>
+    <a href="/index.html#projects" class="back-link">Back</a>
+    <div class="sidebar-nav">
+        <div class="sidebar-progress">
+            <div class="sidebar-progress-fill"></div>
         </div>
+        <div class="sidebar-links"></div>
+    </div>
 </aside>
 
-
 <main class="project-content">
-    <div class="content-section" id="design-brief">
-        <h3 class="content-heading">Design Brief</h3>
-        <p class="content-body">This module takes our RP300 research and turns it into a digital product that responds to the issues we identified. We begin with blue-sky discussions, then create a proposal and a clear project plan, spatial interaction, or wearables to push beyond conventional design and create more human-centred digital experiences.</p>
+
+    <!-- Optional pivot/turning-point statement — delete this block if this project didn't have one -->
+    <div class="dark-block">
+        <div class="content-heading-dk">[Optional label]</div>
+        <p class="content-body-large">[The one-sentence turning point in the project, if there was one.]</p>
+        <p>[Follow-up context.]</p>
     </div>
 
-    <div class="content-section" id="approach">
-        <h3 class="content-heading">ApproachSS</h3>
-        <p class="content-body">Meme-driven social app that encourages discussion, awareness, and collective action through humour and shared interests platform </p>
-    </div>
+    <section class="content-section" id="design-brief" data-nav-label="Design Brief">
+        <h3 class="content-heading">01 — Design Brief</h3>
+        <h2 class="content-title">What am I designing?</h2>
+        <p class="content-body">This module takes our RP300 research and turns it into a digital 
+        product that responds to the issues we identified. We begin with blue-sky discussions, 
+        then create a proposal and a clear project plan, spatial interaction, or wearables to push beyond 
+        conventional design and create more human-centred digital experiences.</p>
 
-    <div class="content-section" id="research">
-        <h3 class="content-heading">Persona</h3>
+        <!-- Example: two-column info-card grid — delete if not needed -->
+        <div class="card-grid-2">
+            <div class="info-card">
+                <div class="content-heading">The module asked for</div>
+                <ul>
+                    <li>Point</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <div class="content-heading">What I Used</div>
+                <ul>
+                    <li>Point</li>
+                    <li>Point</li>
+                    <li>Point</li>
+                    <li>Point</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="approach" data-nav-label="Approach">
+        <h3 class="content-heading">02 — Approach</h3>
+        <h2 class="content-title">How did I approach the problem?</h2>
         <p class="content-body">Your content here...</p>
-    </div>
 
-    <div class="content-section" id="defining-problems">
-        <h3 class="content-heading">Defining Problems</h3>
+        <!-- Example: step-card process grid — delete or resize if not needed -->
+        <div class="card-grid-4">
+            <div class="step-card">
+                <span class="index">01</span>
+                <span class="title">[Step]</span>
+                <span class="desc">[Short description]</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="research" data-nav-label="Research">
+        <h3 class="content-heading">03 — Research</h3>
+        <h2 class="content-title">What did I discover?</h2>
         <p class="content-body">Your content here...</p>
-    </div>
 
-    <div class="content-section" id="ideate">
-        <h3 class="content-heading">Ideate</h3>
-        <p class="content-body">Your content here...</p>       
-    </div>
+        <!-- Example: stat-card grid — delete if not needed -->
+        <div class="card-grid-3">
+            <div class="stat-card">
+                <span class="number">[X/X]</span>
+                <span class="desc">[What the stat means]</span>
+            </div>
+        </div>
+    </section>
 
-    <div class="content-section" id="design-process">
-        <h3 class="content-heading">Design Process</h3>
+    <section class="content-section" id="persona" data-nav-label="Persona">
+        <h3 class="content-heading"></h3>
+        <h2 class="content-title">Who are the users?</h2>
         <p class="content-body">Your content here...</p>
-    </div>
+        <!-- Copy the .persona-card markup from eddy/index.html if this project uses personas -->
+    </section>
 
-    <div class="content-section" id="usability-testing">
+    <section class="content-section" id="defining-problems" data-nav-label="Defining Problems">
+        <h3 class="content-heading">04 — Defining Problems</h3>
+        <h2 class="content-title">What problems did I identify?</h2>
+
+        <div class="dark-block">
+            <div class="content-heading-dk">Primary problem</div>
+            <p class="content-body-large">Your content here...</p>
+        </div>
+
+        <div class="card-grid-2">
+            <div class="info-card">
+                <div class="content-heading">Supporting problem 01</div>
+                <p class="content-body">Your content here...</p>
+            </div>
+            <div class="info-card">
+                <div class="content-heading">Supporting problem 02</div>
+                <p class="content-body">Your content here...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="ideation" data-nav-label="Ideation">
+        <h3 class="content-heading">05 — Ideation</h3>
+        <h2 class="content-title">What solutions did I explore?</h2>
+        <p class="content-body">Your content here...</p>
+
+        <div class="card-grid-3">
+            <div class="step-card">
+                <span class="title">[Opportunity area]</span>
+                <span class="desc">[Short description]</span>
+            </div>
+            <div class="step-card is-chosen">
+                <span class="index">Direction chosen</span>
+                <span class="title">[The direction you picked]</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="design-process" data-nav-label="Design Process">
+        <h3 class="content-heading">06 — Design Process</h3>
+        <h2 class="content-title">How did I turn ideas into an interface?</h2>
+        <p class="content-body">Your content here...</p>
+
+        <h4 class="content-subtitle">[Sub-heading]</h4>
+
+        <!-- Example: evidence → decision pairs — reuses .finding-list -->
+        <div class="finding-list">
+            <div class="finding-row">
+                <p class="finding">[What you learned]</p>
+                <p class="so"><span>Decision</span> [What you did about it]</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="usability-testing" data-nav-label="Usability Testing">
         <h3 class="content-heading">Usability Testing</h3>
         <p class="content-body">Your content here...</p>
-    </div>
+    </section>
 
-    <div class="content-section" id="reflections">
-        <h3 class="content-heading">Reflections</h3>
+    <section class="content-section" id="reflection" data-nav-label="Reflection">
+        <h3 class="content-heading">Reflection</h3>
         <p class="content-body">Your content here...</p>
-    </div>
+    </section>
 
 </main>
-    </div>
-        </section>
-            <div id="footer-placeholder"></div>
-    <script src="/components/footer.js"></script>
+</section>
+<div id="footer-placeholder"></div>
+<script src="/components/footer.js" defer></script>
 </body>
 </html>
-
