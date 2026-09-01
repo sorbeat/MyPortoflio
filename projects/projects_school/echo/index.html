@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Project Name] - Sebastian Harris</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/project.css">
+    <!-- <link rel="stylesheet" href="/projects/[project]/project-[name].css"> only if this project truly needs one-off styles -->
+    <script src="/components/sidebar-scroll.js" defer></script>
+</head>
+<body>
+
+<!--nav bar-->
+<div id="nav-placeholder"></div>
+<script src="/components/nav.js" defer></script>
+
+<!--Hero Section-->
+<section class="project-hero">
+    <h1 class="project-name">[Project Name]</h1>
+    <div class="project-tags">
+        <span class="tag">[Tag 1]</span>
+        <span class="tag">[Tag 2]</span>
+    </div>
+
+    <div class="project-hero-img">
+        <img src="/projects/[project]/images/[hero-image].png" alt="[Describe the image]">
+    </div>
+
+    <div class="project-meta">
+        <span class="meta-duration">Duration: [X Weeks]</span>
+        <div class="meta-tools">
+            <span>Tools:</span>
+            <img src="/assets/icons/Figma.png" alt="Figma" class="tool-icon">
+            <img src="/assets/icons/Forms.png" alt="Forms" class="tool-icon">
+        </div>
+    </div>
+</section>
+
+<section class="project-layout" id="project-info">
+
+<aside class="project-sidebar">
+    <a href="/index.html#mywork" class="back-link" onclick="event.preventDefault(); history.back();">Back</a>    
+    <div class="sidebar-nav">
+        <div class="sidebar-progress">
+            <div class="sidebar-progress-fill"></div>
+        </div>
+        <div class="sidebar-links"></div>
+    </div>
+</aside>
+
+<main class="project-content">
+
+    <!-- Optional pivot/turning-point statement — delete this block if this project didn't have one -->
+    <div class="dark-block">
+        <div class="content-heading-dk">[Optional label]</div>
+        <p class="content-body-large">[The one-sentence turning point in the project, if there was one.]</p>
+        <p>[Follow-up context.]</p>
+    </div>
+
+    <section class="content-section" id="design-brief" data-nav-label="Design Brief">
+        <h3 class="content-heading">01 — Design Brief</h3>
+        <h2 class="content-title">What am I designing?</h2>
+        <p class="content-body">Your content here...</p>
+
+        <!-- Example: two-column info-card grid — delete if not needed -->
+        <div class="card-grid-2">
+            <div class="info-card">
+                <div class="content-heading">[Heading]</div>
+                <ul>
+                    <li>Point</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <div class="content-heading">[Heading]</div>
+                <ul>
+                    <li>Point</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="approach" data-nav-label="Approach">
+        <h3 class="content-heading">02 — Approach</h3>
+        <h2 class="content-title">How did I approach the problem?</h2>
+        <p class="content-body">Your content here...</p>
+
+        <!-- Example: step-card process grid — delete or resize if not needed -->
+        <div class="card-grid-4">
+            <div class="step-card">
+                <span class="index">01</span>
+                <span class="title">[Step]</span>
+                <span class="desc">[Short description]</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="research" data-nav-label="Research">
+        <h3 class="content-heading">03 — Research</h3>
+        <h2 class="content-title">What did I discover?</h2>
+        <p class="content-body">Your content here...</p>
+
+        <!-- Example: stat-card grid — delete if not needed -->
+        <div class="card-grid-3">
+            <div class="stat-card">
+                <span class="number">[X/X]</span>
+                <span class="desc">[What the stat means]</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="persona" data-nav-label="Persona">
+        <h3 class="content-heading"></h3>
+        <h2 class="content-title">Who are the users?</h2>
+        <p class="content-body">Your content here...</p>
+        <!-- Copy the .persona-card markup from eddy/index.html if this project uses personas -->
+    </section>
+
+    <section class="content-section" id="defining-problems" data-nav-label="Defining Problems">
+        <h3 class="content-heading">04 — Defining Problems</h3>
+        <h2 class="content-title">What problems did I identify?</h2>
+
+        <div class="dark-block">
+            <div class="content-heading-dk">Primary problem</div>
+            <p class="content-body-large">Your content here...</p>
+        </div>
+
+        <div class="card-grid-2">
+            <div class="info-card">
+                <div class="content-heading">Supporting problem 01</div>
+                <p class="content-body">Your content here...</p>
+            </div>
+            <div class="info-card">
+                <div class="content-heading">Supporting problem 02</div>
+                <p class="content-body">Your content here...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="ideation" data-nav-label="Ideation">
+        <h3 class="content-heading">05 — Ideation</h3>
+        <h2 class="content-title">What solutions did I explore?</h2>
+        <p class="content-body">Your content here...</p>
+
+        <div class="card-grid-3">
+            <div class="step-card">
+                <span class="title">[Opportunity area]</span>
+                <span class="desc">[Short description]</span>
+            </div>
+            <div class="step-card is-chosen">
+                <span class="index">Direction chosen</span>
+                <span class="title">[The direction you picked]</span>
+            </div>
+        </div>
+        <h4 class ="content-subtitle">How I prioritised </h4>
+    <div class="priority-table">
+        <div class="priority-row head">
+            <span>Opportunity</span>
+            <span>Evidence behind it</span>
+            <span>Decision</span></div>
+            <div class="priority-row">
+                <span class="opportunity"></span>
+                <span class="evidence"></span>
+                <span class="decision-tag core"></span>
+            </div>
+            <div class="priority-row">
+                <span class="opportunity"></span>
+                <span class="evidence"></span>
+                <span class="decision-tag core"></span>
+            </div>
+            <div class="priority-row">
+                <span class="opportunity"></span>
+                <span class="evidence"></span>
+                <span class="decision-tag core"></span>
+            </div>
+            <div class="priority-row">
+                <span class="opportunity"></span>
+                <span class="evidence"></span>
+                <span class="decision-tag supporting"></span>
+            </div>
+            <div class="priority-row">
+                <span class="opportunity"></span>
+                <span class="evidence"></span>
+                <span class="decision-tag supporting"></span>
+            </div>
+            <div class="priority-row">
+                <span class="opportunity"></span>
+                <span class="evidence"></span>
+                <span class="decision-tag parked"></span>
+            </div>
+        </div>
+</section>
+    </section>
+
+    <section class="content-section" id="design-process" data-nav-label="Design Process">
+        <h3 class="content-heading">06 — Design Process</h3>
+        <h2 class="content-title">How did I turn ideas into an interface?</h2>
+        <p class="content-body">Your content here...</p>
+
+        <h4 class="content-subtitle">[Sub-heading]</h4>
+
+        <!-- Example: evidence → decision pairs — reuses .finding-list -->
+        <div class="finding-list">
+            <div class="finding-row">
+                <p class="finding">[What you learned]</p>
+                <p class="so"><span>Decision</span> [What you did about it]</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="usability-testing" data-nav-label="Usability Testing">
+        <h3 class="content-heading">Usability Testing</h3>
+        <p class="content-body">Your content here...</p>
+    </section>
+
+    <section class="content-section" id="reflection" data-nav-label="Reflection">
+        <h3 class="content-heading">Reflection</h3>
+        <p class="content-body">Your content here...</p>
+    </section>
+
+</main>
+</section>
+<div id="footer-placeholder"></div>
+<script src="/components/footer.js" defer></script>
+</body>
+</html>

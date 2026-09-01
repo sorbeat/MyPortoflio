@@ -301,4 +301,121 @@
         <div class="dark-block">
             <div class="content-heading-dk">Primary problem</div>
             <p class="content-body-large">Memes spread awareness, but they rarely lead to real action.</p>
-            <p>A meme can reach more people faster than a news article, and the audience knows it. What's missing is the step after the share —
+            <p>A meme can reach more people faster than a news article, and the audience knows it. What's missing is the step after the share — nothing in the platforms people already use connects a meme to the campaign, petition or event it's actually about.</p>
+        </div>
+
+        <div class="card-grid-2">
+            <div class="info-card">
+                <div class="content-heading">Supporting problem 01 — Trust</div>
+                <p class="content-body">People are uncertain whether a meme, or the campaign behind it, is credible. 19% said they'd only act on something from a trusted source, and "unsure what's real online" appeared across both the empathy map and the personas.</p>
+            </div>
+            <div class="info-card">
+                <div class="content-heading">Supporting problem 02 — Fragmentation</div>
+                <p class="content-body">Organising is scattered across multiple apps, and causes rotate fast — yesterday's issue is old news before anyone turns up to anything. There's no single place where a cause, its content and its events sit together.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="ideation" data-nav-label="Ideation">
+        <h3 class="content-heading">05 — Ideation</h3>
+        <h2 class="content-title">What solutions did I explore?</h2>
+        <p class="content-body">I explored the features people actually asked for in the survey rather than the ones I found most interesting to design. The survey's feature question gave me a ranked list to work from, and I weighted each one against whether it closed the awareness-to-action gap or just made the app busier.</p>
+
+        <div class="card-grid-3">
+            <div class="step-card">
+                <span class="title">Awareness tools</span>
+                <span class="desc">Trending feeds and educational content — good reach, but this is the part that already works</span>
+            </div>
+            <div class="step-card">
+                <span class="title">Community tools</span>
+                <span class="desc">Forums and group chats — builds the conversation, but doesn't move it offline</span>
+            </div>
+            <div class="step-card is-chosen">
+                <span class="index">Direction chosen</span>
+                <span class="title">Bind every meme to a real action</span>
+            </div>
+        </div>
+
+        <h4 class="content-subtitle">How I prioritised</h4>
+    <div class="priority-table">
+        <div class="priority-row head">
+            <span>Opportunity</span>
+            <span>Evidence behind it</span>
+            <span>Decision</span></div>
+            <div class="priority-row">
+                <span class="opportunity">Meme links to campaign, petition or protest</span>
+                <span class="evidence">57.1% would act on an issue they care about; 55% would attend an event that began online</span>
+                <span class="decision-tag core">Core</span>
+            </div>
+            <div class="priority-row">
+                <span class="opportunity">Remix and meme-creation tool</span>
+                <span class="evidence">38.1% would use a tool if it were easy; 23.8% definitely would</span>
+                <span class="decision-tag core">Core</span>
+            </div>
+            <div class="priority-row">
+                <span class="opportunity">Impact analytics</span>
+                <span class="evidence">Most requested feature at 52%; personas repeatedly asked "did this matter?"</span>
+                <span class="decision-tag core">Core</span>
+            </div>
+            <div class="priority-row">
+                <span class="opportunity">Protest map and schedule</span>
+                <span class="evidence">42.9% each; organising described as scattered across apps</span>
+                <span class="decision-tag supporting">Supporting</span>
+            </div>
+            <div class="priority-row">
+                <span class="opportunity">Forum and group chat</span>
+                <span class="evidence">38.1%; Ground News audit showed observation without co-creation</span>
+                <span class="decision-tag supporting">Supporting</span>
+            </div>
+            <div class="priority-row">
+                <span class="opportunity">Points for sharing and completing actions</span>
+                <span class="evidence">57.1% interested in gamified features, 23.8% unsure</span>
+                <span class="decision-tag supporting">Supporting</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section" id="design-process" data-nav-label="Design Process">
+        <h3 class="content-heading">06 — Design Process</h3>
+        <h2 class="content-title">How did I turn ideas into an interface?</h2>
+        <p class="content-body">The structure came before the styling. If the core idea was that a meme should always lead somewhere, the architecture had to make that path short — which meant the meme detail page became the hinge of the whole product.</p>
+
+        <h4 class="content-subtitle">Information architecture</h4>
+        <!-- IMAGE NEEDED: IA diagram → /projects/caus/images/information-architecture.png -->
+        <p class="content-body">Onboarding leads into the home page, which branches into eight areas: home feed, meme details, remix, map, profile, forum, petition and protest. Petitions and protests both link back to the meme that surfaced them, so the loop closes in both directions. Sharing or completing an action earns points.</p>
+
+        <h4 class="content-subtitle">User flows</h4>
+        <!-- IMAGE NEEDED: user flow diagram → /projects/caus/images/user-flow.png -->
+        <p class="content-body">Four flows carry the product. A user searches the feed, sees a meme's variants and remixes, opens its detail page and finds the campaign attached to it. From the meme detail they reach the protest and join it. On the map, dropped pins open protest cards. On the remix page they download the original, edit it, and post — earning points for the share.</p>
+
+        <h4 class="content-subtitle">Wireframes</h4>
+        <!-- IMAGE NEEDED: wireframe frames → /projects/caus/images/wireframes.png -->
+        <p class="content-body">Simple, low-fidelity layouts that show the basic structure and flow of the interface, without detailed design elements — enough to test whether the path from meme to action held up before committing to visuals.</p>
+
+        <h4 class="content-subtitle">Visual language</h4>
+        <!-- IMAGE NEEDED: style guide / colour and type → /projects/caus/images/style-guide.png -->
+        <p class="content-body">Bittersweet (#FF6B54) as primary against Space Cadet (#2F2E41), with Alice Blue (#ECF3F7) and Lavender (#CFDCEF) as accents. Poppins throughout. The palette had to carry humour without looking like a joke app — warm enough to feel social, dark enough that a petition doesn't look out of place next to it.</p>
+
+        <h4 class="content-subtitle">The four main screens</h4>
+        <!-- IMAGE NEEDED: main flow screens → /projects/caus/images/main-flow.png -->
+        <p class="content-body">Meme is the feed. Did You Know is discovery and context. Connection is the community layer. Movement is where campaigns, petitions and protests live. Naming them plainly was a direct response to the Global Citizen audit, where the tabs were the first thing that confused me.</p>
+    </section>
+
+    <section class="content-section" id="reflection" data-nav-label="Reflection">
+        <h3 class="content-heading">07 — Reflection</h3>
+        <h2 class="content-title">What did I learn?</h2>
+        <p class="content-body">The most useful thing that happened in this project was being contradicted by my own survey. I went in from a research paper about how memes resist dominant narratives, which had already convinced me memes were powerful. The survey agreed — and then said, by a majority, that memes wouldn't get disengaged people to act. I could have designed around that, or treated it as the brief. Taking it as the brief is what turned Caus. from a meme app into an app about the distance between reacting and doing.</p>
+
+        <p class="content-body">Ground News taught me more than the direct competitors did. It's a well-made product solving a real problem, and its weakness is structural rather than visual: it positions the user as an observer. Noticing that is what made me put remixing at the centre of Caus. rather than treating it as a side feature.</p>
+
+        <p class="content-body">What I'd change: I didn't run usability testing within the eight weeks, and that's the clearest gap in the project. The whole design rests on an untested assumption — that a link from a meme to a petition actually gets tapped. I'd also want to test whether the points system motivates people or does the opposite, since the same survey that showed 57.1% interested in gamification also showed a widespread suspicion of activism that feels performative. Rewarding shares could easily reinforce the exact behaviour the app was built to move past.</p>
+
+        <p class="content-body">I'd also want a bigger sample. 21 responses, heavily weighted toward 18–24, is enough to find a tension but not enough to size it.</p>
+    </section>
+
+</main>
+</section>
+<div id="footer-placeholder"></div>
+<script src="/components/footer.js" defer></script>
+</body>
+</html>
