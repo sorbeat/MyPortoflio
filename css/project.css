@@ -291,11 +291,16 @@ p {
 }
 /* Left — coloured avatar block */
 .persona-avatar {
-    background: var(--blue);
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 24px;
+}
+.persona-card--eddy .persona-avatar {
+    background: var(--blue)
+}
+.persona-card--caus .persona-avatar {
+    background: #FF6B54
 }
 .persona-avatar img {
     width: 100%;
