@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[Project Name] - Sebastian Harris</title>
+    <title>Echo - Sebastian Harris</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/project.css">
-    <!-- <link rel="stylesheet" href="/projects/[project]/project-[name].css"> only if this project truly needs one-off styles -->
     <script src="/components/sidebar-scroll.js" defer></script>
 </head>
 <body>
@@ -17,22 +16,25 @@
 
 <!--Hero Section-->
 <section class="project-hero">
-    <h1 class="project-name">[Project Name]</h1>
+    <h1 class="project-name">Echo</h1>
     <div class="project-tags">
-        <span class="tag">[Tag 1]</span>
-        <span class="tag">[Tag 2]</span>
+        <!-- TAGS NEEDED: which two tags? "UX/UI Design" + "Web App"? -->
+        <span class="tag">UX/UI Design</span>
+        <span class="tag">Web App</span>
     </div>
 
     <div class="project-hero-img">
-        <img src="/projects/[project]/images/[hero-image].png" alt="[Describe the image]">
+        <img src="/projects/projects_school/echo/images/echo-multi-hero.png" alt="Echo web app shown on a phone">
     </div>
 
     <div class="project-meta">
-        <span class="meta-duration">Duration: [X Weeks]</span>
+        <!-- DURATION NEEDED -->
+        <span class="meta-duration">Duration: 8 Weeks</span>
         <div class="meta-tools">
             <span>Tools:</span>
             <img src="/assets/icons/Figma.png" alt="Figma" class="tool-icon">
             <img src="/assets/icons/Forms.png" alt="Forms" class="tool-icon">
+            <!-- TOOLS NEEDED: anything beyond Figma and Forms? -->
         </div>
     </div>
 </section>
@@ -51,171 +53,316 @@
 
 <main class="project-content">
 
-    <!-- Optional pivot/turning-point statement — delete this block if this project didn't have one -->
     <div class="dark-block">
-        <div class="content-heading-dk">[Optional label]</div>
-        <p class="content-body-large">[The one-sentence turning point in the project, if there was one.]</p>
-        <p>[Follow-up context.]</p>
+        <div class="content-heading-dk">The challenge</div>
+        <p class="content-body-large">Young people are telling powerful stories, but those stories often don't reach the people who can act on them.</p>
+        <p>Echo is a progressive web app built with Youth Capital, a South African advocacy group working on youth unemployment. The brief asked for a platform that gets young people to act rather than only read. What we found in research was that the intent already existed — what was missing was a short, credible route from hearing someone's story to doing something about it. Echo is that route: a verified story leads to a petition, signing leads to a share, and the share pulls someone new into the story. I worked on this with George, splitting the interface between us.</p>
     </div>
 
     <section class="content-section" id="design-brief" data-nav-label="Design Brief">
         <h3 class="content-heading">01 — Design Brief</h3>
-        <h2 class="content-title">What am I designing?</h2>
-        <p class="content-body">Your content here...</p>
+        <h2 class="content-title">What were we asked to make?</h2>
+        <p class="content-body">Youth Capital is an advocacy group in South Africa working on youth unemployment through research, policy advocacy, and centring young people in the conversation rather than speaking for them. They asked us for a digital platform that encourages young people to get involved in solving youth unemployment, explains advocacy and policy in a way that doesn't feel like homework, and gets users to act rather than only think or talk about the problem.</p>
 
-        <!-- Example: two-column info-card grid — delete if not needed -->
         <div class="card-grid-2">
             <div class="info-card">
-                <div class="content-heading">[Heading]</div>
+                <div class="content-heading">What the platform had to do</div>
                 <ul>
-                    <li>Point</li>
+                    <li>Teach users about youth unemployment and advocacy</li>
+                    <li>Show that everyone is affected</li>
+                    <li>Encourage real action, not just reading or watching</li>
+                    <li>Not feel like a boring government activist site</li>
+                    <li>Be data-light and work on limited devices</li>
                 </ul>
             </div>
             <div class="info-card">
-                <div class="content-heading">[Heading]</div>
+                <div class="content-heading">Constraints we were given</div>
                 <ul>
-                    <li>Point</li>
+                    <li>Keep it simple — limited resources</li>
+                    <li>Onboard users into what advocacy actually means</li>
+                    <li>Build in gamification to bring users back</li>
+                    <li>Include a social sharing function showcasing a badge</li>
+                    <li>Website vs app was still open at kickoff</li>
                 </ul>
             </div>
         </div>
+
+        <p class="content-body">That last constraint mattered more than it looked. Data-light, works on limited devices, and website-or-app-undecided all pointed the same way, and we settled on a progressive web app — no install, no app store, low data cost, and reachable from a shared link, which the sharing loop depended on anyway.</p>
     </section>
 
     <section class="content-section" id="approach" data-nav-label="Approach">
         <h3 class="content-heading">02 — Approach</h3>
-        <h2 class="content-title">How did I approach the problem?</h2>
-        <p class="content-body">Your content here...</p>
+        <h2 class="content-title">How did we approach it?</h2>
+        <p class="content-body">We treated the brief as a starting position rather than a specification. The client had asked for advocacy education and gamification; research pushed us toward storytelling as the thing that would actually carry both.</p>
 
-        <!-- Example: step-card process grid — delete or resize if not needed -->
         <div class="card-grid-4">
             <div class="step-card">
                 <span class="index">01</span>
-                <span class="title">[Step]</span>
-                <span class="desc">[Short description]</span>
+                <span class="title">Unpacking the brief</span>
+                <span class="desc">Client goals, user types, constraints</span>
+            </div>
+            <div class="step-card">
+                <span class="index">02</span>
+                <span class="title">Research</span>
+                <span class="desc">Survey, interviews, six-platform audit</span>
+            </div>
+            <div class="step-card">
+                <span class="index">03</span>
+                <span class="title">First concept</span>
+                <span class="desc">Three-page PWA with a sharing loop</span>
+            </div>
+            <div class="step-card">
+                <span class="index">04</span>
+                <span class="title">Revised concept</span>
+                <span class="desc">Two-sided model with verified stories</span>
+            </div>
+            <div class="step-card">
+                <span class="index">05</span>
+                <span class="title">Structure</span>
+                <span class="desc">Information architecture and user flow</span>
+            </div>
+            <div class="step-card">
+                <span class="index">06</span>
+                <span class="title">Interface</span>
+                <span class="desc">Style guide, screens, split between us</span>
             </div>
         </div>
     </section>
 
-    <section class="content-section" id="research" data-nav-label="Research">
+        <section class="content-section" id="research" data-nav-label="Research">
         <h3 class="content-heading">03 — Research</h3>
-        <h2 class="content-title">What did I discover?</h2>
-        <p class="content-body">Your content here...</p>
+        <h2 class="content-title">What did we discover?</h2>
+        <p class="content-body">We researched three user groups the brief identified: unemployed young people and students in post-school education, community facilitators who act as trusted intermediaries, and allied organisations — Youth Capital's partners, small business reps and CBO workers. The focus was youth aged 18–34 in urban and peri-urban settings. We ran a short Google Forms survey, two interviews, and an audit of six existing platforms.</p>
 
-        <!-- Example: stat-card grid — delete if not needed -->
+        <h4 class="content-subtitle">The survey</h4>
+        <p class="content-body">The survey returned five responses, four of them within the 18–34 target range. That is a small sample and I've treated it as directional rather than statistical — no percentages, no claims about the population. What made it useful was how tightly it agreed with the interviews and the audit. Three separate methods pointed at the same behaviour.</p>
+
         <div class="card-grid-3">
             <div class="stat-card">
-                <span class="number">[X/X]</span>
-                <span class="desc">[What the stat means]</span>
+                <span class="number">5/5</span>
+                <span class="desc">used WhatsApp — the only platform every respondent had in common</span>
+            </div>
+            <div class="stat-card">
+                <span class="number">4/5</span>
+                <span class="desc">had signed a petition in the last six months, the most common action by a distance</span>
+            </div>
+            <div class="stat-card">
+                <span class="number">5/5</span>
+                <span class="desc">had already taken some action on an issue they cared about</span>
+            </div>
+        </div>
+
+        <p class="content-body">The last figure reframed the problem. We had been designing for people who needed persuading to care. Everyone who responded had already done something — signed, shared, attended, volunteered. Asked what would motivate them further, they chose seeing real stories from people like themselves and seeing clear results from their own actions. Asked what would bring them back to a platform, they said rewards, good content, and one respondent simply: if it is fun and entertaining.</p>
+
+        <p class="content-body">One caveat worth stating: the fifth respondent was over 45, outside our target range, and answered dismissively — that young people should stop expecting handouts. It's a minority view in a tiny sample, but it's a reminder that the audience Echo needs to reach includes people who don't accept the premise, and that a platform arguing for youth advocacy is arguing into some resistance.</p>
+
+        <h4 class="content-subtitle">What the interviews told us</h4>
+        <!-- IMAGE NEEDED: interview evidence board → /projects/echo/images/interviews.png -->
+        <!-- CHECK: you said both interviewees were facilitators, but the transcript
+             describes a data analyst working with Youth Capital. Confirm and I'll adjust. -->
+        <p class="content-body">A data analyst working with Youth Capital described the practical wall their outreach hits: universities charge for campus access, so reaching students directly is difficult, and young people without degrees face compounding barriers into both education and employment. On advocacy, the pattern was interest without follow-through — young people express interest and then don't act, for want of information and motivation rather than willingness. They responded well to the idea of unemployed youth sharing their own stories to attract support, while noting candidly that people with resources tend to engage when there's a benefit attached.</p>
+
+        <p class="content-body">A community facilitator made the case for storytelling directly: sharing a story lets others resonate with it, and even where experiences differ, the feelings can be similar enough to create empathy — and empathy is what leads to action. People read stories constantly and learn from them, so real lived experience builds awareness in a way that general information doesn't.</p>
+
+        <h4 class="content-subtitle">Competitive audit</h4>
+        <!-- IMAGES NEEDED: six audit boards →
+             /projects/echo/images/audit-activate.png
+             /projects/echo/images/audit-amandla.png
+             /projects/echo/images/audit-dosomething.png
+             /projects/echo/images/audit-fridays.png
+             /projects/echo/images/audit-goodwall.png
+             /projects/echo/images/audit-zlto.png -->
+        <p class="content-body">We audited six platforms working adjacent to this problem — Activate! Change Drivers, amandla.mobi, DoSomething.org, Fridays for Future, GoodWall and Zlto. Each answered a different part of the brief, and together they shaped most of Echo's feature set.</p>
+
+        <div class="finding-list">
+            <div class="finding-row">
+                <p class="finding">Every survey respondent used WhatsApp, and amandla.mobi reaches South Africans over SMS and WhatsApp in four languages, prioritising low bandwidth.</p>
+                <p class="so"><span>Decision</span> Data-light PWA, with WhatsApp Status as a first-class share target alongside Instagram Stories.</p>
+            </div>
+            <div class="finding-row">
+                <p class="finding">Petition signing was already the most common action our respondents had taken, and DoSomething.org shows youth prefer quick, tangible actions over abstract messaging.</p>
+                <p class="so"><span>Decision</span> Sign-a-petition as the primary call to action — an existing habit rather than a new one, completable in seconds.</p>
+            </div>
+            <div class="finding-row">
+                <p class="finding">"Seeing real stories of others like me" was a top motivator, and Activate! Change Drivers spotlights individual young change-makers to inspire others.</p>
+                <p class="so"><span>Decision</span> Individual named stories carry the feed — one person at a time, never aggregate statistics.</p>
+            </div>
+            <div class="finding-row">
+                <p class="finding">"Seeing clear results of my actions" was equally weighted, and Zlto's activity dashboard shows that a visible sense of progress matters when you're unemployed.</p>
+                <p class="so"><span>Decision</span> Badges, points and a leaderboard, so contribution is tracked and publicly visible rather than private.</p>
+            </div>
+            <div class="finding-row">
+                <p class="finding">Respondents said rewards and entertainment would bring them back, and GoodWall shows badges and community visibility drive repeat engagement.</p>
+                <p class="so"><span>Decision</span> Gamified participation built into the profile rather than bolted on as a separate feature.</p>
+            </div>
+            <div class="finding-row">
+                <p class="finding">Fridays for Future unifies local and national action through a strong shared visual identity and downloadable toolkits.</p>
+                <p class="so"><span>Decision</span> Ready-made share templates, so every user posts something that visibly belongs to the same campaign.</p>
             </div>
         </div>
     </section>
 
     <section class="content-section" id="persona" data-nav-label="Persona">
         <h3 class="content-heading"></h3>
-        <h2 class="content-title">Who are the users?</h2>
-        <p class="content-body">Your content here...</p>
-        <!-- Copy the .persona-card markup from eddy/index.html if this project uses personas -->
+        <h2 class="content-title">Who are we designing for?</h2>
+        <p class="content-body">Zinhle represents the user the brief was really about — already sympathetic to Youth Capital, already following along, and still not participating.</p>
+
+        <!-- IMAGE NEEDED: persona portrait → /projects/echo/images/persona-zinhle.png -->
+        <div class="persona-card">
+            <div class="persona-avatar">
+                <img src="/projects/echo/images/persona-zinhle.png" alt="Zinhle persona portrait">
+            </div>
+            <div class="persona-details">
+                <h4 class="persona-name">Zinhle, 23</h4>
+                <ul class="persona-meta">
+                    <li>Final-year university student</li>
+                    <li>South Africa</li>
+                </ul>
+                <p class="content-body">"I want to be involved, but sometimes it feels like the movement is happening without me. I wish there was an easy way to see how people are being affected as well as an easy way to act on it."</p>
+            </div>
+            <div class="persona-info">
+                <div class="persona-block">
+                    <h5 class="persona-subhead">Goals &amp; Needs</h5>
+                    <ul>
+                        <li>To feel part of a community making a difference in youth development</li>
+                        <li>Clear, simple ways to contribute to causes she cares about</li>
+                        <li>To build confidence navigating civic spaces</li>
+                    </ul>
+                </div>
+                <div class="persona-block">
+                    <h5 class="persona-subhead">Relationship to Youth Capital</h5>
+                    <ul>
+                        <li>Follows Youth Capital online and resonates with their message</li>
+                        <li>Feels aligned with the mission but hasn't engaged deeply yet</li>
+                        <li>Seeks more interactive, personal ways in — micro-actions, gamified participation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="content-section" id="defining-problems" data-nav-label="Defining Problems">
         <h3 class="content-heading">04 — Defining Problems</h3>
-        <h2 class="content-title">What problems did I identify?</h2>
+        <h2 class="content-title">What problems did we identify?</h2>
 
         <div class="dark-block">
             <div class="content-heading-dk">Primary problem</div>
-            <p class="content-body-large">Your content here...</p>
+            <p class="content-body-large">Bridging the gap between experience and action.</p>
+            <p>Young people living through youth unemployment have the most credible account of it, and the least access to the people who set policy. Meanwhile the people who want to help have no obvious way in. The two sides aren't connected by anything.</p>
         </div>
 
         <div class="card-grid-2">
             <div class="info-card">
-                <div class="content-heading">Supporting problem 01</div>
-                <p class="content-body">Your content here...</p>
+                <div class="content-heading">Supporting problem 01 — Intent without follow-through</div>
+                <p class="content-body">Youth Capital's own experience is that young people express interest in advocacy and then don't act on it. The barrier isn't willingness — it's not knowing what to do next, and not having a reason to come back.</p>
             </div>
             <div class="info-card">
-                <div class="content-heading">Supporting problem 02</div>
-                <p class="content-body">Your content here...</p>
+                <div class="content-heading">Supporting problem 02 — Access</div>
+                <p class="content-body">The audience is data-conscious and often on limited devices, and Youth Capital's own outreach is blocked by paid campus access. Anything requiring an install, an account-heavy onboarding, or a lot of data loses the user before the first story.</p>
             </div>
         </div>
+
+        <p class="content-body">There was also an ethical problem the brief didn't name. Building a platform on stories about hardship risks turning people's difficulties into content. That shaped the concept as much as any research finding did.</p>
     </section>
 
     <section class="content-section" id="ideation" data-nav-label="Ideation">
         <h3 class="content-heading">05 — Ideation</h3>
-        <h2 class="content-title">What solutions did I explore?</h2>
-        <p class="content-body">Your content here...</p>
+        <h2 class="content-title">What did we explore?</h2>
+        <!-- IMAGE NEEDED: concept pitch board → /projects/echo/images/concept-pitch.png -->
+        <p class="content-body">The first concept was a three-page progressive web app: a Feed for discovering advocacy stories and petitions, My Campaigns as a dashboard of what you'd signed, and Profile &amp; Points to gamify participation. The mechanism connecting them was a growth loop — after signing, the user is prompted to share, the shared link brings someone directly into the story and its petition, and that person becomes the next sharer.</p>
+
+        <!-- IMAGE NEEDED: updated concept board → /projects/echo/images/updated-concept.png -->
+        <p class="content-body">The revision came from the ethics problem. If Echo simply let anyone post their hardship, it would mine personal trauma for engagement. So we split the product in two: Youth Capital sources, reviews and publishes stories from its existing community networks on an opt-in basis, and the public reads, signs, shares and tracks. A "Verified by Youth Capital" badge carries that trust into the interface, which also solves the credibility problem — users can tell a story is real and part of a broader campaign rather than a scam or clickbait.</p>
 
         <div class="card-grid-3">
             <div class="step-card">
-                <span class="title">[Opportunity area]</span>
-                <span class="desc">[Short description]</span>
+                <span class="title">Open storytelling</span>
+                <span class="desc">Anyone posts their story — maximum reach, but no consent controls and no verification</span>
+            </div>
+            <div class="step-card">
+                <span class="title">Education-first</span>
+                <span class="desc">Explain advocacy and policy up front — meets the brief, but this is the "boring activist site" they asked us to avoid</span>
             </div>
             <div class="step-card is-chosen">
                 <span class="index">Direction chosen</span>
-                <span class="title">[The direction you picked]</span>
+                <span class="title">Curated stories, two-sided model</span>
             </div>
         </div>
-        <h4 class ="content-subtitle">How I prioritised </h4>
+
+        <h4 class="content-subtitle">How we prioritised</h4>
     <div class="priority-table">
         <div class="priority-row head">
-            <span>Opportunity</span>
+            <span>Feature</span>
             <span>Evidence behind it</span>
             <span>Decision</span></div>
             <div class="priority-row">
-                <span class="opportunity"></span>
-                <span class="evidence"></span>
-                <span class="decision-tag core"></span>
+                <span class="opportunity">Verified real stories</span>
+                <span class="evidence">Facilitator interview on empathy driving action; Activate!'s spotlighting of individuals</span>
+                <span class="decision-tag core">Core</span>
             </div>
             <div class="priority-row">
-                <span class="opportunity"></span>
-                <span class="evidence"></span>
-                <span class="decision-tag core"></span>
+                <span class="opportunity">Low-friction action</span>
+                <span class="evidence">DoSomething's quick tangible actions; interest-without-follow-through in the YC interview</span>
+                <span class="decision-tag core">Core</span>
             </div>
             <div class="priority-row">
-                <span class="opportunity"></span>
-                <span class="evidence"></span>
-                <span class="decision-tag core"></span>
+                <span class="opportunity">Social sharing with templates</span>
+                <span class="evidence">Client requirement; Fridays for Future's shared visual identity</span>
+                <span class="decision-tag core">Core</span>
             </div>
             <div class="priority-row">
-                <span class="opportunity"></span>
-                <span class="evidence"></span>
-                <span class="decision-tag supporting"></span>
+                <span class="opportunity">Gamification — badges, points, leaderboard</span>
+                <span class="evidence">Client requirement; Zlto and GoodWall both show retention gains</span>
+                <span class="decision-tag core">Core</span>
             </div>
             <div class="priority-row">
-                <span class="opportunity"></span>
-                <span class="evidence"></span>
-                <span class="decision-tag supporting"></span>
+                <span class="opportunity">Impact tracking</span>
+                <span class="evidence">Users need to feel their actions matter; Zlto's personal activity dashboard</span>
+                <span class="decision-tag supporting">Supporting</span>
             </div>
             <div class="priority-row">
-                <span class="opportunity"></span>
-                <span class="evidence"></span>
-                <span class="decision-tag parked"></span>
+                <span class="opportunity">Advocacy onboarding explainer</span>
+                <span class="evidence">Client requirement — many arrivals via social media won't know what Youth Capital or advocacy is</span>
+                <span class="decision-tag supporting">Supporting</span>
             </div>
         </div>
-</section>
     </section>
 
     <section class="content-section" id="design-process" data-nav-label="Design Process">
         <h3 class="content-heading">06 — Design Process</h3>
-        <h2 class="content-title">How did I turn ideas into an interface?</h2>
-        <p class="content-body">Your content here...</p>
+        <h2 class="content-title">How did we turn it into an interface?</h2>
+        <p class="content-body">George and I split the build roughly in half. He designed the home page and the sign-petition flow; I designed the dropdown menus through to the profile page, plus the badges and leaderboard. The brief, research, concept and structure were shared work.</p>
 
-        <h4 class="content-subtitle">[Sub-heading]</h4>
+        <h4 class="content-subtitle">Information architecture</h4>
+        <!-- IMAGE NEEDED: IA diagram → /projects/echo/images/information-architecture.png -->
+        <p class="content-body">Seven top-level areas: Home Feed, Search &amp; Filters, Story Content, Petitions, Profile, Badges and Leader Board. The Home Feed carries a learn-more pop-up and the Youth Manifesto, so the advocacy explainer sits where new arrivals land rather than behind an onboarding wall they'd skip. Story Content holds the verification marker and the advocacy prompt — the point where a story hands off to an action.</p>
 
-        <!-- Example: evidence → decision pairs — reuses .finding-list -->
-        <div class="finding-list">
-            <div class="finding-row">
-                <p class="finding">[What you learned]</p>
-                <p class="so"><span>Decision</span> [What you did about it]</p>
-            </div>
-        </div>
-    </section>
+        <h4 class="content-subtitle">User flow</h4>
+        <!-- IMAGE NEEDED: user flow board → /projects/echo/images/user-flow.png -->
+        <p class="content-body">Five steps, deliberately short: Feed → Story → Call to action → Taking action → Sharing. A user browses stories, opens one, and finds a "Want to help?" block offering to donate or sign. Signing takes a drawn or uploaded signature, and completing it produces a pre-made share card — "I just signed a petition to help Jabulani" — ready for Instagram or WhatsApp Stories. That card is the loop closing: it carries the story, the action and the link back into the app in one image.</p>
 
-    <section class="content-section" id="usability-testing" data-nav-label="Usability Testing">
-        <h3 class="content-heading">Usability Testing</h3>
-        <p class="content-body">Your content here...</p>
+        <h4 class="content-subtitle">Profile, badges and leaderboard</h4>
+        <!-- IMAGE NEEDED: profile / badges / leaderboard screens →
+             /projects/echo/images/profile-badges.png -->
+        <p class="content-body">My half of the interface handles the part of the loop that happens after the action. The profile shows petitions signed and recent advocacy, badges are grouped into categories with the story behind each one, and the leaderboard adds rank and placement. The reasoning came straight out of the audit: Zlto and GoodWall both show that a visible sense of progress is what brings people back, and the research kept surfacing the same need — people want to know their action counted for something.</p>
+
+        <h4 class="content-subtitle">Visual language</h4>
+        <!-- IMAGE NEEDED: style guide → /projects/echo/images/style-guide.png -->
+        <!-- COLOUR CONFLICT: the primary swatch renders yellow but is labelled #187BD2 (blue).
+             The mockups use yellow. Confirm which is correct and I'll add the primary here. -->
+        <p class="content-body">Poppins throughout, on a type scale running from 56px headings down to 20px, with line height set at 1.1× the font size. The secondary palette is deliberately bright — green (#98B23F), blue (#1DA6B5), orange (#E96212) and pink (#F065A5) — because the brief was explicit that this should not read as a government activist site, and because a story about unemployment lands differently when the interface around it isn't grim.</p>
     </section>
 
     <section class="content-section" id="reflection" data-nav-label="Reflection">
-        <h3 class="content-heading">Reflection</h3>
-        <p class="content-body">Your content here...</p>
+        <h3 class="content-heading">07 — Reflection</h3>
+        <h2 class="content-title">What did I learn?</h2>
+        <!-- REFLECTION NEEDED — I can't write this one for you. Worth answering:
+             · What changed between the first concept and the revised one, and what prompted it?
+             · What was it like designing to a real client brief instead of a university one?
+             · How did splitting an interface with George affect consistency?
+             · What did Youth Capital say when you presented it?
+             · What would you change with more time? -->
+        <p class="content-body">[Your reflection here.]</p>
     </section>
 
 </main>
