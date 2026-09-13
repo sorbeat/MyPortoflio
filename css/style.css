@@ -270,21 +270,18 @@ nav{
 .section-label::before {
     content: '\\ ';
 }
-
 .project-tagline {
     color: var(--black);
     margin: 12px;
     margin-bottom: 36px;
     line-height: var(--lh-heading);
 }
-
 /* Left + Right two column layout */
 .project-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
 }
-
 /* Right column stacks two cards vertically */
 .project-grid-right {
     display: flex;
