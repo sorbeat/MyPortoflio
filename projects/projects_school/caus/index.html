@@ -481,21 +481,109 @@
         <!-- IMAGE NEEDED: IA diagram → /projects/caus/images/information-architecture.png -->
         <p class="content-body">Onboarding leads into the home page, which branches into eight areas: home feed, meme details, remix, map, profile, forum, petition and protest. Petitions and protests both link back to the meme that surfaced them, so the loop closes in both directions. Sharing or completing an action earns points.</p>
 
-        <h4 class="content-subtitle">User flows</h4>
-        <!-- IMAGE NEEDED: user flow diagram → /projects/caus/images/user-flow.png -->
+        <h4 class="content-subtitle">User flow</h4>
+        <p class="content-caption">Feed → Story → Call to action → Taking action → Sharing</p>
         <p class="content-body">Four flows carry the product. A user searches the feed, sees a meme's variants and remixes, opens its detail page and finds the campaign attached to it. From the meme detail they reach the protest and join it. On the map, dropped pins open protest cards. On the remix page they download the original, edit it, and post — earning points for the share.</p>
 
         <h4 class="content-subtitle">Wireframes</h4>
         <!-- IMAGE NEEDED: wireframe frames → /projects/caus/images/wireframes.png -->
         <p class="content-body">Simple, low-fidelity layouts that show the basic structure and flow of the interface, without detailed design elements — enough to test whether the path from meme to action held up before committing to visuals.</p>
 
-        <h4 class="content-subtitle">Visual language</h4>
-        <!-- IMAGE NEEDED: style guide / colour and type → /projects/caus/images/style-guide.png -->
-        <p class="content-body">Bittersweet (#FF6B54) as primary against Space Cadet (#2F2E41), with Alice Blue (#ECF3F7) and Lavender (#CFDCEF) as accents. Poppins throughout. The palette had to carry humour without looking like a joke app — warm enough to feel social, dark enough that a petition doesn't look out of place next to it.</p>
+        <h4 class ="content-subtitle">Visual System Choice</h4>
+        <p class="content-body">Bittersweet (#FF6B54) as primary against Space Cadet (#2F2E41), with Alice Blue (#ECF3F7) and Lavender (#CFDCEF) as accents. 
+            Poppins throughout. The palette had to carry humour without looking like a joke app — warm enough to feel social, dark enough 
+            that a petition doesn't look out of place next to it.</p>
 
-        <h4 class="content-subtitle">The four main screens</h4>
-        <!-- IMAGE NEEDED: main flow screens → /projects/caus/images/main-flow.png -->
-        <p class="content-body">Meme is the feed. Did You Know is discovery and context. Connection is the community layer. Movement is where campaigns, petitions and protests live. Naming them plainly was a direct response to the Global Citizen audit, where the tabs were the first thing that confused me.</p>
+    <div class="palette-group-label">Primary</div>
+        <div class="palette-primary">
+            <div class="swatch is-large" style="background:#FF6B54; color:#fff;">
+                <span class="swatch-name">Bittersweet</span>
+                <div class="swatch-values">
+                    <span class="hex">#FF6B54</span>
+                    <span>RGB 255 · 107 · 84</span>
+                </div>
+            </div>
+            <div class="swatch" style="background:#2F2E41; color:#fff;">
+                <span class="swatch-name">Space Cadet</span>
+                <div class="swatch-values">
+                    <span class="hex">#2F2E41</span>
+                    <span>RGB 47 · 46 · 65</span>
+                </div>
+            </div>
+            <div class="swatch" style="background:#CFDCEF;">
+                <span class="swatch-name">Lavender</span>
+                <div class="swatch-values">
+                    <span class="hex">#CFDCEF</span>
+                    <span>RGB 207 · 220 · 239</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copy the .palette-primary pattern above for a .palette-secondary
+            (grid-template-columns: repeat(4, 1fr)) or .palette-neutrals
+            (repeat(5, 1fr)) group if the project needs them -->
+
+    <div class="palette-group-label">Type scale</div>
+        <div class="type-scale-table">
+            <div class="type-scale-row">
+                <div class="type-scale-meta">
+                    <span class="label">[Display / H1]</span>
+                    <span>[size · weight · line-height]</span>
+                </div>
+                <div>[Example heading text]</div>
+            </div>
+        <div class="type-scale-row">
+                <div class="type-scale-meta">
+                    <span class="label">[Body]</span>
+                    <span>[size · weight · line-height]</span>
+                </div>
+                <div>[Example body text]</div>
+            </div>
+        <div class="type-scale-row">
+                <div class="type-scale-meta">
+                    <span class="label">[Body]</span>
+                    <span>[size · weight · line-height]</span>
+                </div>
+                <div>[Example body text]</div>
+            </div>
+        <div class="type-scale-row">
+                <div class="type-scale-meta">
+                    <span class="label">[Body]</span>
+                    <span>[size · weight · line-height]</span>
+                </div>
+                <div>[Example body text]</div>
+            </div>
+        </div>
+    </section>
+
+<section class="content-section" id="final-designs" data-nav-label="Final Designs">
+    <h3 class="content-heading">07 — Final Design</h3>
+        <h2 class="content-title">What does the final design look like?</h2>
+        <p class="content-body">Your content here...</p>
+
+<div class="content-img">
+        <div class="card-grid-3">
+            <div class="ui-title">
+                <img src="/projects/projects_school/echo/images/flows/echo-flow-1.png" alt="Home feed showing verified youth stories">
+            </div>
+            <div class="ui-title">
+                <img src="/projects/projects_school/echo/images/flows/echo-flow-2.png" alt="An individual story page with the help-out prompt">
+            </div>
+            <div class="ui-title">
+                <img src="/projects/projects_school/echo/images/flows/echo-flow-3.png" alt="Petition signing screen with signature field">
+            </div>
+            <div class="ui-title">
+                <img src="/projects/projects_school/echo/images/flows/echo-flow-4.png" alt="Profile page showing petitions signed and recent advocacy">
+            </div>
+            <div class="ui-title">
+                <img src="/projects/projects_school/echo/images/flows/echo-flow-5.png" alt="Profile page showing petitions signed and recent advocacy">
+            </div>
+        </div>
+
+        <p class="content-body">The bottom row is my half of the build — the profile, badges and leaderboard. The top row is George's home page and petition flow.</p>
+
+        <!-- PROTOTYPE LINK NEEDED: paste the Figma share URL -->
+        <a href="https://www.figma.com/proto/tISnAvp2RKqaKZ5sNvBxhU/George---Sebastian----module-2--Copy-?node-id=339-3547&t=ZYusHvXEltYX9QJP-1" class="btn-outline" target="_blank" rel="noopener noreferrer">View the prototype ↗</a>
     </section>
 
     <section class="content-section" id="reflection" data-nav-label="Reflection">
