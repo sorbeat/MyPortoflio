@@ -237,7 +237,7 @@ nav{
 /* About Section */
 .about {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: var(--space-80);
     padding: var(--space-64);
     align-items: center;
@@ -252,7 +252,7 @@ nav{
     color: var(--black);
     line-height: var(--lh-body);
     font-weight: 450;
-    font-size: 28px;
+    font-size: 38px;
 }
 
 /* Project Section */
