@@ -362,11 +362,53 @@
             /projects/echo/images/profile-badges.png -->
         <p class="content-body">My half of the interface handles the part of the loop that happens after the action. The profile shows petitions signed and recent advocacy, badges are grouped into categories with the story behind each one, and the leaderboard adds rank and placement. The reasoning came straight out of the audit: Zlto and GoodWall both show that a visible sense of progress is what brings people back, and the research kept surfacing the same need — people want to know their action counted for something.</p>
 
-        <h4 class="content-subtitle">Visual language</h4>
-        <!-- IMAGE NEEDED: style guide → /projects/echo/images/style-guide.png -->
-        <!-- COLOUR CONFLICT: the primary swatch renders yellow but is labelled #187BD2 (blue).
-            The mockups use yellow. Confirm which is correct and I'll add the primary here. -->
+        <h4 class ="content-subtitle">Visual System Choice</h4>
         <p class="content-body">Poppins throughout, on a type scale running from 56px headings down to 20px, with line height set at 1.1× the font size. The secondary palette is deliberately bright — green (#98B23F), blue (#1DA6B5), orange (#E96212) and pink (#F065A5) — because the brief was explicit that this should not read as a government activist site, and because a story about unemployment lands differently when the interface around it isn't grim.</p>
+
+    <div class="palette-group-label">Primary</div>
+        <div class="palette-primary">
+            <div class="swatch is-large" style="background:#000000; color:#fff;">
+                <span class="swatch-name">[Colour name]</span>
+                <div class="swatch-values">
+                    <span class="hex">#000000</span>
+                    <span>RGB 0 · 0 · 0</span>
+                </div>
+            </div>
+            <div class="swatch" style="background:#000000; color:#fff;">
+                <span class="swatch-name">[Colour name]</span>
+                <div class="swatch-values">
+                    <span class="hex">#000000</span>
+                </div>
+            </div>
+            <div class="swatch" style="background:#fff; box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);">
+                <span class="swatch-name">[Colour name]</span>
+                <div class="swatch-values">
+                    <span class="hex">#ffffff</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copy the .palette-primary pattern above for a .palette-secondary
+            (grid-template-columns: repeat(4, 1fr)) or .palette-neutrals
+            (repeat(5, 1fr)) group if the project needs them -->
+
+        <div class="palette-group-label">Type scale</div>
+        <div class="type-scale-table">
+            <div class="type-scale-row">
+                <div class="type-scale-meta">
+                    <span class="label">[Display / H1]</span>
+                    <span>[size · weight · line-height]</span>
+                </div>
+                <div>[Example heading text]</div>
+            </div>
+            <div class="type-scale-row">
+                <div class="type-scale-meta">
+                    <span class="label">[Body]</span>
+                    <span>[size · weight · line-height]</span>
+                </div>
+                <div>[Example body text]</div>
+            </div>
+        </div>
     </section>
 
 <section class="content-section" id="final-designs" data-nav-label="Final Designs">
@@ -404,17 +446,20 @@
         <h3 class="content-heading">07 — Reflection</h3>
         <h2 class="content-title">What did I learn?</h2>
         <!-- REFLECTION NEEDED — I can't write this one for you. Worth answering:
-             · What changed between the first concept and the revised one, and what prompted it?
-             · What was it like designing to a real client brief instead of a university one?
-             · How did splitting an interface with George affect consistency?
-             · What did Youth Capital say when you presented it?
-             · What would you change with more time? -->
+            · What changed between the first concept and the revised one, and what prompted it?
+            · What was it like designing to a real client brief instead of a university one?
+            · How did splitting an interface with George affect consistency?
+            · What did Youth Capital say when you presented it?
+            · What would you change with more time? -->
         <p class="content-body">[Your reflection here.]</p>
     </section>
 
 </main>
 </section>
-<div id="footer-placeholder"></div>
-<script src="/components/footer.js" defer></script>
+
+    <div id="footer-placeholder"></div>
+    <script src="/components/footer.js" defer></script>
+    <script src="/components/scripts/cursor-trail.js" defer></script>
+
 </body>
 </html>
