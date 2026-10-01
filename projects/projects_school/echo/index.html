@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Echo - Sebastian Harris</title>
+    
+    <meta name="description" content="Echo is a progressive web app built with Youth Capital, a South African advocacy group working on youth unemployment. The brief asked for a platform that gets young people to act rather than only read. What we found in research was that the intent already existed — what was missing was a short, credible route from hearing someone's story to doing something about it. Echo is that route: a verified story leads to a petition, signing leads to a share, and the share pulls someone new into the story. I worked on this with George, splitting the interface between us.">
+    <meta property="og:title" content="Echo - Sebastian Harris">
+    <meta property="og:description" content="Echo is a progressive web app built with Youth Capital, a South African advocacy group working on youth unemployment. The brief asked for a platform that gets young people to act rather than only read. What we found in research was that the intent already existed — what was missing was a short, credible route from hearing someone's story to doing something about it. Echo is that route: a verified story leads to a petition, signing leads to a share, and the share pulls someone new into the story. I worked on this with George, splitting the interface between us.">
+
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/project.css">
+    
     <script src="/components/scripts/sidebar-scroll.js" defer></script>
     <script src="/components/scripts/lightbox.js" defer></script>
 </head>
@@ -329,19 +335,35 @@
         </div>
     </section>
 
-    <section class="content-section" id="design-process" data-nav-label="Design Process">
-        <h3 class="content-heading">06 — Design Process</h3>
-        <h2 class="content-title">How did we turn it into an interface?</h2>
-        <p class="content-body">George and I split the build roughly in half. He designed the home page and the sign-petition flow; I designed the dropdown menus through to the profile page, plus the badges and leaderboard. The brief, research, concept and structure were shared work.</p>
+<section class="content-section" id="design-process" data-nav-label="Design Process">
+    <h3 class="content-heading">06 — Design Process</h3>
+    <h2 class="content-title">How did we turn it into an interface?</h2>
+    <p class="content-body">George and I split the build roughly in half. He designed the home page and the sign-petition flow; I designed the dropdown menus through to the profile page, plus the badges and leaderboard. The brief, research, concept and structure were shared work.</p>
+    
+    <h4 class="content-subtitle">Information architecture</h4>
+    <p class="content-body">Seven top-level areas: Home Feed, Search &amp; Filters, Story Content, Petitions, Profile, Badges and Leader Board. The Home Feed carries a learn-more pop-up and the Youth Manifesto, so the advocacy explainer sits where new arrivals land rather than behind an onboarding wall they'd skip. Story Content holds the verification marker and the advocacy prompt — the point where a story hands off to an action.</p>
+    <div class="card-grid-4">
+        <div class="step-card">
+            <span class="title">Discover</span>
+            <span class="desc">Today's conditions, recommended spots, spot detail</span>
+        </div>
+        <div class="step-card">
+            <span class="title">Sessions</span>
+            <span class="desc">Log a surf, history, progress and weekly goals</span>
+        </div>
+        <div class="step-card">
+            <span class="title">Community</span>
+            <span class="desc">Recent local sessions, surfers nearby, spot chatter</span>
+        </div>
+        <div class="step-card">
+            <span class="title">Train</span>
+            <span class="desc">Surf-specific workouts, breathwork, recovery</span>
+        </div>
+    </div>
 
-        <h4 class="content-subtitle">Information architecture</h4>
-        <p class="content-body">Seven top-level areas: Home Feed, Search &amp; Filters, Story Content, Petitions, Profile, Badges and Leader Board. The Home Feed carries a learn-more pop-up and the Youth Manifesto, so the advocacy explainer sits where new arrivals land rather than behind an onboarding wall they'd skip. Story Content holds the verification marker and the advocacy prompt — the point where a story hands off to an action.</p>
+        <p class="content-body">Feed → Story → Call to action → Taking action → Sharing</p>        
+        <img src="/projects/projects_school/echo/images/flows/echo-main-flow.png" class="content-img content-img--full" alt="User flow diagram showing the path from feed to story to call to action to taking action to sharing">
 
-        <h4 class="content-subtitle">User flow</h4>
-        <img src="/projects/projects_school/echo/images/flows/echo-main-flow.png" 
-            class="content-img content-img--full" 
-            alt="User flow diagram showing the path from feed to story to call to action to taking action to sharing">
-        <p class="content-caption">Feed → Story → Call to action → Taking action → Sharing</p>
         <h4 class="content-subtitle">Profile, badges and leaderboard</h4>
         <p class="content-body">My half of the interface handles the part of the loop that happens after the action. The profile shows petitions signed and recent advocacy, badges are grouped into categories with the story behind each one, and the leaderboard adds rank and placement. The reasoning came straight out of the audit: Zlto and GoodWall both show that a visible sense of progress is what brings people back, and the research kept surfacing the same need — people want to know their action counted for something.</p>
 
