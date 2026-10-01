@@ -163,17 +163,18 @@ p {
     text-align: justify;
     margin-top: 12px;
 }
-.content-img{
-    width: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-    margin: 24px 0;
-}
-.content-img img {
+.content-img {
+    display: cover;
     width: 100%;
     height: auto;
-    object-fit: cover;
-    display: block;
+    border-radius: 16px;
+    margin: 24px 0 0;
+    cursor: zoom-in;
+}
+.content-img--full {
+    width: 1100px;
+    max-width: auto;
+    border-radius: 12px;
 }
 .content-caption{
     justify-self: center;
@@ -181,7 +182,7 @@ p {
     font-size: 32px;
     color: var(--gray);
     margin-top: 12px;
-    margin-bottom: 32px;
+    margin-bottom: 5px;
 }
 .ui-title {
     border-radius: 32px;
@@ -689,4 +690,53 @@ p {
     font-weight: 600;
     color: var(--black);
     font-size: 15px;
+}
+/* Lightbox styles */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px;
+    background: rgba(17, 17, 16, 0.94);
+    cursor: zoom-out;
+}
+.lightbox[hidden] {
+    display: none;
+}
+.lightbox img {
+    max-width: 95vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+@media (max-width: 900px) {
+    .content-img--full {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
 }

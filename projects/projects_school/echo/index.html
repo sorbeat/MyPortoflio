@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/project.css">
     <script src="/components/scripts/sidebar-scroll.js" defer></script>
+    <script src="/components/scripts/lightbox.js" defer></script>
 </head>
 <body>
 
@@ -334,32 +335,14 @@
         <p class="content-body">George and I split the build roughly in half. He designed the home page and the sign-petition flow; I designed the dropdown menus through to the profile page, plus the badges and leaderboard. The brief, research, concept and structure were shared work.</p>
 
         <h4 class="content-subtitle">Information architecture</h4>
-        <!-- IMAGE NEEDED: IA diagram → /projects/echo/images/information-architecture.png -->
         <p class="content-body">Seven top-level areas: Home Feed, Search &amp; Filters, Story Content, Petitions, Profile, Badges and Leader Board. The Home Feed carries a learn-more pop-up and the Youth Manifesto, so the advocacy explainer sits where new arrivals land rather than behind an onboarding wall they'd skip. Story Content holds the verification marker and the advocacy prompt — the point where a story hands off to an action.</p>
 
         <h4 class="content-subtitle">User flow</h4>
-        <!-- IMAGE NEEDED: user flow board → /projects/echo/images/user-flow.png -->
+        <img src="/projects/projects_school/echo/images/flows/echo-main-flow.png" 
+            class="content-img content-img--full" 
+            alt="User flow diagram showing the path from feed to story to call to action to taking action to sharing">
         <p class="content-caption">Feed → Story → Call to action → Taking action → Sharing</p>
-    <div class="card-grid-3">
-            <div class="ui-title">
-                <img src="/projects/projects_school/echo/images/flows/echo-flow-1.png" alt="Home feed showing verified youth stories">
-            </div>
-            <div class="ui-title">
-                <img src="/projects/projects_school/echo/images/flows/echo-flow-2.png" alt="An individual story page with the help-out prompt">
-            </div>
-            <div class="ui-title">
-                <img src="/projects/projects_school/echo/images/flows/echo-flow-3.png" alt="Petition signing screen with signature field">
-            </div>
-            <div class="ui-title">
-                <img src="/projects/projects_school/echo/images/flows/echo-flow-4.png" alt="Profile page showing petitions signed and recent advocacy">
-            </div>
-            <div class="ui-title">
-                <img src="/projects/projects_school/echo/images/flows/echo-flow-5.png" alt="Profile page showing petitions signed and recent advocacy">
-            </div>
-    </div>
         <h4 class="content-subtitle">Profile, badges and leaderboard</h4>
-        <!-- IMAGE NEEDED: profile / badges / leaderboard screens →
-            /projects/echo/images/profile-badges.png -->
         <p class="content-body">My half of the interface handles the part of the loop that happens after the action. The profile shows petitions signed and recent advocacy, badges are grouped into categories with the story behind each one, and the leaderboard adds rank and placement. The reasoning came straight out of the audit: Zlto and GoodWall both show that a visible sense of progress is what brings people back, and the research kept surfacing the same need — people want to know their action counted for something.</p>
 
         <h4 class ="content-subtitle">Visual System Choice</h4>
@@ -387,12 +370,7 @@
                 </div>
             </div>
         </div>
-
-        <!-- Copy the .palette-primary pattern above for a .palette-secondary
-            (grid-template-columns: repeat(4, 1fr)) or .palette-neutrals
-            (repeat(5, 1fr)) group if the project needs them -->
-
-        <div class="palette-group-label">Type scale</div>
+    <div class="palette-group-label">Type scale</div>
         <div class="type-scale-table">
             <div class="type-scale-row">
                 <div class="type-scale-meta">
