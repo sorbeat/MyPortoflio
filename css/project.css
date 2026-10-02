@@ -183,7 +183,7 @@ p {
 .content-caption{
     justify-self: center;
     font-family: var(--font-body);
-    font-size: 32px;
+    font-size: 24px;
     color: var(--gray);
     margin-top: 12px;
     margin-bottom: 5px;
@@ -601,12 +601,14 @@ p {
     background: #3C3C3C; 
 }
 .decision-tag.supporting { 
+    background: #fff;
     color: rgba(0, 0, 0, 0.55); 
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15); 
 }
 .decision-tag.parked {
-    color: rgba(0, 0, 0, 0.4);
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1); }
+    background: #fff;
+    color: rgba(0, 0, 0, 0.55);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15); }
 
 /* Visual language — colour swatches */
 .palette-group-label {

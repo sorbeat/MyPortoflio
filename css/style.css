@@ -229,6 +229,12 @@ nav{
     text-decoration: none;
     transition: opacity var(--t-color);
 }
+.btn-outline.btn--centre{
+    display: block;
+    width: fit-content;
+    margin: 24px auto 0;
+    
+}
 .btn-outline:hover {
     background-color: #e5e4df;
 }
@@ -515,3 +521,23 @@ footer {
 }
 
 
+@media (max-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+        gap: var(--space-32);
+        padding: var(--space-32);
+    }
+    .hero-card {
+        right: var(--space-32);
+        bottom: var(--space-32);
+    }
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-grid-right {
+        flex-direction: column;
+    }
+    .hobbies-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
