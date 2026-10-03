@@ -343,25 +343,56 @@
     <p class="content-body">George and I split the build roughly in half. He designed the home page and the sign-petition flow; I designed the dropdown menus through to the profile page, plus the badges and leaderboard. The brief, research, concept and structure were shared work.</p>
     
     <h4 class="content-subtitle">Information architecture</h4>
-    <p class="content-body">Seven top-level areas: Home Feed, Search &amp; Filters, Story Content, Petitions, Profile, Badges and Leader Board. The Home Feed carries a learn-more pop-up and the Youth Manifesto, so the advocacy explainer sits where new arrivals land rather than behind an onboarding wall they'd skip. Story Content holds the verification marker and the advocacy prompt — the point where a story hands off to an action.</p>
-    <div class="card-grid-4">
-        <div class="step-card">
-            <span class="title">Discover</span>
-            <span class="desc">Today's conditions, recommended spots, spot detail</span>
+<button type="button" class="ia-toggle" data-toggle-target="echo-ia-diagram" data-label-show="View information architecture ↓" data-label-hide="Hide information architecture">View information architecture ↓</button>
+<div id="ia-diagram" class="ia-scroll" hidden>
+    <div class="ia-diagram">
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-echo">Home Feed</div>
+            <div class="ia-item">Learn more(pop-up)</div>
+            <div class="ia-item">Search</div>
+            <div class="ia-item">Stories</div>
+            <div class="ia-item">Youth Manifesto</div>
         </div>
-        <div class="step-card">
-            <span class="title">Sessions</span>
-            <span class="desc">Log a surf, history, progress and weekly goals</span>
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-echo">Search Filter</div>
+            <div class="ia-item">Location/region</div>
+            <div class="ia-item">Type of story</div>
         </div>
-        <div class="step-card">
-            <span class="title">Community</span>
-            <span class="desc">Recent local sessions, surfers nearby, spot chatter</span>
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-echo">Story Detail</div>
+            <div class="ia-item">Verified stories badge</div>
+            <div class="ia-item">Text/Audio(story)</div>
+            <div class="ia-item">Attached petition</div>
+            <div class="ia-item">Advocacy prompt </div>
         </div>
-        <div class="step-card">
-            <span class="title">Train</span>
-            <span class="desc">Surf-specific workouts, breathwork, recovery</span>
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-echo">Petition</div>
+            <div class="ia-item">Prompt Sign petition</div>
+            <div class="ia-item">Share/Upload</div>
+            <div class="ia-item">Get in touch</div>
+            <div class="ia-item">Preview Template</div>
+            <div class="ia-item">Points earned</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-echo">Profile</div>
+            <div class="ia-item">Total Petitions/Bio</div>
+            <div class="ia-item">Badges</div>
+            <div class="ia-item">Recent Advocacy</div>
+            <div class="ia-item">Leaderboard</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-echo">Badges</div>
+            <div class="ia-item">Categories of Badges</div>
+            <div class="ia-item">Badge Earned</div>
+            <div class="ia-item">Story about the Badge</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-echo">Leaderboard</div>
+            <div class="ia-item">Search</div>
+            <div class="ia-item">Rank placement </div>
         </div>
     </div>
+</div>
         
         <h4 class="content-subtitle">The flow that mattered most</h4>
         <p class="content-body">Feed → Story → Call to action → Taking action → Sharing</p>        
@@ -402,28 +433,21 @@
                     <span class="label">[Display / H1]</span>
                     <span>[size · weight · line-height]</span>
                 </div>
-                <div>[Example heading text]</div>
+                <div><p>Find your next favourite spot</p></div>
             </div>
         <div class="type-scale-row">
                 <div class="type-scale-meta">
                     <span class="label">[Body]</span>
                     <span>[size · weight · line-height]</span>
                 </div>
-                <div>[Example body text]</div>
+                <div><p>Browse honest reviews, compare options side by side, and save the places you love so they're ready when you are.</p></div>
             </div>
         <div class="type-scale-row">
                 <div class="type-scale-meta">
                     <span class="label">[Body]</span>
                     <span>[size · weight · line-height]</span>
                 </div>
-                <div>[Example body text]</div>
-            </div>
-        <div class="type-scale-row">
-                <div class="type-scale-meta">
-                    <span class="label">[Body]</span>
-                    <span>[size · weight · line-height]</span>
-                </div>
-                <div>[Example body text]</div>
+                <div><p>Updated 2 hours ago · 128 reviews · Free cancellation on most bookings</p></div>
             </div>
         </div>
     </section>
