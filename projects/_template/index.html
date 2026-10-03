@@ -197,8 +197,34 @@
         <h2 class="content-title">How did I turn ideas into an interface?</h2>
         <p class="content-body">Your content here...</p>
 
-        <h4 class="content-subtitle">[Sub-heading]</h4>
+<!-- Optional: Information architecture diagram — a good fit when the
+     product has enough distinct pages/areas to be worth mapping. Each
+     column is one page; the items below it are what that page contains
+     or lets the user do. Collapses behind a button on small screens
+     automatically (see the 768px breakpoint in project.css) — no extra
+     work needed per project. Delete the whole block if the step-card
+     grid above already covers it for this project. -->
 
+<h4 class="content-subtitle">[Sub-heading]</h4><button type="button" class="ia-toggle" data-toggle-target="ia-diagram" data-label-show="View information architecture ↓" data-label-hide="Hide information architecture">View information architecture ↓</button>
+<div id="ia-diagram" class="ia-scroll" hidden>
+    <div class="ia-diagram">
+        <div class="ia-column">
+            <div class="ia-column-head">[Page name]</div>
+            <div class="ia-item">[Feature]</div>
+            <div class="ia-item">[Feature]</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head">[Page name]</div>
+            <div class="ia-item">[Feature]</div>
+            <div class="ia-item">[Feature]</div>
+            <div class="ia-item">[Feature]</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head">[Page name]</div>
+            <div class="ia-item">[Feature]</div>
+        </div>
+    </div>
+</div>
         <!-- Example: evidence → decision pairs — reuses .finding-list -->
         <div class="finding-list">
             <div class="finding-row">

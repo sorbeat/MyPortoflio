@@ -385,41 +385,69 @@
     <h2 class="content-title">How did I turn ideas into an interface?</h2>
     <p class="content-body">Everything below serves one sentence: the app has to answer "is this a good place for me to surf today?" before it asks the surfer to do anything else.</p>
 
-    <h4 class="content-subtitle">Information architecture</h4>
-    <div class="card-grid-4">
-        <div class="step-card">
-            <span class="title">Discover</span>
-            <span class="desc">Today's conditions, recommended spots, spot detail</span>
+<h4 class="content-subtitle">Information architecture</h4>
+<button type="button" class="ia-toggle" data-toggle-target="ia-diagram" data-label-show="View information architecture ↓" data-label-hide="Hide information architecture">View information architecture ↓</button>
+<div id="ia-diagram" class="ia-scroll" hidden>
+    <div class="ia-diagram">
+        <div class="ia-column">
+            <div class="ia-column-head">Onboarding</div>
+            <div class="ia-item">User Login</div>
+            <div class="ia-item">Style</div>
+            <div class="ia-item">Level of Surfing</div>
         </div>
-        <div class="step-card">
-            <span class="title">Sessions</span>
-            <span class="desc">Log a surf, history, progress and weekly goals</span>
+        <div class="ia-column">
+            <div class="ia-column-head">Explore Page</div>
+            <div class="ia-item">Search SurfSpot</div>
+            <div class="ia-item">Filter Categories</div>
+            <div class="ia-item">Recommend Surf</div>
+            <div class="ia-item">Saving favourite spot</div>
         </div>
-        <div class="step-card">
-            <span class="title">Community</span>
-            <span class="desc">Recent local sessions, surfers nearby, spot chatter</span>
+        <div class="ia-column">
+            <div class="ia-column-head">Surf Details</div>
+            <div class="ia-item">Level Displayed</div>
+            <div class="ia-item">Forecast</div>
+            <div class="ia-item">Locations</div>
+            <div class="ia-item">Similar spots</div>
         </div>
-        <div class="step-card">
-            <span class="title">Train</span>
-            <span class="desc">Surf-specific workouts, breathwork, recovery</span>
+        <div class="ia-column">
+            <div class="ia-column-head">Surf Session</div>
+            <div class="ia-item">Start session</div>
+            <div class="ia-item">Add/Change Location</div>
+            <div class="ia-item">Upload Video</div>
+            <div class="ia-item">Session analysis</div>
+            <div class="ia-item">Feedback</div>
+            <div class="ia-item">Recommend exercise</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head">Community</div>
+            <div class="ia-item">Connect with friends</div>
+            <div class="ia-item">Post Surf Session</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head">Fitness Page</div>
+            <div class="ia-item">Recommend Exercise</div>
+            <div class="ia-item">Muscle group</div>
+            <div class="ia-item">Video</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head">Profile</div>
+            <div class="ia-item">Bio</div>
+            <div class="ia-item">Recent Activities</div>
+            <div class="ia-item">Saved Spots</div>
         </div>
     </div>
-
+</div>
 
     <h4 class="content-subtitle">The flows that mattered most</h4>
     <p class="content-body">The colour and type system had to work in bright sun or on a foggy screen, and stay calm enough not to compete with surf photography. 
         Ocean blue carries the brand and marks the active state on the map; deep navy holds the interface's dark surfaces, like the bottom navigation.</p>
-    <p class="content-caption">Open Eddy →  Recommended spot → Check conditions → View spot detail → <strong>Decide: surf or not</strong>.</p>
-
-        <img src="/projects/projects_school/eddy/images/eddy-main-flow.png" 
-        class="content-img content-img--full" 
-        alt="User flow diagram showing the path from feed to story to call to action to taking action to sharing">
-    <p class="content-caption">Open Eddy →  Recommended spot → Check conditions → View spot detail → <strong>Decide: surf or not</strong>.</p>
     
-    <img src="/projects/projects_school/eddy/images/eddy-main-flow2.png" 
-        class="content-img content-img--full" 
-        alt="User flow diagram showing the path from feed to story to call to action to taking action to sharing">
-<h4 class="content-subtitle">Three interface decisions</h4>
+    <p class="content-caption">Open Eddy →  Recommended spot → Check conditions → View spot detail → <strong>Decide: surf or not</strong></p>
+    <img src="/projects/projects_school/eddy/images/eddy-main-flow.png" class="content-img content-img--full" alt="User flow diagram showing the path from feed to story to call to action to taking action to sharing">
+    <p class="content-caption">Start Session  → Record Session → Edit → </p>
+    <img src="/projects/projects_school/eddy/images/eddy-main-flow2.png" class="content-img content-img--full" alt="User flow diagram showing the path from feed to story to call to action to taking action to sharing">
+
+        <h4 class="content-subtitle">Three interface decisions</h4>
     <div class="finding-list">
         <div class="finding-row">
             <p class="finding">Surfers could read the numbers but not the verdict — swell, period and wind mean little to a developing surfer.</p>

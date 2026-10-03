@@ -67,6 +67,9 @@ p {
     padding: 64px 48px;
     align-items: start;
 }
+.project-content {
+    min-width: 0;
+}
 .back-link{
     color: var(--black);
     font-size: 24px;
@@ -739,10 +742,76 @@ p {
 .lightbox-close:hover {
     background: rgba(255, 255, 255, 0.15);
 }
-@media (max-width: 900px) {
-    .content-img--full {
-        width: 100%;
-        max-width: 100%;
-        margin-left: 0;
+.ia-scroll {
+    overflow-x: auto;
+    padding-bottom: var(--space-8);
+}
+.ia-diagram {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items : flex-start;
+    gap: var(--space-16);
+}
+.ia-column {
+    flex: 0 0 auto;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+}
+.ia-column-head {
+    background: var(--blue);
+    color: var(--white);
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    font-weight: 600;
+    padding: 12px 16px;
+    border-radius: var(--r-pill);
+}
+.ia-item {
+    background: var(--white);
+    color: var(--black);
+    text-align: center;
+    font-family: var(--font-body);
+    font-size: var(--fs-caption);
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--r-pill);
+}
+.ia-caption {
+    font-family: var(--font-body);
+    font-size: var(--fs-caption);
+    color: var(--gray);
+    margin-top: var(--space-8);
+}
+.ia-toggle {
+    display: none; /* shown only below the breakpoint, see media query below */
+    background: transparent;
+    color: var(--black);
+    padding: 12px 24px;
+    border-radius: var(--r-pill);
+    border: 1px solid var(--border);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--t-color);
+    margin-bottom: var(--space-16);
+}
+.ia-toggle:hover {
+    background: var(--bg-hover);
+}
+
+/* First breakpoint in this file — reuse 768px for future responsive
+   work rather than introducing a second value elsewhere. */
+@media (max-width: 768px) {
+    .ia-toggle {
+        display: inline-block;
+    }
+}
+@media (min-width: 769px) {
+    .ia-scroll[hidden] {
+        display: block; /* always show the diagram above the breakpoint */
     }
 }
