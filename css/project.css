@@ -124,6 +124,13 @@ p {
     height: 0%; /* JS drives this 0–100% as you scroll through the case study */
     background: var(--black);
 }
+.size-img {
+    width: 80%;
+    height: auto;
+    border-radius: 16px;
+    margin: 24px 0 0;
+    cursor: none;
+}
 /* Dark block for turning point */
 .dark-block { 
     display: flex; 
