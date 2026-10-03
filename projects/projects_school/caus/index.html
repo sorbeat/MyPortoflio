@@ -251,14 +251,7 @@
         <p class="content-body">Ground News was the more useful failure. It exposes media bias brilliantly by showing left, centre and right coverage side by side, which is a genuinely counter-visual move. But the bias meter is passive: it tells you the split without explaining how the narratives differ. It's a dashboard, not a conversation. News is observed, never co-created — the exact opposite of how meme culture works, where critique becomes shared authorship. That contrast defined what Caus. needed to be.</p>
         <p class="content-body">Humour is the gateway — people engage with causes when it doesn't feel preachy. But the pains clustered tightly: activism feeling performative, information overload as causes compete for attention, uncertainty about whether a meme or the campaign behind it is credible, and no clear route from an online reaction to an offline one.</p>
 
-        <h4 class="content-subtitle">Competitor analysis</h4>
-        <!-- IMAGE NEEDED: competitor analysis boards → /projects/caus/images/competitor-analysis.png -->
 
-        <p class="content-body">I looked at Global Citizen and Ground News. Global Citizen already blends activism with entertainment and rewards participation with points, but its navigation — Festival, For You, Discover, Goals &amp; Journeys — is vague and overlapping, and points appear everywhere without explaining what they convert into.</p>
-
-        <p class="content-body">Ground News was the more useful failure. It exposes media bias brilliantly by showing left, centre and right coverage side by side, which is a genuinely counter-visual move. But the bias meter is passive: it tells you the split without explaining how the narratives differ. It's a dashboard, not a conversation. News is observed, never co-created — the exact opposite of how meme culture works, where critique becomes shared authorship. That contrast defined what Caus. needed to be.</p>
-
-        <div class="finding-list">
             <div class="finding-row">
                 <p class="finding">People believe memes raise awareness but doubt they produce action.</p>
                 <p class="so"><span>Decision</span> Every meme in the app links directly to the campaign, petition or protest behind it, so the action is one tap from the joke.</p>
@@ -404,7 +397,7 @@
         </div>
         <div class="card-grid-2">
             <div class="content-heading">Supporting problem 01</div>
-            div class="content-heading">Supporting problem 02</div>
+            <div class="content-heading">Supporting problem 02</div>
         </div>
         <div class="card-grid-2">
             <div class="info-card">
@@ -482,8 +475,61 @@
         <p class="content-body">The structure came before the styling. If the core idea was that a meme should always lead somewhere, the architecture had to make that path short — which meant the meme detail page became the hinge of the whole product.</p>
 
         <h4 class="content-subtitle">Information architecture</h4>
-        <!-- IMAGE NEEDED: IA diagram → /projects/caus/images/information-architecture.png -->
-        <p class="content-body">Onboarding leads into the home page, which branches into eight areas: home feed, meme details, remix, map, profile, forum, petition and protest. Petitions and protests both link back to the meme that surfaced them, so the loop closes in both directions. Sharing or completing an action earns points.</p>
+<button type="button" class="ia-toggle" data-toggle-target="caus-ia-diagram" data-label-show="View information architecture ↓" data-label-hide="Hide information architecture">View information architecture ↓</button>
+<div id="ia-diagram" class="ia-scroll" hidden>
+    <div class="ia-diagram">
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-caus">Home Feed</div>
+            <div class="ia-item">tags</div>
+            <div class="ia-item">Search</div>
+            <div class="ia-item">Meme Cards</div>
+            <div class="ia-item">Up/Down Votes</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-caus">Meme Details</div>
+            <div class="ia-item">Political topic</div>
+            <div class="ia-item">Petition</div>
+            <div class="ia-item">Protest</div>
+            <div class="ia-item">Campaign</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-caus">Petition</div>
+            <div class="ia-item">Details</div>
+            <div class="ia-item">Who Joined</div>
+            <div class="ia-item">Related Memes</div>
+            <div class="ia-item">certified</div>
+            <div class="ia-item">Prompt signing</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-caus">Protest</div>
+            <div class="ia-item">Details</div>
+            <div class="ia-item">Who Joined</div>
+            <div class="ia-item">Option to Join</div>
+            <div class="ia-item">is Certified</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-caus">Profile</div>
+            <div class="ia-item">Archive</div>
+            <div class="ia-item">friend lis</div>
+            <div class="ia-item">Advocacy</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-caus">ChatRoom</div>
+            <div class="ia-item">Links to Memes</div>
+            <div class="ia-item">Badge Earned</div>
+            <div class="ia-item">Story about the Badge</div>
+        </div>
+        <div class="ia-column">
+            <div class="ia-column-head ia-column-caus">Remix Page</div>
+            <div class="ia-item">Download the Original Photo</div>
+            <div class="ia-item">Rank placement </div>
+        </div><div class="ia-column">
+            <div class="ia-column-head ia-column-caus">Remix Page</div>
+            <div class="ia-item">Download the Original Photo</div>
+            <div class="ia-item">Rank placement </div>
+        </div>
+    </div>
+</div>
 
         <h4 class="content-subtitle">The flow that mattered most</h4>
         <img src="/projects/projects_school/caus/images/caus-main-flow.png" alt="User flow diagram showing the path from feed to action and back to sharing" class="content-img">

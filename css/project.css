@@ -775,7 +775,7 @@ p {
 .ia-column-head.ia-column-echo {
     background: #dbc746;
 }
-.ia-column-head .ia-column-caus {
+.ia-column-head.ia-column-caus {
     background: #FF6B54;
 } 
 .ia-item {
