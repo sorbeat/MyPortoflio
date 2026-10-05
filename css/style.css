@@ -522,6 +522,15 @@ footer {
 
 
 @media (max-width: 768px) {
+    .hero {
+        padding: var(--space-32);
+    }
+    .hero h1 {
+        font-size: var(--fs-display-m);
+    }
+    .hero-tagline {
+        font-size: var(--fs-body-lg);
+    }
     .about {
         grid-template-columns: 1fr;
         gap: var(--space-32);
@@ -539,5 +548,22 @@ footer {
     }
     .hobbies-grid {
         grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width: 320px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+    .hero-tagline {
+        font-size: 16px;
+    }
+    .about-body {
+        font-size: 24px;
+    }
+    .project-title {
+        font-size: 24px;
+    }
+    .project-description {
+        font-size: 16px;
     }
 }
