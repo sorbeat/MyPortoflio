@@ -357,11 +357,22 @@ nav{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: none;
 }
-
+/* Arrow icon — the SVG is used as a mask, so it takes the text colour
+   (currentColor). Change `color` on the parent and the arrow follows. */
+.icon-arrow {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    vertical-align: -0.125em;
+    background-color: currentColor;
+    -webkit-mask: url('/assets/icons/arrow-trans.svg') center / contain no-repeat;
+            mask: url('/assets/icons/arrow-trans.svg') center / contain no-repeat;
+}
 /* Hover lift — applies to all three cards */
 .project-card-large:hover,.project-card-small:hover,.project-card-seemore:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
 }
 
 .project-card-body {
@@ -426,10 +437,11 @@ nav{
     height: 36px;
     border: 1px solid var(--border);
     border-radius: 50%;
+    background: var(--white);
     color: var(--black);
-    font-size: 14px;
+    font-size: 18px;          /* sets the arrow size */
     flex-shrink: 0;
-    transition: var(--t-color);
+    transition: background var(--t-color), color var(--t-color);
 }
 
 .project-card-seemore:hover .seemore-btn {
@@ -658,6 +670,7 @@ footer {
         left: 0;
         right: 0;
         flex-direction: column;
+        text-align: center;
         align-items: stretch;
         gap: 0;
         padding: var(--space-8) var(--space-24) var(--space-24);
