@@ -228,29 +228,169 @@
         transform: none;
     }
 }
-@media (max-width: 768px) {
+
+/* ==========================================================
+   RESPONSIVE — ALL WORK PAGE (showcase.html)
+   Desktop  : base styles above (1025px and up)
+   Tablet   : 768px – 1024px
+   Mobile   : 767px and below
+   ========================================================== */
+
+/* ---------- TABLET (≤1024px) ---------- */
+@media (max-width: 1024px) {
+    /* Header */
     .work-hero {
-        padding: 64px 32px 32px;
+        padding: 112px var(--space-48) var(--space-32);
+        gap: var(--space-16);
+    }
+    .work-intro {
+        font-size: 20px;
     }
     .work-filter-bar {
-        padding: 0 32px var(--space-24);
+        padding: 0 var(--space-48) var(--space-24);
     }
+
+    /* Grid */
     .work-grid {
-        padding: var(--space-48) 32px var(--space-80);
+        padding: var(--space-48) var(--space-48) var(--space-64);
+        gap: var(--space-24);
     }
+    .work-desc {
+        font-size: var(--fs-body-lg);
+    }
+    .tag {
+        font-size: var(--fs-caption);
+        padding: 6px 12px;
+    }
+
+    /* Featured — stack, image on top */
     .work-featured {
         grid-template-columns: 1fr;
     }
-    .work-featured-media img {
-        min-height: 320px;
+    .work-featured-media {
+        order: -1;
     }
+    .work-featured-media img {
+        min-height: 0;
+        height: 380px;
+    }
+    .work-featured-text {
+        padding: var(--space-32);
+    }
+    .work-featured-text h2 {
+        font-size: 40px;
+    }
+    .work-cta {
+        margin-top: var(--space-8);
+    }
+
+    /* Cards — stay 2 up */
     .work-list {
-        grid-template-columns: 1fr;
+        gap: var(--space-24);
+    }
+    .work-card-body {
+        padding: var(--space-24);
+    }
+    .work-card-head h3 {
+        font-size: 28px;
     }
     .work-card-media {
-        height: 200px;
+        height: 240px;
+        margin-top: auto; /* keeps images aligned along the bottom of each row */
     }
-    .grid-2 {
+}
+
+/* ---------- MOBILE (≤767px) ---------- */
+@media (max-width: 767px) {
+    /* Header — clears the fixed nav */
+    .work-hero {
+        padding: 104px var(--space-24) var(--space-24);
+        gap: var(--space-12);
+    }
+    .work-title {
+        font-size: 44px;
+    }
+    .work-intro {
+        font-size: var(--fs-body-lg);
+    }
+
+    /* Filter bar — chips become one swipeable row */
+    .work-filter-bar {
+        padding: 0 0 var(--space-16);
+        gap: var(--space-12);
+    }
+    .chips {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        width: 100%;
+        padding: 4px var(--space-24);
+        scrollbar-width: none;
+        -webkit-overflow-scrolling: touch;
+    }
+    .chips::-webkit-scrollbar {
+        display: none;
+    }
+    .chip {
+        flex-shrink: 0;
+        min-height: 44px;        /* touch target */
+        padding: 10px 16px;
+        white-space: nowrap;
+    }
+    .work-count {
+        padding: 0 var(--space-24);
+        font-size: var(--fs-caption);
+    }
+
+    /* Grid */
+    .work-grid {
+        padding: var(--space-32) var(--space-24) var(--space-64);
+        gap: var(--space-16);
+    }
+    .work-desc {
+        font-size: var(--fs-body);
+    }
+    .work-role {
+        font-size: var(--fs-caption);
+    }
+
+    /* Featured */
+    .work-featured-media img {
+        height: 260px;
+    }
+    .work-featured-text {
+        padding: var(--space-24);
+        gap: var(--space-12);
+    }
+    .work-featured-text h2 {
+        font-size: 32px;
+    }
+    .work-cta {
+        font-size: var(--fs-body);
+    }
+
+    /* Cards — single column */
+    .work-list {
         grid-template-columns: 1fr;
+        gap: var(--space-16);
+    }
+    .work-card-head h3 {
+        font-size: var(--fs-heading);
+    }
+    .work-card-media {
+        height: 220px;
+    }
+}
+
+/* ---------- SMALL PHONES (≤380px) ---------- */
+@media (max-width: 380px) {
+    .work-title {
+        font-size: 36px;
+    }
+    .work-featured-text h2 {
+        font-size: 28px;
+    }
+    .work-featured-media img,
+    .work-card-media {
+        height: 200px;
     }
 }

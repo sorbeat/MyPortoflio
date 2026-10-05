@@ -14,6 +14,20 @@ sections.forEach(section => {
     sidebar.appendChild(link);
 });
 
+// On tablet/mobile the links become a horizontal, swipeable bar.
+// Slide that bar so the active link is always visible (does nothing on desktop).
+function keepLinkInView(link) {
+    if (sidebar.scrollWidth <= sidebar.clientWidth) return;
+    const barRect = sidebar.getBoundingClientRect();
+    const linkRect = link.getBoundingClientRect();
+    if (linkRect.left < barRect.left || linkRect.right > barRect.right) {
+        sidebar.scrollTo({
+            left: sidebar.scrollLeft + (linkRect.left - barRect.left) - 16,
+            behavior: 'smooth'
+        });
+    }
+}
+
 // --- 2. Scroll-spy: highlight the active link ---
 const links = document.querySelectorAll('.sidebar-links a');
 
@@ -22,7 +36,10 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             links.forEach(link => link.classList.remove('active'));
             const activeLink = document.querySelector(`.sidebar-links a[href="#${entry.target.id}"]`);
-            if (activeLink) activeLink.classList.add('active');
+            if (activeLink) {
+                activeLink.classList.add('active');
+                keepLinkInView(activeLink);
+            }
         }
     });
 }, { rootMargin: '-20% 0px -70% 0px' });
