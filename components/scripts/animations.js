@@ -1,5 +1,6 @@
 /**
- * Home page animations (GSAP 3 + ScrollTrigger + SplitText + ScrambleText)
+ * Site animations (GSAP 3 + ScrollTrigger + SplitText + ScrambleText)
+ * Home page, All Work (showcase) page and project case-study pages.
  *
  * Load order (all `defer`, so they run in this order after the HTML is parsed):
  *   gsap.min.js → ScrollTrigger.min.js → SplitText.min.js → ScrambleTextPlugin.min.js → animations.js
@@ -31,23 +32,57 @@
         new Promise((resolve) => setTimeout(resolve, 1500))
     ]);
 
+    const NO_MOTION = '(prefers-reduced-motion: reduce)';
+    const MOTION    = '(prefers-reduced-motion: no-preference)';
+
+    // Plain fade/slide reveals start straight away (no font wait), so content
+    // that's already on screen doesn't flash visible → hidden → visible.
+    gsap.matchMedia().add(MOTION, () => {
+        sectionReveals();
+        projectCards();
+        hobbyPhotos();
+        showcaseReveals();
+        projectPageReveals();
+    });
+
+    // Text-splitting effects wait for fonts so lines/letters are measured correctly.
     fontsReady.then(() => {
         const mm = gsap.matchMedia();
 
         // Reduced motion: no animation, just make sure the hero is visible.
-        mm.add('(prefers-reduced-motion: reduce)', () => {
+        mm.add(NO_MOTION, () => {
             showHero();
         });
 
-        mm.add('(prefers-reduced-motion: no-preference)', () => {
+        mm.add(MOTION, () => {
             heroIntro();
             aboutText();
-            sectionReveals();
-            projectCards();
-            hobbyPhotos();
             footerHeading();
         });
     });
+
+
+    /* Shared helper — fade + rise a list of elements as they scroll into view,
+       a few at a time (ScrollTrigger.batch groups ones that enter together). */
+    function revealOnScroll(elements, { y = 40, stagger = 0.1, start = 'top 90%' } = {}) {
+        const items = gsap.utils.toArray(elements);
+        if (!items.length) return;
+
+        gsap.set(items, { autoAlpha: 0, y });
+        ScrollTrigger.batch(items, {
+            start,
+            onEnter: (batch) => gsap.to(batch, {
+                autoAlpha: 1,
+                y: 0,
+                duration: 0.8,
+                stagger,
+                ease: 'power3.out',
+                overwrite: true,
+                // hand transform back to CSS so hover lifts keep working
+                onComplete: () => gsap.set(batch, { clearProps: 'transform,transition' })
+            })
+        });
+    }
 
 
     /* ---------------------------------------------------------
@@ -282,5 +317,77 @@
                 });
             }
         });
+    }
+
+
+    /* ---------------------------------------------------------
+       7. ALL WORK (showcase.html) — header on load, cards on scroll
+       --------------------------------------------------------- */
+    function showcaseReveals() {
+        const header = document.querySelector('.work-hero');
+        if (!header) return;
+
+        // Header: title, intro and filter bar rise in on load
+        gsap.from(['.work-title', '.work-intro', '.work-filter-bar'], {
+            autoAlpha: 0,
+            y: 30,
+            duration: 0.9,
+            stagger: 0.12,
+            ease: 'power3.out',
+            clearProps: 'transform'
+        });
+
+        // Cards: the CSS hover lift also uses transform, so switch its
+        // transition off until each card has finished revealing.
+        const cards = gsap.utils.toArray('.work-featured, .work-card');
+        gsap.set(cards, { transition: 'none' });
+        revealOnScroll(cards, { y: 60, stagger: 0.12, start: 'top 92%' });
+
+        // The filter chips hide/show cards (display: none), which moves
+        // everything below — recalculate trigger positions after a filter.
+        document.querySelectorAll('.chip').forEach((chip) => {
+            chip.addEventListener('click', () => ScrollTrigger.refresh());
+        });
+    }
+
+
+    /* ---------------------------------------------------------
+       8. PROJECT / CASE STUDY PAGES — hero on load, content on scroll
+       --------------------------------------------------------- */
+    function projectPageReveals() {
+        const hero = document.querySelector('.project-hero');
+        if (!hero) return;
+
+        // Hero: name, tags, image and meta rise in on load
+        gsap.from(hero.querySelectorAll('.project-name, .project-tags, .project-hero-img, .project-meta'), {
+            autoAlpha: 0,
+            y: 30,
+            duration: 0.9,
+            stagger: 0.12,
+            ease: 'power3.out',
+            clearProps: 'transform'
+        });
+
+        // Everything in the case study that should reveal on scroll.
+        // Cards inside grids are listed individually so they stagger.
+        const REVEAL = [
+            '.dark-block',
+            '.content-heading', '.content-heading-dk', '.content-title', '.content-subtitle',
+            '.content-body', '.section-body', '.content-caption',
+            '.content-img', '.size-img', '.btn--centre',
+            '.info-card', '.step-card', '.stat-card',
+            '.persona-label', '.persona-card',
+            '.empathy-caption-row', '.empathy-quadrant',
+            '.finding-row', '.priority-row',
+            '.palette-group-label', '.swatch', '.type-scale-row'
+            // (IA diagram left out — it's collapsed/hidden on mobile)
+        ].join(', ');
+
+        // Skip anything inside another revealed block (e.g. the heading inside
+        // an info-card) so nothing animates twice.
+        const items = gsap.utils.toArray(document.querySelectorAll('.project-content ' + REVEAL.split(', ').join(', .project-content ')))
+            .filter((el) => !el.parentElement.closest(REVEAL));
+
+        revealOnScroll(items, { y: 40, stagger: 0.08 });
     }
 })();
