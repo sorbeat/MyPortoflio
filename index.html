@@ -16,7 +16,11 @@
 <!-- Navigation-->
 <nav>
     <a href="#" class="logo">Sebastianhar</a>
-    <ul class="nav-links">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="/projects/showcase.html">My Work</a></li>
         <li><a href="#contact" class="btn-nav">Get in Touch</a></li>
@@ -136,6 +140,7 @@
         </div>
     </footer>
 
+    <script src="/components/nav.js" defer></script>
     <script src="/components/scripts/cursor-trail.js">defer</script>
 </body>
 </html>
