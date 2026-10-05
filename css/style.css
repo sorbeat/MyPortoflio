@@ -521,49 +521,218 @@ footer {
 }
 
 
-@media (max-width: 768px) {
+/* ==========================================================
+   RESPONSIVE — HOME PAGE (index.html) + shared footer
+   Desktop  : base styles above (1025px and up)
+   Tablet   : 768px – 1024px
+   Mobile   : 767px and below
+   Nav is intentionally left untouched for now.
+   ========================================================== */
+
+/* ---------- TABLET (≤1024px) ---------- */
+@media (max-width: 1024px) {
+    body {
+        font-size: 20px;
+    }
+
+    /* Hero */
     .hero {
-        padding: var(--space-32);
+        padding: var(--space-48);
+    }
+    .hero-tagline {
+        font-size: 20px;
+    }
+    .hero-card {
+        right: var(--space-48);
+        bottom: var(--space-48);
+    }
+    .hero-card-avatar {
+        height: var(--space-64);
+    }
+    .hero-card-name {
+        font-size: 18px;
+    }
+    .hero-card-role {
+        font-size: var(--fs-body);
+    }
+
+    /* About */
+    .about {
+        grid-template-columns: 1fr;
+        gap: var(--space-24);
+        padding: var(--space-80) var(--space-48);
+        min-height: auto;
+    }
+    .about-body {
+        font-size: 30px;
+    }
+
+    /* Projects */
+    .mywork {
+        padding: var(--space-48);
+    }
+    .project-tagline {
+        margin: var(--space-12) 0 var(--space-32);
+    }
+    .project-grid,
+    .project-grid-right {
+        gap: var(--space-24);
+    }
+    .project-card-body,
+    .project-card-seemore {
+        padding: var(--space-24);
+    }
+    .project-title {
+        font-size: 28px;
+    }
+    .project-description,
+    .seemore-title,
+    .seemore-desc {
+        font-size: 18px;
+    }
+    .project-card-small .project-img {
+        height: 220px;
+    }
+
+    /* Hobbies */
+    .hobbies-section {
+        min-height: auto;
+        padding: var(--space-48);
+    }
+
+    /* Footer (shared) */
+    footer {
+        padding: var(--space-48) var(--space-48) var(--space-24);
+    }
+}
+
+/* ---------- MOBILE (≤767px) ---------- */
+@media (max-width: 767px) {
+    body {
+        font-size: 18px;
+    }
+
+    /* Hero — card drops into the flow under the buttons */
+    .hero {
+        min-height: 100svh;
+        padding: var(--space-80) var(--space-24) var(--space-48);
     }
     .hero h1 {
         font-size: var(--fs-display-m);
+        margin: 0 0 var(--space-16);
     }
     .hero-tagline {
         font-size: var(--fs-body-lg);
     }
-    .about {
-        grid-template-columns: 1fr;
-        gap: var(--space-32);
-        padding: var(--space-32);
+    .hero-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
     }
     .hero-card {
-        right: var(--space-32);
-        bottom: var(--space-32);
+        position: static;
+        margin-top: var(--space-48);
     }
-    .project-grid {
-        grid-template-columns: 1fr;
+    .hero-card-avatar {
+        height: var(--space-48);
     }
-    .project-grid-right {
-        flex-direction: column;
-    }
-    .hobbies-grid {
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-@media (max-width: 320px) {
-    .hero h1 {
-        font-size: 32px;
-    }
-    .hero-tagline {
-        font-size: 16px;
+
+    /* About */
+    .about {
+        padding: var(--space-64) var(--space-24);
+        gap: var(--space-16);
     }
     .about-body {
         font-size: 24px;
     }
-    .project-title {
-        font-size: 24px;
+
+    /* Projects — single column */
+    .mywork {
+        padding: var(--space-48) var(--space-24);
     }
-    .project-description {
-        font-size: 16px;
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-title {
+        font-size: var(--fs-heading);
+        margin-bottom: var(--space-8);
+    }
+    .project-description,
+    .seemore-desc {
+        font-size: var(--fs-body);
+    }
+    .seemore-title {
+        font-size: var(--fs-body-lg);
+    }
+    .project-card-small .project-img {
+        height: auto;
+    }
+    .project-card-seemore {
+        gap: var(--space-16);
+    }
+
+    /* Hobbies — first photo full width, other two side by side */
+    .hobbies-section {
+        padding: var(--space-48) var(--space-24);
+    }
+    .hobbies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8);
+    }
+    .hobbies-items:first-child {
+        grid-column: 1 / -1;
+        aspect-ratio: 4 / 3;
+    }
+
+    /* Footer (shared) — stack everything */
+    footer {
+        padding: var(--space-48) var(--space-24) var(--space-24);
+        gap: var(--space-24);
+    }
+    .footer-top {
+        text-align: left;
+    }
+    .footer-bottom {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: var(--space-16);
+        padding-top: var(--space-24);
+    }
+    .footer-links {
+        flex-wrap: wrap;
+        gap: var(--space-16);
+    }
+    .footer-links a {
+        font-size: var(--fs-body);
+    }
+    .footer-copy {
+        font-size: var(--fs-caption);
+    }
+}
+
+/* ---------- SMALL PHONES (≤380px) ---------- */
+@media (max-width: 380px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+    .hero-tagline {
+        font-size: var(--fs-body);
+    }
+    .btn-primary,
+    .btn-outline {
+        padding: 12px 20px;
+    }
+    .about-body {
+        font-size: 20px;
+    }
+    .project-card-body,
+    .project-card-seemore {
+        padding: var(--space-16);
+    }
+}
+
+/* Touch devices: no mouse, so bring the normal cursor back */
+@media (hover: none) {
+    body {
+        cursor: auto;
     }
 }
