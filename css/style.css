@@ -22,6 +22,7 @@ padding: 0;
     --border:   #d8d8d2;
     --blue:     #4BA4F2;
     --green:    #70D263;
+    --orange:   #FF6B54;                   /* Caus accent */
 
 /* Type families */
     --font-body:    'DM Sans', sans-serif;
@@ -172,6 +173,24 @@ nav{
 .btn-nav:hover{
     opacity: 0.75;
 }
+/* Animations — hero content stays hidden until the GSAP intro starts
+   (class added in index.html <head>, removed by animations.js).
+   Reduced-motion users always see it straight away. */
+.js-anim .hero h1,
+.js-anim .hero-tagline,
+.js-anim .hero-buttons,
+.js-anim .hero-card {
+    visibility: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+    .js-anim .hero h1,
+    .js-anim .hero-tagline,
+    .js-anim .hero-buttons,
+    .js-anim .hero-card {
+        visibility: visible;
+    }
+}
+
 /* Mobile menu toggle — hidden until the mobile breakpoint */
 .nav-toggle {
     display: none;
@@ -309,6 +328,33 @@ nav{
     line-height: var(--lh-body);
     font-weight: 450;
     font-size: 38px;
+}
+/* Highlighted words inside the About text */
+.about-body strong {
+    font-weight: 600;
+}
+/* Orange highlighter block — the background is a gradient so GSAP can
+   sweep it in (background-size 0% → 100%). Without JS it's just shown. */
+.highlight {
+    color: var(--black);       /* black on orange ≈ 7:1 contrast (white fails) */
+    background-color: transparent;
+    background-image: linear-gradient(var(--orange), var(--orange));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0 0.15em;
+    border-radius: 4px;
+    -webkit-box-decoration-break: clone; /* keeps padding/radius on each line if it wraps */
+            box-decoration-break: clone;
+}
+.about-body em {
+    font-family: var(--font-heading); /* Instrument Serif italic */
+    font-style: italic;
+    font-size: 1.1em;
+}
+/* The letters scale up to 3x while animating in — clip so they never
+   push the page wider for a moment */
+.about-right {
+    overflow-x: clip;
 }
 
 /* Project Section */

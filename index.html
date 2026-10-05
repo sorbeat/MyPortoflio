@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sebastian Harris Design</title>
     <meta name="description" content="Sebastian Harris is a digital designer working across UX, UI and brand. He cares about clarity, craft and the small details that make a product feel considered.">
@@ -6,6 +10,14 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="/assets/favicon/favicon.png">
 
+    <!-- Animations: lets CSS hide the hero until the GSAP intro starts.
+         If GSAP fails to load, the hero is shown again after 3s. -->
+    <script>
+        document.documentElement.classList.add('js-anim');
+        setTimeout(function () {
+            if (!window.gsap) document.documentElement.classList.remove('js-anim');
+        }, 3000);
+    </script>
 </head>
 <body>
 
@@ -52,11 +64,11 @@
 </div>
     <div class="about-right">
         <p class="about-body">
-        I'm a digital designer working across UX, UI and Product Design.
-        I care about clarity, craft and the small details that make a product
-        feel considered and I like getting out of the studio to explore,
-        surf and shoot along the way.
-                </p>
+        I'm a digital designer working across <strong>UX, UI and Product Design</strong>.
+        I care about <em>clarity, craft</em> and the <mark class="highlight">small details that make</mark> a product
+        feel considered and I like getting out of the studio to
+        explore 🧭, surf 🏄 and shoot 📷 along the way.
+        </p>
         </div>
     </section>
 
@@ -99,8 +111,7 @@
 <!--Hobbies Section-->
 <section class ="hobbies-section" id="hobbies">
 <p class="section-label">Out and About</p>
-    <p class="project-tagline">Figma ipsum component variant main layer. Library clip
-    background main main prototype arrange thumbnail.
+    <p class="project-tagline">Outside of design, I’m usually chasing a bit of adventure. I enjoy exploring caves, surfing, and getting outdoors whenever I can. These hobbies give me a chance to switch off, explore new places, and find inspiration away from the screen.
     </p>
 <!-- Photo Grid -->
     <div class="hobbies-grid">
@@ -138,6 +149,13 @@
 
     <script src="/components/nav.js" defer></script>
     <script src="/components/scripts/cursor-trail.js" defer></script>
+
+    <!-- GSAP (free standard license) + plugins, then our animations -->
+    <script src="/components/vendor/gsap/gsap.min.js" defer></script>
+    <script src="/components/vendor/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="/components/vendor/gsap/SplitText.min.js" defer></script>
+    <script src="/components/vendor/gsap/ScrambleTextPlugin.min.js" defer></script>
+    <script src="/components/scripts/animations.js" defer></script>
 </body>
 </html>
 
