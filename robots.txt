@@ -1,0 +1,8 @@
+# robots.txt — https://www.sebastianharrisdesign.com
+# Everything may be crawled. Unfinished pages (Mono, Trivia CC, the template)
+# carry a <meta name="robots" content="noindex"> tag instead of being blocked
+# here, so search engines can still see and respect that tag.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.sebastianharrisdesign.com/sitemap.xml

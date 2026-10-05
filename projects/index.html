@@ -3,21 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Work - Sebastian Harris</title>
+    <title>Projects | Sebastian Harris — UX/UI Design Portfolio</title>
+    <meta name="description" content="Selected UX/UI, product and web design work by Sebastian Harris: mobile and web app case studies grounded in user research, plus websites for clients.">
+    <meta name="author" content="Sebastian Harris">
+    <link rel="canonical" href="https://www.sebastianharrisdesign.com/projects/">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sebastian Harris Design">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Projects | Sebastian Harris — UX/UI Design Portfolio">
+    <meta property="og:description" content="Selected UX/UI, product and web design work by Sebastian Harris: mobile and web app case studies grounded in user research, plus websites for clients.">
+    <meta property="og:url" content="https://www.sebastianharrisdesign.com/projects/">
+    <meta property="og:image" content="https://www.sebastianharrisdesign.com/assets/og/og-projects.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Selected UX/UI projects by Sebastian Harris">
+    <meta name="twitter:card" content="summary_large_image">
     
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/favicon-192.png">
     <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=DM+Sans:wght@300;400;500&amp;family=Poppins:wght@300;400;500;600&amp;display=swap">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/work.css">
 
     <script src="/components/scripts/work-filter.js" defer></script>
+
+    <!-- Structured data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://www.sebastianharrisdesign.com/projects/#page",
+          "name": "Projects",
+          "url": "https://www.sebastianharrisdesign.com/projects/",
+          "isPartOf": {
+            "@id": "https://www.sebastianharrisdesign.com/#website"
+          },
+          "about": {
+            "@id": "https://www.sebastianharrisdesign.com/#person"
+          },
+          "hasPart": [
+            {
+              "@id": "https://www.sebastianharrisdesign.com/projects/eddy/#work"
+            },
+            {
+              "@id": "https://www.sebastianharrisdesign.com/projects/caus/#work"
+            },
+            {
+              "@id": "https://www.sebastianharrisdesign.com/projects/echo/#work"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.sebastianharrisdesign.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://www.sebastianharrisdesign.com/projects/"
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.sebastianharrisdesign.com/#person",
+          "name": "Sebastian Harris",
+          "url": "https://www.sebastianharrisdesign.com/",
+          "image": "https://www.sebastianharrisdesign.com/assets/images/photoofme.webp",
+          "jobTitle": "UX/UI Designer",
+          "description": "UX/UI and product designer working across user research, prototyping, interaction design and web design.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Cape Town",
+            "addressCountry": "ZA"
+          },
+          "knowsAbout": [
+            "UX design",
+            "UI design",
+            "Product design",
+            "User research",
+            "Prototyping",
+            "Interaction design",
+            "Web design"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/sebastian-harris-9599502b4/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.sebastianharrisdesign.com/#website",
+          "name": "Sebastian Harris Design",
+          "url": "https://www.sebastianharrisdesign.com/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://www.sebastianharrisdesign.com/#person"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!--nav bar-->
-<div id="nav-placeholder"></div>
+<header id="nav-placeholder"></header>
 <script src="/components/nav.js" defer></script>
 
+<main id="main">
 <header class="work-hero">
     <h1 class="work-title">All Work</h1>
     <p class="work-intro">An overview of selected projects spanning UX/UI design, interaction design, research and digital experiences.</p>
@@ -32,15 +138,16 @@
         <button type="button" class="chip" data-filter="research" aria-pressed="false">Research</button>
         <button type="button" class="chip" data-filter="3d-experimental" aria-pressed="false">3D / Experimental</button>
     </div>
-    <p class="work-count">6 projects</p>
+    <p class="work-count" aria-live="polite">6 projects</p>
 </div>
 
-<main class="work-grid">
+<h2 class="sr-only">Selected projects</h2>
+<div class="work-grid">
 
-    <a class="work-featured work-item" data-categories="ux-ui research" href="/projects/projects_school/eddy/index.html">
+    <a class="work-featured work-item" data-categories="ux-ui research" href="/projects/eddy/">
         <div class="work-featured-text">
             <span class="work-featured-label">Featured</span>
-            <h2>Eddy</h2>
+            <h3>Eddy</h3>
             <p class="work-desc">An AI-powered surf app helping surfers find the right waves.</p>
             <p class="work-role">Role — UX/UI Design & Research</p>
             <div class="tag-row">
@@ -53,12 +160,12 @@
             </span>
         </div>
         <div class="work-featured-media">
-            <img src="/projects/projects_school/eddy/images/Eddy%20two%20phones.png" alt="Two phones showing the Eddy surf app interface">
+            <img fetchpriority="high" width="1800" height="1338" src="/projects/eddy/images/eddy-two-phones.webp" alt="Two phones showing the Eddy surf app interface">
         </div>
     </a>
 
     <div class="work-list">
-        <a class="work-card work-item" data-categories="ux-ui" href="/projects/projects_school/caus/index.html">
+        <a class="work-card work-item" data-categories="ux-ui" href="/projects/caus/">
             <div class="work-card-body">
                 <div class="work-card-head">
                     <h3>Caus</h3>
@@ -72,11 +179,11 @@
                 </div>
             </div>
             <div class="work-card-media">
-                <img src="/projects/projects_school/caus/images/phone_screen_mockup.png" alt="Phone mockup of the Caus. social app">
+                <img loading="lazy" decoding="async" width="1600" height="1067" src="/projects/caus/images/phone-screen-mockup.webp" alt="Phone mockup of the Caus. social app">
             </div>
         </a>
 
-        <a class="work-card work-item" data-categories="research ux-ui" href="/projects/projects_school/echo/index.html">
+        <a class="work-card work-item" data-categories="research ux-ui" href="/projects/echo/">
             <div class="work-card-body">
                 <div class="work-card-head">
                     <h3>Echo</h3>
@@ -90,7 +197,7 @@
                 </div>
             </div>
             <div class="work-card-media">
-                <img src="/projects/projects_school/echo/images/Echo_handHold.png" alt="Placeholder project imagery">
+                <img loading="lazy" decoding="async" width="1600" height="1200" src="/projects/echo/images/echo-handhold.webp" alt="Hand holding a phone showing the Echo web app">
             </div>
         </a>
 
@@ -108,9 +215,9 @@
                 </div>
             </div>
             <div class="work-card-media">
-                <img src="/projects/projects_work/seagullView/images/seagullsview_laptop.png" alt="Placeholder project imagery">
+                <img loading="lazy" decoding="async" width="1536" height="1024" src="/projects/projects_work/seagullView/images/seagullsview-laptop.webp" alt="Seagull's View Cintsa website shown on a laptop">
             </div>
-        </a>
+        <span class="sr-only"> (opens in a new tab)</span></a>
 
         <a class="work-card work-item" data-categories="3d-experimental" href="https://www.surfwithmitch.com/" target="_blank" rel="noopener noreferrer">
             <div class="work-card-body">
@@ -125,11 +232,12 @@
                 </div>
             </div>
             <div class="work-card-media">
-                <img src="/projects/projects_work/surfWithMitch/images/surfwithmitch_laptop.png" alt="Placeholder project imagery">
+                <img loading="lazy" decoding="async" width="1536" height="1024" src="/projects/projects_work/surfWithMitch/images/surfwithmitch-laptop.webp" alt="SurfWithMitch surf coaching website shown on a laptop">
             </div>
-        </a>
+        <span class="sr-only"> (opens in a new tab)</span></a>
     </div>
 
+</div>
 </main>
 
 <div id="footer-placeholder"></div>
@@ -138,7 +246,6 @@
     <script src="/components/vendor/gsap/gsap.min.js" defer></script>
     <script src="/components/vendor/gsap/ScrollTrigger.min.js" defer></script>
     <script src="/components/vendor/gsap/SplitText.min.js" defer></script>
-    <script src="/components/vendor/gsap/ScrambleTextPlugin.min.js" defer></script>
     <script src="/components/scripts/animations.js" defer></script>
 </body>
 </html>

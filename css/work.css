@@ -138,7 +138,7 @@
     text-transform: uppercase;
     color: var(--gray);
 }
-.work-featured-text h2 {
+.work-featured-text h3 {
     font-family: var(--font-poppins);
     font-size: 48px; /* off-scale */
     font-weight: 500;
@@ -230,7 +230,7 @@
 }
 
 /* ==========================================================
-    RESPONSIVE — ALL WORK PAGE (showcase.html)
+    RESPONSIVE — ALL WORK PAGE (projects/index.html)
     Desktop  : base styles above (1025px and up)
    Tablet   : 768px – 1024px
    Mobile   : 767px and below
@@ -277,7 +277,7 @@
     .work-featured-text {
         padding: var(--space-32);
     }
-    .work-featured-text h2 {
+    .work-featured-text h3 {
         font-size: 40px;
     }
     .work-cta {
@@ -361,7 +361,7 @@
         padding: var(--space-24);
         gap: var(--space-12);
     }
-    .work-featured-text h2 {
+    .work-featured-text h3 {
         font-size: 32px;
     }
     .work-cta {
@@ -386,7 +386,7 @@
     .work-title {
         font-size: 36px;
     }
-    .work-featured-text h2 {
+    .work-featured-text h3 {
         font-size: 28px;
     }
     .work-featured-media img,

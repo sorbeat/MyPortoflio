@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Update <lastmod> when a page's content meaningfully changes.
+     Only finished, indexable pages belong here. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.sebastianharrisdesign.com/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://www.sebastianharrisdesign.com/projects/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://www.sebastianharrisdesign.com/projects/eddy/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://www.sebastianharrisdesign.com/projects/caus/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://www.sebastianharrisdesign.com/projects/echo/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+</urlset>

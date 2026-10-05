@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@300;400;500&family=Poppins:wght@300;400;500;600&display=swap');
+/* Fonts are loaded with <link> tags in each page's <head> (faster than @import). */
 
 /*Removes default Browser spacing */
 *, *::before, *::after {
@@ -72,6 +72,42 @@ padding: 0;
 
 html {
     scroll-behavior: smooth;
+}
+
+/* ---------- Accessibility helpers (invisible unless needed) ---------- */
+/* Hidden visually, still read by screen readers and search engines */
+.sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+/* "Skip to content" — off-screen until a keyboard user tabs to it */
+.skip-link {
+    position: absolute;
+    left: var(--space-16);
+    top: -100px;
+    z-index: 1000;
+    padding: 12px 20px;
+    border-radius: var(--r-pill);
+    background: var(--black);
+    color: var(--white);
+    font-size: var(--fs-body);
+    text-decoration: none;
+}
+.skip-link:focus {
+    top: var(--space-16);
+}
+/* Section labels are now <h2> (for heading structure) — keep the
+   exact look they had as <p> */
+h2.section-label {
+    font-size: inherit;
+    font-weight: inherit;
 }
 /* body */
 body{
@@ -289,6 +325,7 @@ nav{
 }
 .hero-card-avatar{
     height: var(--space-80);
+    width: auto; /* width follows the height (img has width/height attributes for CLS) */
     border-radius:50%;
     object-fit: cover;
     flex-shrink: 0;

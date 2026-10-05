@@ -3,22 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caus. - Sebastian Harris</title>
+    <title>Caus. — Social Activism App UX/UI Case Study | Sebastian Harris</title>
+    <meta name="description" content="Caus. is a mobile app concept that turns South African political memes into awareness and action, a UX/UI case study grounded in research on meme culture.">
+    <meta name="author" content="Sebastian Harris">
+    <link rel="canonical" href="https://www.sebastianharrisdesign.com/projects/caus/">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Sebastian Harris Design">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Caus. — Social Activism App UX/UI Case Study | Sebastian Harris">
+    <meta property="og:description" content="Caus. is a mobile app concept that turns South African political memes into awareness and action, a UX/UI case study grounded in research on meme culture.">
+    <meta property="og:url" content="https://www.sebastianharrisdesign.com/projects/caus/">
+    <meta property="og:image" content="https://www.sebastianharrisdesign.com/assets/og/og-caus.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Caus. social activism app screens">
+    <meta name="twitter:card" content="summary_large_image">
     
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/favicon-192.png">
     <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=DM+Sans:wght@300;400;500&amp;family=Poppins:wght@300;400;500;600&amp;display=swap">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/project.css">
     
     <script src="/components/scripts/sidebar-scroll.js" defer></script>
     <script src="/components/scripts/lightbox.js" defer></script>
+
+    <!-- Structured data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CreativeWork",
+          "@id": "https://www.sebastianharrisdesign.com/projects/caus/#work",
+          "name": "Caus.",
+          "headline": "Caus. — UX/UI case study",
+          "description": "Caus. is a mobile app concept that turns South African political memes into awareness and action, a UX/UI case study grounded in research on meme culture.",
+          "url": "https://www.sebastianharrisdesign.com/projects/caus/",
+          "image": "https://www.sebastianharrisdesign.com/assets/og/og-caus.jpg",
+          "inLanguage": "en",
+          "genre": "UX/UI case study",
+          "keywords": "UX design, UI design, mobile app, user research, empathy map, social activism, memes",
+          "creator": {
+            "@id": "https://www.sebastianharrisdesign.com/#person"
+          },
+          "isPartOf": {
+            "@id": "https://www.sebastianharrisdesign.com/#website"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.sebastianharrisdesign.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://www.sebastianharrisdesign.com/projects/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Caus.",
+              "item": "https://www.sebastianharrisdesign.com/projects/caus/"
+            }
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.sebastianharrisdesign.com/#person",
+          "name": "Sebastian Harris",
+          "url": "https://www.sebastianharrisdesign.com/",
+          "image": "https://www.sebastianharrisdesign.com/assets/images/photoofme.webp",
+          "jobTitle": "UX/UI Designer",
+          "description": "UX/UI and product designer working across user research, prototyping, interaction design and web design.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Cape Town",
+            "addressCountry": "ZA"
+          },
+          "knowsAbout": [
+            "UX design",
+            "UI design",
+            "Product design",
+            "User research",
+            "Prototyping",
+            "Interaction design",
+            "Web design"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/sebastian-harris-9599502b4/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.sebastianharrisdesign.com/#website",
+          "name": "Sebastian Harris Design",
+          "url": "https://www.sebastianharrisdesign.com/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://www.sebastianharrisdesign.com/#person"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!--nav bar-->
-<div id="nav-placeholder"></div>
+<header id="nav-placeholder"></header>
 <script src="/components/nav.js" defer></script>
 
+<main id="main">
 <!--Hero Section-->
 <section class="project-hero">
     <h1 class="project-name">Caus.</h1>
@@ -29,15 +136,15 @@
     </div>
 
     <div class="project-hero-img">
-        <img src="/projects/projects_school/caus/images/Multicards-caus.png" alt="Caus. app screens shown across multiple cards">
+        <img fetchpriority="high" width="1920" height="1080" src="/projects/caus/images/multicards-caus.webp" alt="Caus. app screens shown across multiple cards">
     </div>
 
     <div class="project-meta">
         <span class="meta-duration">Duration: 8 Weeks</span>
         <div class="meta-tools">
             <span>Tools:</span>
-            <img src="/assets/icons/Figma.png" alt="Figma" class="tool-icon">
-            <img src="/assets/icons/Forms.png" alt="Forms" class="tool-icon">
+            <img width="48" height="48" src="/assets/icons/Figma.png" alt="Figma" class="tool-icon">
+            <img width="48" height="48" src="/assets/icons/Forms.png" alt="Google Forms" class="tool-icon">
         </div>
     </div>
 </section>
@@ -45,7 +152,7 @@
 <section class="project-layout" id="project-info">
 
 <aside class="project-sidebar">
-    <a href="/index.html#mywork" class="back-link" onclick="event.preventDefault(); history.back();">Back</a>    
+    <a href="/projects/" class="back-link" onclick="event.preventDefault(); history.back();">Back</a>    
     <div class="sidebar-nav">
         <div class="sidebar-progress">
             <div class="sidebar-progress-fill"></div>
@@ -54,20 +161,20 @@
     </div>
 </aside>
 
-<main class="project-content">
+<article class="project-content">
 
     <div class="dark-block">
         <p class="content-body-large">How do South African political memes use visuals and language to resist and challenge dominant digital narratives?</p>
     </div>
 
     <section class="content-section" id="design-brief" data-nav-label="Design Brief">
-        <h3 class="content-heading">01 — Design Brief</h3>
+        <p class="content-heading">01 — Design Brief</p>
         <h2 class="content-title">What am I designing?</h2>
         <p class="content-body">This module takes the research from RP300 and turns it into a digital product that responds to the issues identified in it. It begins with blue sky discussion, then moves into a proposal and a clear project plan before any design work starts.</p>
 
         <p class="content-body">My RP300 paper, <em>Meme Culture and Digital Resistance in South Africa: Visualizing Political and Social Activism in the Digital Age</em>, asked how South African political memes use visuals and language to resist and challenge dominant digital narratives. <strong>Caus.</strong> is the attempt to build something out of that question rather than only write about it.</p>
 
-        <h4 class="content-subtitle">The theory it's built on</h4>
+        <h3 class="content-subtitle">The theory it's built on</h3>
 
         <div class="card-grid-3">
             <div class="info-card">
@@ -97,7 +204,7 @@
     </section>
 
     <section class="content-section" id="approach" data-nav-label="Approach">
-        <h3 class="content-heading">02 — Approach</h3>
+        <p class="content-heading">02 — Approach</p>
         <h2 class="content-title">How did I approach the problem?</h2>
         <p class="content-body">Eight weeks, worked through in sequence,but I let the research overturn the framing rather than treating the concept as settled. The survey in the middle of the project changed what the app was for.</p>
 
@@ -126,7 +233,7 @@
     </section>
 
     <section class="content-section" id="research" data-nav-label="Research">
-        <h3 class="content-heading">03 — Research</h3>
+        <p class="content-heading">03 — Research</p>
         <h2 class="content-title">What did I discover?</h2>
         <p class="content-body">I ran a survey of 21 people, mostly aged 18–24, alongside an empathy map and an audit of two existing platforms. I wanted to know two things: whether people actually treat memes as political, and whether anything happens after they share one.</p>
 
@@ -149,7 +256,7 @@
 
         <p class="content-body">So the audience believed in the reach and doubted the outcome. What did move people was specific: 57.1% said they'd take real-world action if it was an issue they already cared about, 19% if the meme came from a source they trusted, and 14.3% if taking part felt safe and accessible. 55% said they would attend an in-person event that started as an online meme campaign — which sits oddly against the 61.9% who never had. The intent is there; something in between is missing.</p>
 
-<h4 class="content-subtitle">What the empathy map surfaced</h4>
+<h3 class="content-subtitle">What the empathy map surfaced</h3>
     <div class="empathy-caption-row">
             <span>Empathy map</span>
             <span>built from 25 survey responses</span>
@@ -209,7 +316,7 @@
 
             <div class="empathy-avatar">
                 <div class="empathy-avatar-inner">
-                    <img src="/projects/projects_school/caus/images/caus_organisation_persona.png" class="empathy-avatar" alt="Kayla Alex — the composite user the map describes">
+                    <img loading="lazy" decoding="async" width="451" height="834" src="/projects/caus/images/caus-organisation-persona.webp" class="empathy-avatar" alt="Kayla Alex — the composite user the map describes">
                 </div>
             </div>
         </div>
@@ -244,7 +351,7 @@
 
         <p class="content-body">Humour is the gateway — people engage with causes when it doesn't feel preachy. But the pains clustered tightly: activism feeling performative, information overload as causes compete for attention, uncertainty about whether a meme or the campaign behind it is credible, and no clear route from an online reaction to an offline one.</p>
 
-        <h4 class="content-subtitle">Competitor analysis</h4>
+        <h3 class="content-subtitle">Competitor analysis</h3>
         <p class="content-body">I looked at Global Citizen and Ground News. Global Citizen already blends activism with entertainment and rewards participation with points, but its navigation — Festival, For You, Discover, Goals &amp; Journeys — is vague and overlapping, and points appear everywhere without explaining what they convert into.</p>
         <p class="content-body">Ground News was the more useful failure. It exposes media bias brilliantly by showing left, centre and right coverage side by side, which is a genuinely counter-visual move. But the bias meter is passive: it tells you the split without explaining how the narratives differ. It's a dashboard, not a conversation. News is observed, never co-created — the exact opposite of how meme culture works, where critique becomes shared authorship. That contrast defined what Caus. needed to be.</p>
         <p class="content-body">Humour is the gateway — people engage with causes when it doesn't feel preachy. But the pains clustered tightly: activism feeling performative, information overload as causes compete for attention, uncertainty about whether a meme or the campaign behind it is credible, and no clear route from an online reaction to an offline one.</p>
@@ -270,7 +377,7 @@
     </section>
 
     <section class="content-section" id="persona" data-nav-label="Persona">
-        <h3 class="content-heading"></h3>
+        <p class="content-heading"></p>
         <h2 class="content-title">Who are the users?</h2>
         <p class="content-body">Three users, chosen because they sit at different distances from the problem: someone fluent in meme culture but stuck at reposting, someone sceptical of it, and an organisation that needs the reach but can't produce the content.</p>
 
@@ -284,10 +391,10 @@
         <p class="persona-label">Primary</p>
         <div class="persona-card persona-card--caus">
             <div class="persona-avatar">
-                <img src="/projects/projects_school/caus/images/caus_primary_persona.png" alt="Kayla Alex persona portrait">
+                <img loading="lazy" decoding="async" width="451" height="834" src="/projects/caus/images/caus-primary-persona.webp" alt="Kayla Alex persona portrait">
             </div>
             <div class="persona-details">
-                <h4 class="persona-name">Kayla Alex, 20</h4>
+                <h3 class="persona-name">Kayla Alex, 20</h3>
                 <ul class="persona-meta">
                     <li>Digital Media Student</li>
                     <li>BA in Computer Science</li>
@@ -297,7 +404,7 @@
             </div>
             <div class="persona-info">
                 <div class="persona-block">
-                    <h5 class="persona-subhead">Frustrations</h5>
+                    <h4 class="persona-subhead">Frustrations</h4>
                     <ul>
                         <li>Activism can feel overwhelming or performative</li>
                         <li>Unsure what's real or trustworthy online</li>
@@ -305,7 +412,7 @@
                     </ul>
                 </div>
                 <div class="persona-block">
-                    <h5 class="persona-subhead">Goals</h5>
+                    <h4 class="persona-subhead">Goals</h4>
                     <ul>
                         <li>Express opinions and raise awareness creatively</li>
                         <li>Be part of social movements without feeling pressured</li>
@@ -318,10 +425,10 @@
         <p class="persona-label">Secondary</p>
         <div class="persona-card persona-card--caus">
             <div class="persona-avatar">
-                <img src="/projects/projects_school/caus/images/caus_secondary_persona.png" alt="Mark Ace persona portrait">
+                <img loading="lazy" decoding="async" width="451" height="834" src="/projects/caus/images/caus-secondary-persona.webp" alt="Mark Ace persona portrait">
             </div>
             <div class="persona-details">
-                <h4 class="persona-name">Mark Ace, 48</h4>
+                <h3 class="persona-name">Mark Ace, 48</h3>
                 <ul class="persona-meta">
                     <li>Dance Teacher</li>
                     <li>Management</li>
@@ -331,7 +438,7 @@
             </div>
             <div class="persona-info">
                 <div class="persona-block">
-                    <h5 class="persona-subhead">Frustrations</h5>
+                    <h4 class="persona-subhead">Frustrations</h4>
                     <ul>
                         <li>Finds memes confusing or disrespectful toward serious issues</li>
                         <li>Doesn't engage on newer platforms like TikTok</li>
@@ -339,7 +446,7 @@
                     </ul>
                 </div>
                 <div class="persona-block">
-                    <h5 class="persona-subhead">Goals</h5>
+                    <h4 class="persona-subhead">Goals</h4>
                     <ul>
                         <li>Understand youth perspectives and connect with them</li>
                         <li>See social causes communicated respectfully</li>
@@ -352,10 +459,10 @@
         <p class="persona-label">Organisation</p>
         <div class="persona-card persona-card--caus">
             <div class="persona-avatar">
-                <img src="/projects/projects_school/caus/images/caus_organisation_persona.png" alt="Growth Foundation organisation persona">
+                <img loading="lazy" decoding="async" width="451" height="834" src="/projects/caus/images/caus-organisation-persona.webp" alt="Growth Foundation organisation persona">
             </div>
             <div class="persona-details">
-                <h4 class="persona-name">Growth Foundation</h4>
+                <h3 class="persona-name">Growth Foundation</h3>
                 <ul class="persona-meta">
                     <li>Small community-based organisation</li>
                     <li>5–10 members</li>
@@ -365,7 +472,7 @@
             </div>
             <div class="persona-info">
                 <div class="persona-block">
-                    <h5 class="persona-subhead">Frustrations</h5>
+                    <h4 class="persona-subhead">Frustrations</h4>
                     <ul>
                         <li>Lacks digital marketing and meme-creation skills</li>
                         <li>Hard to stay visible against large NGOs</li>
@@ -373,7 +480,7 @@
                     </ul>
                 </div>
                 <div class="persona-block">
-                    <h5 class="persona-subhead">Goals</h5>
+                    <h4 class="persona-subhead">Goals</h4>
                     <ul>
                         <li>Reach and mobilise youth through online campaigns</li>
                         <li>Track post reach and engagement</li>
@@ -385,7 +492,7 @@
     </section>
 
     <section class="content-section" id="defining-problems" data-nav-label="Defining Problems">
-        <h3 class="content-heading">04 — Defining Problems</h3>
+        <p class="content-heading">04 — Defining Problems</p>
         <h2 class="content-title">What problems did I identify?</h2>
 
         <div class="content-heading-dk">Primary problem</div>
@@ -406,7 +513,7 @@
     </section>
 
     <section class="content-section" id="ideation" data-nav-label="Ideation">
-        <h3 class="content-heading">05 — Ideation</h3>
+        <p class="content-heading">05 — Ideation</p>
         <h2 class="content-title">What solutions did I explore?</h2>
         <p class="content-body">I explored the features people actually asked for in the survey rather than the ones I found most interesting to design. The survey's feature question gave me a ranked list to work from, and I weighted each one against whether it closed the awareness-to-action gap or just made the app busier.</p>
 
@@ -425,7 +532,7 @@
             </div>
         </div>
 
-        <h4 class="content-subtitle">How I prioritised</h4>
+        <h3 class="content-subtitle">How I prioritised</h3>
     <div class="priority-table">
         <div class="priority-row head">
             <span>Opportunity</span>
@@ -466,11 +573,11 @@
     </section>
 
 <section class="content-section" id="design-process" data-nav-label="Design Process">
-    <h3 class="content-heading">06 — Design Process</h3>
+    <p class="content-heading">06 — Design Process</p>
         <h2 class="content-title">How did I turn ideas into an interface?</h2>
             <p class="content-body">The structure came before the styling. If the core idea was that a meme should always lead somewhere, the architecture had to make that path short — which meant the meme detail page became the hinge of the whole product.</p>
 
-        <h4 class="content-subtitle">Information architecture</h4>
+        <h3 class="content-subtitle">Information architecture</h3>
 <button type="button" class="ia-toggle" data-toggle-target="caus-ia-diagram" data-label-show="View information architecture ↓" data-label-hide="Hide information architecture">View information architecture ↓</button>
 <div id="ia-diagram" class="ia-scroll" hidden>
     <div class="ia-diagram">
@@ -529,11 +636,11 @@
     </div>
 </div>
 
-        <h4 class="content-subtitle">The flow that mattered most</h4>
-        <img src="/projects/projects_school/caus/images/caus-main-flow.png" alt="User flow diagram showing the path from feed to action and back to sharing" class="content-img">
+        <h3 class="content-subtitle">The flow that mattered most</h3>
+        <img loading="lazy" decoding="async" width="1920" height="667" src="/projects/caus/images/caus-main-flow.webp" alt="Caus. user flow across five screens: onboarding, the meme feed, a campaign video, the story behind it and connected actions" class="content-img">
                 <p class="content-caption">Feed → Story → Join Movement → Sharing</p>
 
-        <h4 class ="content-subtitle">Visual System Choice</h4>
+        <h3 class="content-subtitle">Visual System Choice</h3>
         <p class="content-body">Bittersweet (#FF6B54) as primary against Space Cadet (#2F2E41), with Alice Blue (#ECF3F7) and Lavender (#CFDCEF) as accents. 
             Poppins throughout. The palette had to carry humour without looking like a joke app — warm enough to feel social, dark enough 
             that a petition doesn't look out of place next to it.</p>
@@ -597,14 +704,14 @@
     </section>
 
 <section class="content-section" id="final-designs" data-nav-label="Final Designs">
-    <h3 class="content-heading">07 — Final Design</h3>
+    <p class="content-heading">07 — Final Design</p>
         <h2 class="content-title">What does the final design look like?</h2>
-            <img src="/projects/projects_school/caus/images/caus-other.png" alt="Caus final designs" class="content-img content-img--full">
-                <a href="https://www.figma.com/proto/ostuE6sr9K5VxGLrIjtbCP/23081_Sebastian--Copy-?node-id=685-5530&p=f&viewport=999%2C-482%2C0.31&t=i2qpGpOeoJARsZEd-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=685%3A5530&show-proto-sidebar=1&page-id=685%3A4353" class="btn-outline btn--centre" target="_blank" rel="noopener noreferrer">View the prototype ↗</a>
+            <img loading="lazy" decoding="async" width="1484" height="4102" src="/projects/caus/images/caus-other.webp" alt="Overview of the final high-fidelity Caus. screens" class="content-img content-img--full">
+                <a href="https://www.figma.com/proto/ostuE6sr9K5VxGLrIjtbCP/23081_Sebastian--Copy-?node-id=685-5530&p=f&viewport=999%2C-482%2C0.31&t=i2qpGpOeoJARsZEd-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=685%3A5530&show-proto-sidebar=1&page-id=685%3A4353" class="btn-outline btn--centre" target="_blank" rel="noopener noreferrer">View the prototype ↗<span class="sr-only"> (opens in a new tab)</span></a>
 </section>
 
     <section class="content-section" id="reflection" data-nav-label="Reflection">
-        <h3 class="content-heading">07 — Reflection</h3>
+        <p class="content-heading">07 — Reflection</p>
         <h2 class="content-title">What did I learn?</h2>
         <p class="content-body">The most useful thing that happened in this project was being contradicted by my own survey. 
             I went in from a research paper about how memes resist dominant narratives, which had already convinced me memes were powerful. 
@@ -624,15 +731,19 @@
             is enough to find a tension but not enough to size it.</p>
     </section>
 
-</main>
+
+<div class="project-next">
+    <a href="/projects/echo/" class="btn-outline btn--centre">Next project: Echo <span class="icon-arrow" aria-hidden="true"></span></a>
+</div>
+</article>
 </section>
+</main>
 <div id="footer-placeholder"></div>
 <script src="/components/footer.js" defer></script>
 <script src="/components/scripts/cursor-trail.js" defer></script>
 <script src="/components/vendor/gsap/gsap.min.js" defer></script>
 <script src="/components/vendor/gsap/ScrollTrigger.min.js" defer></script>
 <script src="/components/vendor/gsap/SplitText.min.js" defer></script>
-<script src="/components/vendor/gsap/ScrambleTextPlugin.min.js" defer></script>
 <script src="/components/scripts/animations.js" defer></script>
 </body>
 </html>

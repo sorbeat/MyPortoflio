@@ -1,0 +1,29 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/projects/showcase.html", "destination": "/projects/", "permanent": true },
+    { "source": "/projects/showcase", "destination": "/projects/", "permanent": true },
+    { "source": "/work.html", "destination": "/projects/", "permanent": true },
+    { "source": "/projects/projects_school/trivia_cc/:path*", "destination": "/projects/trivia-cc/:path*", "permanent": true },
+    { "source": "/projects/projects_school/:path*", "destination": "/projects/:path*", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.(webp|jpg|jpeg|png|svg|woff2?)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }]
+    },
+    {
+      "source": "/components/vendor/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}

@@ -3,11 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebastian Harris Design</title>
-    <meta name="description" content="Sebastian Harris is a digital designer working across UX, UI and brand. He cares about clarity, craft and the small details that make a product feel considered.">
-    <meta property="og:title" content="Sebastian Harris Design">
+    <title>Sebastian Harris | UX/UI &amp; Product Designer, Cape Town</title>
+    <meta name="description" content="Sebastian Harris is a UX/UI and product designer in Cape Town. Explore case studies covering user research, prototyping, interaction design and web design.">
+    <meta name="author" content="Sebastian Harris">
+    <link rel="canonical" href="https://www.sebastianharrisdesign.com/">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sebastian Harris Design">
+    <meta property="og:locale" content="en_ZA">
+    <meta property="og:title" content="Sebastian Harris | UX/UI &amp; Product Designer, Cape Town">
+    <meta property="og:description" content="Sebastian Harris is a UX/UI and product designer in Cape Town. Explore case studies covering user research, prototyping, interaction design and web design.">
+    <meta property="og:url" content="https://www.sebastianharrisdesign.com/">
+    <meta property="og:image" content="https://www.sebastianharrisdesign.com/assets/og/og-home.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Sebastian Harris, UX/UI and product designer in Cape Town">
+    <meta name="twitter:card" content="summary_large_image">
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=DM+Sans:wght@300;400;500&amp;family=Poppins:wght@300;400;500;600&amp;display=swap">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/favicon-192.png">
     <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
 
@@ -19,23 +36,71 @@
             if (!window.gsap) document.documentElement.classList.remove('js-anim');
         }, 3000);
     </script>
+
+    <!-- Structured data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://www.sebastianharrisdesign.com/#person",
+          "name": "Sebastian Harris",
+          "url": "https://www.sebastianharrisdesign.com/",
+          "image": "https://www.sebastianharrisdesign.com/assets/images/photoofme.webp",
+          "jobTitle": "UX/UI Designer",
+          "description": "UX/UI and product designer working across user research, prototyping, interaction design and web design.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Cape Town",
+            "addressCountry": "ZA"
+          },
+          "knowsAbout": [
+            "UX design",
+            "UI design",
+            "Product design",
+            "User research",
+            "Prototyping",
+            "Interaction design",
+            "Web design"
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/sebastian-harris-9599502b4/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.sebastianharrisdesign.com/#website",
+          "name": "Sebastian Harris Design",
+          "url": "https://www.sebastianharrisdesign.com/",
+          "inLanguage": "en",
+          "publisher": {
+            "@id": "https://www.sebastianharrisdesign.com/#person"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!-- Navigation-->
+<header>
 <nav>
-    <a href="#" class="logo">Sebastianhar</a>
+    <a href="/" class="logo">Sebastianhar</a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
         <span class="nav-toggle-bar"></span>
         <span class="nav-toggle-bar"></span>
     </button>
     <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="/projects/showcase.html">My Work</a></li>
+        <li><a href="/projects/">My Work</a></li>
         <li><a href="#contact" class="btn-nav">Get in Touch</a></li>
     </ul>
 </nav>
-<main>
+</header>
+<main id="main">
 <!-- Hero Section-->
 <section class="hero" id="hero">
 
@@ -49,7 +114,7 @@
 
 <!--My card Floating bottom right-->
 <div class="hero-card">
-    <img src="/assets/images/PhotoOfMe.jpg" alt="Profile" class="hero-card-avatar">
+    <img width="990" height="947" src="/assets/images/photoofme.webp" alt="" class="hero-card-avatar">
     <div class="hero-card-text">
         <span class="hero-card-name">Sebastian Harris</span>
         <span class="hero-card-role">UX/UI Designer</span>
@@ -61,7 +126,7 @@
 <section class="about" id="about">
 
 <div class="about-left">
-        <p class="section-label">About Me</p>
+        <h2 class="section-label">About Me</h2>
 </div>
     <div class="about-right">
         <p class="about-body">
@@ -75,30 +140,30 @@
 
 <!--MyProjects Section-->
 <section class="mywork" id="mywork">
-    <p class="section-label">My Projects</p>
+    <h2 class="section-label">My Projects</h2>
     <p class="project-tagline">A few selected projects in product design, case studies and the thinking behind them.</p>
         <div class="project-grid">
 
 <!-- LEFT — Big Clickable Card -->
-    <a href="/projects/projects_school/eddy/index.html" class="project-card-large" data-cursor-label="Eddy Project">
+    <a href="/projects/eddy/" class="project-card-large" data-cursor-label="Eddy Project">
         <div class="project-card-body">
             <h3 class="project-title">Eddy</h3>
             <p class="project-description">An AI-powered surf app helping surfers find the right waves</p>
         </div>
-            <img src="projects/projects_school/eddy/images/Eddy two phones.png" alt="Eddy Project" class="project-img">
+            <img loading="lazy" decoding="async" width="1800" height="1338" src="/projects/eddy/images/eddy-two-phones.webp" alt="Eddy surf app shown on two phones" class="project-img">
         </a>
     <div class="project-grid-right">
 <!-- Right Top — Clickable Card -->
-    <a href="/projects/projects_school/caus/index.html" class="project-card-small" data-cursor-label="Caus Project">
+    <a href="/projects/caus/" class="project-card-small" data-cursor-label="Caus Project">
         <div class="project-card-body">
             <h3 class="project-title">Caus.</h3>
             <p class="project-description">A meme driven social app that turns humour into awareness and collective action.</p>
         </div>
-        <img src="projects/projects_school/caus/images/phone_screen_mockup.png" alt="Caus Project" class="project-img">
+        <img loading="lazy" decoding="async" width="1600" height="1067" src="/projects/caus/images/phone-screen-mockup.webp" alt="Caus. app screens shown on three phones" class="project-img">
     </a>
 
 <!-- Right Bottom — See More Card -->
-    <a href="/projects/showcase.html" class="project-card-seemore" data-cursor-label="See more">
+    <a href="/projects/" class="project-card-seemore" data-cursor-label="See more">
         <div class="seemore-text">
             <p class="seemore-title">Explore More Projects</p>
             <p class="seemore-desc">Take a look at more of my work across UX, UI, and interaction design.</p>
@@ -111,22 +176,22 @@
 
 <!--Hobbies Section-->
 <section class ="hobbies-section" id="hobbies">
-<p class="section-label">Out and About</p>
+<h2 class="section-label">Out and About</h2>
     <p class="project-tagline">Outside of design, I’m usually chasing a bit of adventure. I enjoy exploring caves, surfing, and getting outdoors whenever I can. These hobbies give me a chance to switch off, explore new places, and find inspiration away from the screen.
     </p>
 <!-- Photo Grid -->
     <div class="hobbies-grid">
 
         <div class="hobbies-items">
-        <img src="/assets/images/longboarding.jpeg" alt="Photo 1" data-cursor-label="Love to longboarding">
+        <img loading="lazy" decoding="async" width="1280" height="720" src="/assets/images/longboarding.webp" alt="Surfer carrying a longboard along a misty beach" data-cursor-label="Love to longboarding">
     </div>
 
     <div class="hobbies-items">
-            <img src="/assets/images/CaveExploring.jpeg" alt="Photo 2" data-cursor-label="Cave exploring">
+            <img loading="lazy" decoding="async" width="1280" height="960" src="/assets/images/caveexploring.webp" alt="Exploring a sandstone cave lit by sunlight" data-cursor-label="Cave exploring">
         </div>
 
     <div class="hobbies-items">
-            <img src="/assets/images/PhotoOfMe.jpg" alt="Photo 3" data-cursor-label="Photo of me">
+            <img loading="lazy" decoding="async" width="990" height="947" src="/assets/images/photoofme.webp" alt="Sebastian Harris smiling in a cap" data-cursor-label="Photo of me">
         </div>
     </div>
 </section>
@@ -141,8 +206,8 @@
 <div class="footer-bottom">
     <p class="footer-copy">Copyright ©2026 All right Reserved Sebastian Harris Design</p>
         <ul class="footer-links">
-            <li><a href="https://www.linkedin.com/in/sebastian-harris-9599502b4/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="icon-arrow" aria-hidden="true"></span></a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram <span class="icon-arrow" aria-hidden="true"></span></a></li>
+            <li><a href="https://www.linkedin.com/in/sebastian-harris-9599502b4/" target="_blank" rel="noopener noreferrer">LinkedIn <span class="icon-arrow" aria-hidden="true"></span><span class="sr-only"> (opens in a new tab)</span></a></li>
+            <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram <span class="icon-arrow" aria-hidden="true"></span><span class="sr-only"> (opens in a new tab)</span></a></li>
             <li><a href="mailto:sebastianhar85@gmail.com">Email <span class="icon-arrow" aria-hidden="true"></span></a></li>
         </ul>
         </div>

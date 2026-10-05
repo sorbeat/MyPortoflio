@@ -3,20 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, follow">
     <title>[Project Name] - Sebastian Harris</title>
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/favicon-192.png">
     <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=DM+Sans:wght@300;400;500&amp;family=Poppins:wght@300;400;500;600&amp;display=swap">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/project.css">
     <!-- <link rel="stylesheet" href="/projects/[project]/project-[name].css"> only if this project truly needs one-off styles -->
     <script src="/components/scripts/sidebar-scroll.js" defer></script>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 
 <!--nav bar-->
-<div id="nav-placeholder"></div>
+<header id="nav-placeholder"></header>
 <script src="/components/nav.js" defer></script>
 
+<main id="main">
 <!--Hero Section-->
 <section class="project-hero">
     <h1 class="project-name">[Project Name]</h1>
@@ -42,7 +48,7 @@
 <section class="project-layout" id="project-info">
 
 <aside class="project-sidebar">
-    <a href="/index.html#mywork" class="back-link" onclick="event.preventDefault(); history.back();">Back</a>    
+    <a href="/projects/" class="back-link" onclick="event.preventDefault(); history.back();">Back</a>    
     <div class="sidebar-nav">
         <div class="sidebar-progress">
             <div class="sidebar-progress-fill"></div>
@@ -51,7 +57,7 @@
     </div>
 </aside>
 
-<main class="project-content">
+<article class="project-content">
 
     <!-- Optional pivot/turning-point statement — delete this block if this project didn't have one -->
     <div class="dark-block">
@@ -61,7 +67,7 @@
     </div>
 
     <section class="content-section" id="design-brief" data-nav-label="Design Brief">
-        <h3 class="content-heading">01 — Design Brief</h3>
+        <p class="content-heading">01 — Design Brief</p>
         <h2 class="content-title">What am I designing?</h2>
         <p class="content-body">Your content here...</p>
 
@@ -83,7 +89,7 @@
     </section>
 
     <section class="content-section" id="approach" data-nav-label="Approach">
-        <h3 class="content-heading">02 — Approach</h3>
+        <p class="content-heading">02 — Approach</p>
         <h2 class="content-title">How did I approach the problem?</h2>
         <p class="content-body">Your content here...</p>
 
@@ -98,7 +104,7 @@
     </section>
 
     <section class="content-section" id="research" data-nav-label="Research">
-        <h3 class="content-heading">03 — Research</h3>
+        <p class="content-heading">03 — Research</p>
         <h2 class="content-title">What did I discover?</h2>
         <p class="content-body">Your content here...</p>
 
@@ -112,14 +118,14 @@
     </section>
 
     <section class="content-section" id="persona" data-nav-label="Persona">
-        <h3 class="content-heading"></h3>
+        <p class="content-heading"></p>
         <h2 class="content-title">Who are the users?</h2>
         <p class="content-body">Your content here...</p>
         <!-- Copy the .persona-card markup from eddy/index.html if this project uses personas -->
     </section>
 
     <section class="content-section" id="defining-problems" data-nav-label="Defining Problems">
-        <h3 class="content-heading">04 — Defining Problems</h3>
+        <p class="content-heading">04 — Defining Problems</p>
         <h2 class="content-title">What problems did I identify?</h2>
 
         <div class="dark-block">
@@ -140,7 +146,7 @@
     </section>
 
     <section class="content-section" id="ideation" data-nav-label="Ideation">
-        <h3 class="content-heading">05 — Ideation</h3>
+        <p class="content-heading">05 — Ideation</p>
         <h2 class="content-title">What solutions did I explore?</h2>
         <p class="content-body">Your content here...</p>
 
@@ -154,7 +160,7 @@
                 <span class="title">[The direction you picked]</span>
             </div>
         </div>
-        <h4 class ="content-subtitle">How I prioritised </h4>
+        <h3 class="content-subtitle">How I prioritised </h3>
     <div class="priority-table">
         <div class="priority-row head">
             <span>Opportunity</span>
@@ -195,11 +201,11 @@
     
 
     <section class="content-section" id="design-process" data-nav-label="Design Process">
-        <h3 class="content-heading">06 — Design Process</h3>
+        <p class="content-heading">06 — Design Process</p>
         <h2 class="content-title">How did I turn ideas into an interface?</h2>
         <p class="content-body">Your content here...</p>
 
-        <h4 class="content-subtitle">[Sub-heading]</h4>
+        <h3 class="content-subtitle">[Sub-heading]</h3>
 
         <!-- Example: evidence → decision pairs — reuses .finding-list -->
         <div class="finding-list">
@@ -211,23 +217,23 @@
     </section>
 
     <section class="content-section" id="usability-testing" data-nav-label="Usability Testing">
-        <h3 class="content-heading">Usability Testing</h3>
+        <h2 class="content-heading">Usability Testing</h2>
         <p class="content-body">Your content here...</p>
     </section>
 
     <section class="content-section" id="reflection" data-nav-label="Reflection">
-        <h3 class="content-heading">Reflection</h3>
+        <h2 class="content-heading">Reflection</h2>
         <p class="content-body">Your content here...</p>
     </section>
 
-</main>
+</article>
 </section>
+</main>
 <div id="footer-placeholder"></div>
 <script src="/components/footer.js" defer></script>
 <script src="/components/vendor/gsap/gsap.min.js" defer></script>
 <script src="/components/vendor/gsap/ScrollTrigger.min.js" defer></script>
 <script src="/components/vendor/gsap/SplitText.min.js" defer></script>
-<script src="/components/vendor/gsap/ScrambleTextPlugin.min.js" defer></script>
 <script src="/components/scripts/animations.js" defer></script>
 </body>
 </html>

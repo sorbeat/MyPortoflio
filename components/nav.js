@@ -7,15 +7,15 @@ const navPlaceholder = document.getElementById('nav-placeholder');
 if (navPlaceholder) {
     navPlaceholder.innerHTML = `
     <nav>
-        <a href="/index.html" class="logo">Sebastianhar</a>
+        <a href="/" class="logo">Sebastianhar</a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
             <span class="nav-toggle-bar"></span>
             <span class="nav-toggle-bar"></span>
         </button>
         <ul class="nav-links" id="nav-links">
-            <li><a href="/index.html#about">About</a></li>
-            <li><a href="/projects/showcase.html">My Work</a></li>
-            <li><a href="/index.html#contact" class="btn-nav">Get in Touch</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/projects/">My Work</a></li>
+            <li><a href="/#contact" class="btn-nav">Get in Touch</a></li>
         </ul>
     </nav>
     `;

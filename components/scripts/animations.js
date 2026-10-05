@@ -19,12 +19,18 @@
     const showHero = () => root.classList.remove('js-anim');
 
     // If GSAP didn't load (offline, blocked script), show everything and stop.
-    if (!window.gsap || !window.ScrollTrigger || !window.SplitText || !window.ScrambleTextPlugin) {
+    if (!window.gsap || !window.ScrollTrigger) {
         showHero();
         return;
     }
 
-    gsap.registerPlugin(ScrollTrigger, SplitText, ScrambleTextPlugin);
+    // SplitText (every page) and ScrambleText (home page only) are optional —
+    // each effect checks its plugin is there before running.
+    const HAS_SPLIT    = !!window.SplitText;
+    const HAS_SCRAMBLE = !!window.ScrambleTextPlugin;
+    gsap.registerPlugin(ScrollTrigger);
+    if (HAS_SPLIT)    gsap.registerPlugin(SplitText);
+    if (HAS_SCRAMBLE) gsap.registerPlugin(ScrambleTextPlugin);
 
     // Wait for web fonts so text is split at its real size (max 1.5s so we never hang).
     const fontsReady = Promise.race([
@@ -37,7 +43,11 @@
 
     // Plain fade/slide reveals start straight away (no font wait), so content
     // that's already on screen doesn't flash visible → hidden → visible.
+    // Hero intro starts immediately — scrambling doesn't need fonts measured,
+    // and starting early gets the headline on screen sooner (better LCP).
+    gsap.matchMedia().add(NO_MOTION, () => { showHero(); });
     gsap.matchMedia().add(MOTION, () => {
+        heroIntro();
         sectionReveals();
         projectCards();
         hobbyPhotos();
@@ -47,15 +57,8 @@
 
     // Text-splitting effects wait for fonts so lines/letters are measured correctly.
     fontsReady.then(() => {
-        const mm = gsap.matchMedia();
-
-        // Reduced motion: no animation, just make sure the hero is visible.
-        mm.add(NO_MOTION, () => {
-            showHero();
-        });
-
-        mm.add(MOTION, () => {
-            heroIntro();
+        if (!HAS_SPLIT) return;
+        gsap.matchMedia().add(MOTION, () => {
             aboutText();
             footerHeading();
         });
@@ -68,11 +71,12 @@
         const items = gsap.utils.toArray(elements);
         if (!items.length) return;
 
-        gsap.set(items, { autoAlpha: 0, y });
+        // opacity (not autoAlpha/visibility) so hidden items stay reachable with Tab
+        gsap.set(items, { opacity: 0, y });
         ScrollTrigger.batch(items, {
             start,
             onEnter: (batch) => gsap.to(batch, {
-                autoAlpha: 1,
+                opacity: 1,
                 y: 0,
                 duration: 0.8,
                 stagger,
@@ -81,6 +85,15 @@
                 // hand transform back to CSS so hover lifts keep working
                 onComplete: () => gsap.set(batch, { clearProps: 'transform,transition' })
             })
+        });
+
+        // Keyboard users: if focus lands inside something not revealed yet, show it now
+        document.addEventListener('focusin', (e) => {
+            const item = items.find((el) => el.contains(e.target));
+            if (item && +getComputedStyle(item).opacity < 1) {
+                gsap.to(item, { opacity: 1, y: 0, duration: 0.3, overwrite: true,
+                    onComplete: () => gsap.set(item, { clearProps: 'transform,transition' }) });
+            }
         });
     }
 
@@ -120,7 +133,9 @@
             }
         });
 
-        if (title) {
+        if (title && !HAS_SCRAMBLE) {
+            tl.from(title, { autoAlpha: 0, y: 30, duration: 0.9 });
+        } else if (title) {
             tl.to(title, {
                 duration: 1.6,
                 scrambleText: {
@@ -133,7 +148,9 @@
             });
         }
 
-        if (tagline) {
+        if (tagline && !HAS_SCRAMBLE) {
+            tl.to(tagline, { autoAlpha: 1, duration: 0.6 }, '-=0.4');
+        } else if (tagline) {
             tl.set(tagline, { autoAlpha: 1 }, '-=0.6')
               .to(tagline, {
                   duration: 1.1,
@@ -233,7 +250,7 @@
         const items = gsap.utils.toArray('.section-label, .project-tagline');
         items.forEach((el) => {
             gsap.from(el, {
-                autoAlpha: 0,
+                opacity: 0,
                 y: 24,
                 duration: 0.8,
                 ease: 'power3.out',
@@ -256,13 +273,13 @@
 
         gsap.set(cards, { transition: 'none' });
         gsap.from(cards, {
-            autoAlpha: 0,
+            opacity: 0,
             y: 60,
             duration: 1,
             stagger: 0.15,
             ease: 'power3.out',
             scrollTrigger: { trigger: grid, start: 'top 80%' },
-            onComplete: () => gsap.set(cards, { clearProps: 'transform,transition,opacity,visibility' })
+            onComplete: () => gsap.set(cards, { clearProps: 'transform,transition,opacity' })
         });
     }
 
@@ -321,7 +338,7 @@
 
 
     /* ---------------------------------------------------------
-       7. ALL WORK (showcase.html) — header on load, cards on scroll
+       7. ALL WORK (/projects/) — header on load, cards on scroll
        --------------------------------------------------------- */
     function showcaseReveals() {
         const header = document.querySelector('.work-hero');
