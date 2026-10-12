@@ -197,6 +197,7 @@ p {
     border-radius: 12px;
 }
 .content-caption{
+    text-align: center;
     justify-self: center;
     font-family: var(--font-body);
     font-size: 24px;
